@@ -73,11 +73,29 @@ Page {
             }
             InfoField {
                 label: "Current altitude"
-                value: positionSource.position.altitudeValid ? positionSource.position.coordinate.altitude + " m" : "-"
+                value: {
+                    if (positionSource.position.altitudeValid) {
+                        if (settings.value("units") == "MET") {
+                            return positionSource.position.coordinate.altitude + " m"
+                        } else {
+                            return LocationFormater.roundToDecimal(positionSource.position.coordinate.altitude * 3.2808399, 2) + " ft"
+                        }
+                    }
+                    return "-"
+                }
             }
             InfoField {
                 label: "Current speed"
-                value: positionSource.position.speedValid ? positionSource.position.speed + " m/s" : "-"
+                value: {
+                    if (positionSource.position.speedValid) {
+                        if (settings.value("units") == "MET") {
+                            return positionSource.position.speed + " m/s"
+                        } else {
+                            return LocationFormater.roundToDecimal(positionSource.position.speed * 3.2808399, 2) + " ft/s"
+                        }
+                    }
+                    return "-"
+                }
             }
             InfoField {
                 label: "Last update"
@@ -85,11 +103,29 @@ Page {
             }
             InfoField {
                 label: "Vertical accuracy"
-                value: positionSource.position.verticalAccuracyValid ? positionSource.position.verticalAccuracy + " m" : "-"
+                value: {
+                    if (positionSource.position.verticalAccuracyValid) {
+                        if (settings.value("units") == "MET") {
+                            return positionSource.position.verticalAccuracy + " m"
+                        } else {
+                            return LocationFormater.roundToDecimal(positionSource.position.verticalAccuracy * 3.2808399, 2) + " ft"
+                        }
+                    }
+                    return "-"
+                }
             }
             InfoField {
                 label: "Horizontal accuracy"
-                value: positionSource.position.horizontalAccuracyValid ? positionSource.position.horizontalAccuracy + " m" : "-"
+                value: {
+                    if (positionSource.position.horizontalAccuracyValid) {
+                        if (settings.value("units") == "MET") {
+                            return positionSource.position.horizontalAccuracy + " m"
+                        } else {
+                            return LocationFormater.roundToDecimal(positionSource.position.horizontalAccuracy * 3.2808399, 2) + " ft"
+                        }
+                    }
+                    return "-"
+                }
             }
             InfoField {
                 label: "Compass direction"

@@ -24,6 +24,21 @@ Page {
                     }
                 }
             }
+            ComboBox {
+                label: "Units"
+                currentIndex: settings.value("units") === "MET" ? 0 : 1
+                onCurrentIndexChanged: {
+                    settings.setValue("units", currentIndex === 0 ? "MET" : "IMP")
+                }
+                menu: ContextMenu {
+                    MenuItem {
+                        text: "metric"
+                    }
+                    MenuItem {
+                        text: "imperial"
+                    }
+                }
+            }
         }
     }
 }
