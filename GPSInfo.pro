@@ -20,7 +20,9 @@ OTHER_FILES += qml/GPSInfo.qml \
     rpm/GPSInfo.spec \
     rpm/GPSInfo.yaml \
     GPSInfo.desktop \
-    qml/pages/InfoField.qml
+    qml/pages/InfoField.qml \
+    qml/pages/SettingsPage.qml \
+    qml/LocationFormatter.js
 
 HEADERS += \
     src/gpsdatasource.h \

@@ -3,6 +3,8 @@ import Sailfish.Silica 1.0
 import QtPositioning 5.0
 import QtSensors 5.0
 
+import "../LocationFormatter.js" as LocationFormater
+
 Page {
     id: page
     SilicaFlickable {
@@ -23,6 +25,10 @@ Page {
                     }
                 }
             }
+            MenuItem {
+                text: "settings"
+                onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
+            }
         }
 
         contentHeight: column.height
@@ -41,11 +47,29 @@ Page {
             }
             InfoField {
                 label: "Current latitude"
-                value: positionSource.position.latitudeValid ? positionSource.position.coordinate.latitude : "-"
+                value: {
+                    if (positionSource.position.latitudeValid) {
+                        if (settings.value("coordinateFormat") === "DEG") {
+                            return LocationFormater.decimalLatToDMS(positionSource.position.coordinate.latitude)
+                        } else {
+                            return positionSource.position.coordinate.latitude
+                        }
+                    }
+                    return "-"
+                }
             }
             InfoField {
                 label: "Current longitude"
-                value: positionSource.position.longitudeValid ? positionSource.position.coordinate.longitude : "-"
+                value: {
+                    if (positionSource.position.longitudeValid) {
+                        if (settings.value("coordinateFormat") === "DEG") {
+                            return LocationFormater.decimalLongToDMS(positionSource.position.coordinate.longitude)
+                        } else {
+                            return positionSource.position.coordinate.longitude
+                        }
+                    }
+                    return "-"
+                }
             }
             InfoField {
                 label: "Current altitude"

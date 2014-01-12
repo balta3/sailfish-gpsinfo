@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
     //
     // To display the view, call "show()" (will show fullscreen on device).
     GPSDataSource* source = new GPSDataSource();
-    QMLSettingsWrapper* settings = new QMLSettingsWrapper("net.me", "gpsinfo");
+    QMLSettingsWrapper* settings = new QMLSettingsWrapper("gpsinfo", "gpsinfo");
     QGuiApplication *app = SailfishApp::application(argc, argv);
     QQuickView *view = SailfishApp::createView();
     view->rootContext()->setContextProperty("settings", settings);
