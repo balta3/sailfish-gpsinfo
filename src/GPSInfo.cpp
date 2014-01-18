@@ -34,7 +34,7 @@
 
 #include <sailfishapp.h>
 #include "gpsdatasource.h"
-#include "qmlsettingswrapper.h"
+#include "gpsinfosettings.h"
 
 
 int main(int argc, char *argv[])
@@ -47,8 +47,8 @@ int main(int argc, char *argv[])
     //   - SailfishApp::pathTo(QString) to get a QUrl to a resource file
     //
     // To display the view, call "show()" (will show fullscreen on device).
-    GPSDataSource* source = new GPSDataSource();
-    QMLSettingsWrapper* settings = new QMLSettingsWrapper("gpsinfo", "gpsinfo");
+    //GPSDataSource* source = new GPSDataSource();
+    GPSInfoSettings* settings = new GPSInfoSettings();
     QGuiApplication *app = SailfishApp::application(argc, argv);
     QQuickView *view = SailfishApp::createView();
     view->rootContext()->setContextProperty("settings", settings);

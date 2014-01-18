@@ -12,20 +12,24 @@ CONFIG += sailfishapp
 
 SOURCES += src/GPSInfo.cpp \
     src/gpsdatasource.cpp \
-    src/qmlsettingswrapper.cpp
+    src/qmlsettingswrapper.cpp \
+    src/gpsinfosettings.cpp
 
 OTHER_FILES += qml/GPSInfo.qml \
-    qml/cover/CoverPage.qml \
+    qml/pages/CoverPage.qml \
     qml/pages/FirstPage.qml \
     rpm/GPSInfo.spec \
     rpm/GPSInfo.yaml \
     GPSInfo.desktop \
     qml/pages/InfoField.qml \
     qml/pages/SettingsPage.qml \
-    qml/LocationFormatter.js
+    qml/LocationFormatter.js \
+    qml/providers/Providers.qml \
+    qml/pages/ShowGridRowLabel.qml
 
 HEADERS += \
     src/gpsdatasource.h \
-    src/qmlsettingswrapper.h
+    src/qmlsettingswrapper.h \
+    src/gpsinfosettings.h
 
 QT += positioning

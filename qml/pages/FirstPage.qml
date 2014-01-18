@@ -7,6 +7,8 @@ import "../LocationFormatter.js" as LocationFormater
 
 Page {
     id: page
+    property PositionSource positionSource
+    property Compass compass
     SilicaFlickable {
         anchors.fill: parent
 
@@ -43,14 +45,16 @@ Page {
             }
             InfoField {
                 label: "GPS"
+                visible: settings.showGpsStateApp
                 value: positionSource.active ? "active" : "inactive"
             }
             InfoField {
                 label: "Current latitude"
+                visible: settings.showLatitudeApp
                 value: {
                     if (positionSource.position.latitudeValid) {
                         if (settings.value("coordinateFormat") === "DEG") {
-                            return LocationFormater.decimalLatToDMS(positionSource.position.coordinate.latitude)
+                            return LocationFormater.decimalLatToDMS(positionSource.position.coordinate.latitude, 2)
                         } else {
                             return positionSource.position.coordinate.latitude
                         }
@@ -60,10 +64,11 @@ Page {
             }
             InfoField {
                 label: "Current longitude"
+                visible: settings.showLongitudeApp
                 value: {
                     if (positionSource.position.longitudeValid) {
                         if (settings.value("coordinateFormat") === "DEG") {
-                            return LocationFormater.decimalLongToDMS(positionSource.position.coordinate.longitude)
+                            return LocationFormater.decimalLongToDMS(positionSource.position.coordinate.longitude, 2)
                         } else {
                             return positionSource.position.coordinate.longitude
                         }
@@ -73,6 +78,7 @@ Page {
             }
             InfoField {
                 label: "Current altitude"
+                visible: settings.showAltitudeApp
                 value: {
                     if (positionSource.position.altitudeValid) {
                         if (settings.value("units") == "MET") {
@@ -86,6 +92,7 @@ Page {
             }
             InfoField {
                 label: "Current speed"
+                visible: settings.showSpeedApp
                 value: {
                     if (positionSource.position.speedValid) {
                         if (settings.value("units") == "MET") {
@@ -99,10 +106,12 @@ Page {
             }
             InfoField {
                 label: "Last update"
+                visible: settings.showLastUpdateApp
                 value: positionSource.position.timestamp
             }
             InfoField {
                 label: "Vertical accuracy"
+                visible: settings.showVerticalAccuracyApp
                 value: {
                     if (positionSource.position.verticalAccuracyValid) {
                         if (settings.value("units") == "MET") {
@@ -116,6 +125,7 @@ Page {
             }
             InfoField {
                 label: "Horizontal accuracy"
+                visible: settings.showHorizontalAccuracyApp
                 value: {
                     if (positionSource.position.horizontalAccuracyValid) {
                         if (settings.value("units") == "MET") {
@@ -129,20 +139,10 @@ Page {
             }
             InfoField {
                 label: "Compass direction"
+                visible: settings.showCompassDirectionApp
                 value: compass.reading.azimuth
             }
         }
-    }
-
-    PositionSource {
-        id: positionSource
-        updateInterval: 1000
-        active: true
-    }
-
-    Compass {
-        id: compass
-        active: true
     }
 }
 
