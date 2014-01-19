@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
     QGuiApplication *app = SailfishApp::application(argc, argv);
     QQuickView *view = SailfishApp::createView();
     view->rootContext()->setContextProperty("settings", settings);
-    view->setSource(SailfishApp::pathTo("qml/GPSInfo.qml"));
+    view->setSource(SailfishApp::pathTo("qml/harbour-GPSInfo.qml"));
     view->showFullScreen();
     return app->exec();
 }

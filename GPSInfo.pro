@@ -6,21 +6,19 @@
 #         - desktop icon filename must be changed
 #         - desktop filename must be changed
 #         - icon definition filename in desktop file must be changed
-TARGET = GPSInfo
+TARGET = harbour-GPSInfo
 
 CONFIG += sailfishapp
 
-SOURCES += src/GPSInfo.cpp \
+SOURCES += \
     src/gpsdatasource.cpp \
     src/qmlsettingswrapper.cpp \
-    src/gpsinfosettings.cpp
+    src/gpsinfosettings.cpp \
+    src/harbour-GPSInfo.cpp
 
-OTHER_FILES += qml/GPSInfo.qml \
+OTHER_FILES += \
     qml/pages/CoverPage.qml \
     qml/pages/FirstPage.qml \
-    rpm/GPSInfo.spec \
-    rpm/GPSInfo.yaml \
-    GPSInfo.desktop \
     qml/pages/InfoField.qml \
     qml/pages/SettingsPage.qml \
     qml/LocationFormatter.js \
@@ -28,7 +26,11 @@ OTHER_FILES += qml/GPSInfo.qml \
     qml/pages/ShowGridRowLabel.qml \
     qml/pages/AboutPage.qml \
     qml/pages/LicensePage.qml \
-    qml/license.js
+    qml/license.js \
+    qml/harbour-GPSInfo.qml \
+    harbour-GPSInfo.desktop \
+    rpm/harbour-GPSInfo.yaml \
+    rpm/harbour-GPSInfo.spec
 
 HEADERS += \
     src/gpsdatasource.h \
