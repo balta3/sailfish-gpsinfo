@@ -49,7 +49,7 @@ Page {
                 value: positionSource.active ? "active" : "inactive"
             }
             InfoField {
-                label: "Current latitude"
+                label: "Latitude"
                 visible: settings.showLatitudeApp
                 value: {
                     if (positionSource.position.latitudeValid) {
@@ -63,7 +63,7 @@ Page {
                 }
             }
             InfoField {
-                label: "Current longitude"
+                label: "Longitude"
                 visible: settings.showLongitudeApp
                 value: {
                     if (positionSource.position.longitudeValid) {
@@ -77,7 +77,7 @@ Page {
                 }
             }
             InfoField {
-                label: "Current altitude"
+                label: "Altitude"
                 visible: settings.showAltitudeApp
                 value: {
                     if (positionSource.position.altitudeValid) {
@@ -107,7 +107,7 @@ Page {
             InfoField {
                 label: "Last update"
                 visible: settings.showLastUpdateApp
-                value: positionSource.position.timestamp
+                value: Qt.formatTime(positionSource.position.timestamp, "hh:mm:ss")
             }
             InfoField {
                 label: "Vertical accuracy"
@@ -140,7 +140,7 @@ Page {
             InfoField {
                 label: "Compass direction"
                 visible: settings.showCompassDirectionApp
-                value: compass.reading.azimuth
+                value: LocationFormater.formatDirection(compass.reading.azimuth)
             }
         }
     }

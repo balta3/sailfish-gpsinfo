@@ -28,6 +28,7 @@ CoverBackground {
         InfoField {
             label: positionSource.position.latitudeValid ? "" : "Latitude"
             visible: settings.showLatitudeCover
+            fontpixelSize: Theme.fontSizeMedium
             value: {
                 if (positionSource.position.latitudeValid) {
                     if (settings.value("coordinateFormat") === "DEG") {
@@ -42,6 +43,7 @@ CoverBackground {
         InfoField {
             label: positionSource.position.longitudeValid ? "" : "Longitude"
             visible: settings.showLongitudeCover
+            fontpixelSize: Theme.fontSizeMedium
             value: {
                 if (positionSource.position.longitudeValid) {
                     if (settings.value("coordinateFormat") === "DEG") {
@@ -84,7 +86,7 @@ CoverBackground {
         InfoField {
             label: "Last update"
             visible: settings.showLastUpdateCover
-            value: positionSource.position.timestamp
+            value: Qt.formatTime(positionSource.position.timestamp, "hh:mm:ss")
         }
         InfoField {
             label: "Vert. acc."
