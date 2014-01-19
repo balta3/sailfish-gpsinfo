@@ -20,16 +20,16 @@ License:    LICENSE
 URL:        http://example.org/
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  GPSInfo.yaml
-Requires:   qt5-qtdeclarative-import-sensors
-Requires:   qt5-qtdeclarative-import-positioning
 Requires:   sailfishsilica-qt5 >= 0.10.9
-BuildRequires:  pkgconfig(sailfishapp) >= 0.0.10
-BuildRequires:  pkgconfig(Qt5Core)
-BuildRequires:  pkgconfig(Qt5Qml)
+Requires:   qt5-qtdeclarative-import-positioning
+Requires:   qt5-qtdeclarative-import-sensors
 BuildRequires:  pkgconfig(Qt5Quick)
-BuildRequires:  qt5-qtdeclarative-import-sensors
-BuildRequires:  qt5-qtdeclarative-import-positioning
+BuildRequires:  pkgconfig(Qt5Qml)
+BuildRequires:  pkgconfig(Qt5Core)
+BuildRequires:  pkgconfig(sailfishapp) >= 0.0.10
 BuildRequires:  qt5-qtpositioning-devel
+BuildRequires:  qt5-qtdeclarative-import-positioning
+BuildRequires:  qt5-qtdeclarative-import-sensors
 BuildRequires:  desktop-file-utils
 
 %description
@@ -68,13 +68,13 @@ desktop-file-install --delete-original       \
 
 %files
 %defattr(-,root,root,-)
-/usr/share/icons/hicolor/86x86/apps
-/usr/share/applications
-/usr/share/GPSInfo
-/usr/bin
-%{_datadir}/icons/hicolor/86x86/apps/%{name}.png
-%{_datadir}/applications/%{name}.desktop
-%{_datadir}/%{name}/qml
 %{_bindir}
+%{_datadir}/%{name}/qml
+%{_datadir}/applications/%{name}.desktop
+%{_datadir}/icons/hicolor/86x86/apps/%{name}.png
+/usr/bin
+/usr/share/GPSInfo
+/usr/share/applications
+/usr/share/icons/hicolor/86x86/apps
 # >> files
 # << files
