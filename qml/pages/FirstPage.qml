@@ -14,6 +14,14 @@ Page {
 
         PullDownMenu {
             MenuItem {
+                text: "about"
+                onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
+            }
+            MenuItem {
+                text: "settings"
+                onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
+            }
+            MenuItem {
                 text: positionSource.active ? "deactivate GPS" : "activate GPS"
                 onClicked: {
                     if (positionSource.active) {
@@ -26,10 +34,6 @@ Page {
                         console.log("active: " + positionSource.active);
                     }
                 }
-            }
-            MenuItem {
-                text: "settings"
-                onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
             }
         }
 

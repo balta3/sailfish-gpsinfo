@@ -25,7 +25,10 @@ OTHER_FILES += qml/GPSInfo.qml \
     qml/pages/SettingsPage.qml \
     qml/LocationFormatter.js \
     qml/providers/Providers.qml \
-    qml/pages/ShowGridRowLabel.qml
+    qml/pages/ShowGridRowLabel.qml \
+    qml/pages/AboutPage.qml \
+    qml/pages/LicensePage.qml \
+    qml/license.js
 
 HEADERS += \
     src/gpsdatasource.h \
