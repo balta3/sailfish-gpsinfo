@@ -6,36 +6,51 @@ Page {
     SilicaListView {
         anchors.fill: parent
         header: PageHeader {
-            title: "Settings"
+            title: qsTr("Settings")
         }
         model: VisualItemModel {
             ComboBox {
-                label: "Coordinate format"
+                label: qsTr("Coordinate format")
                 currentIndex: settings.coordinateFormat === "DEG" ? 0 : 1
                 onCurrentIndexChanged: {
                     settings.coordinateFormat = (currentIndex === 0 ? "DEG" : "DEC")
                 }
                 menu: ContextMenu {
                     MenuItem {
-                        text: "degree"
+                        text: qsTr("degree")
                     }
                     MenuItem {
-                        text: "decimal"
+                        text: qsTr("decimal")
                     }
                 }
             }
             ComboBox {
-                label: "Units"
+                label: qsTr("Units")
                 currentIndex: settings.units === "MET" ? 0 : 1
                 onCurrentIndexChanged: {
                     settings.units = (currentIndex === 0 ? "MET" : "IMP")
                 }
                 menu: ContextMenu {
                     MenuItem {
-                        text: "metric"
+                        text: qsTr("metric")
                     }
                     MenuItem {
-                        text: "imperial"
+                        text: qsTr("imperial")
+                    }
+                }
+            }
+            ComboBox {
+                label: qsTr("Language")
+                currentIndex: settings.locale === "de" ? 0 : 1
+                onCurrentIndexChanged: {
+                    settings.locale = (currentIndex === 0 ? "de" : "en")
+                }
+                menu: ContextMenu {
+                    MenuItem {
+                        text: "Deutsch"
+                    }
+                    MenuItem {
+                        text: "English"
                     }
                 }
             }
@@ -57,18 +72,18 @@ Page {
                             id: label
                             anchors.left: parent.left
                             anchors.leftMargin: Theme.paddingLarge
-                            text: "Show..."
+                            text: qsTr("Show") + "..."
                         }
                     }
                     Label {
-                        text: "Appview"
+                        text: qsTr("Appview")
                     }
                     Label {
-                        text: "Cover"
+                        text: qsTr("Cover")
                     }
 
                     ShowGridRowLabel {
-                        text: "GPS state"
+                        text: qsTr("GPS state")
                     }
                     Switch {
                         checked: settings.showGpsStateApp
@@ -80,7 +95,7 @@ Page {
                     }
 
                     ShowGridRowLabel {
-                        text: "Latitude"
+                        text: qsTr("Latitude")
                     }
                     Switch {
                         checked: settings.showLatitudeApp
@@ -92,7 +107,7 @@ Page {
                     }
 
                     ShowGridRowLabel {
-                        text: "Longitude"
+                        text: qsTr("Longitude")
                     }
                     Switch {
                         checked: settings.showLongitudeApp
@@ -104,7 +119,7 @@ Page {
                     }
 
                     ShowGridRowLabel {
-                        text: "Altitude"
+                        text: qsTr("Altitude")
                     }
                     Switch {
                         checked: settings.showAltitudeApp
@@ -116,7 +131,7 @@ Page {
                     }
 
                     ShowGridRowLabel {
-                        text: "Speed"
+                        text: qsTr("Speed")
                     }
                     Switch {
                         checked: settings.showSpeedApp
@@ -128,7 +143,7 @@ Page {
                     }
 
                     ShowGridRowLabel {
-                        text: "Last Update"
+                        text: qsTr("Last Update")
                     }
                     Switch {
                         checked: settings.showLastUpdateApp
@@ -140,7 +155,7 @@ Page {
                     }
 
                     ShowGridRowLabel {
-                        text: "Vertical Accuracy"
+                        text: qsTr("Vertical Accuracy")
                     }
                     Switch {
                         checked: settings.showVerticalAccuracyApp
@@ -152,7 +167,7 @@ Page {
                     }
 
                     ShowGridRowLabel {
-                        text: "Horizontal Accuracy"
+                        text: qsTr("Horizontal Accuracy")
                     }
                     Switch {
                         checked: settings.showHorizontalAccuracyApp
@@ -164,7 +179,7 @@ Page {
                     }
 
                     ShowGridRowLabel {
-                        text: "Compass Direction"
+                        text: qsTr("Compass Direction")
                     }
                     Switch {
                         checked: settings.showCompassDirectionApp

@@ -14,7 +14,8 @@ SOURCES += \
     src/gpsdatasource.cpp \
     src/qmlsettingswrapper.cpp \
     src/gpsinfosettings.cpp \
-    src/harbour-GPSInfo.cpp
+    src/harbour-GPSInfo.cpp \
+    src/app.cpp
 
 OTHER_FILES += \
     qml/pages/CoverPage.qml \
@@ -30,11 +31,22 @@ OTHER_FILES += \
     qml/harbour-GPSInfo.qml \
     harbour-GPSInfo.desktop \
     rpm/harbour-GPSInfo.yaml \
-    rpm/harbour-GPSInfo.spec
+    rpm/harbour-GPSInfo.spec \
+    locales/de.qm \
+    locales/en.qm
 
 HEADERS += \
     src/gpsdatasource.h \
     src/qmlsettingswrapper.h \
-    src/gpsinfosettings.h
+    src/gpsinfosettings.h \
+    src/app.h
 
 QT += positioning
+
+locales.files = \
+    locales/de.qm \
+    locales/en.qm
+
+locales.path = /usr/share/harbour-GPSInfo/locales
+
+INSTALLS += locales

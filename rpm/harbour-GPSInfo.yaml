@@ -29,4 +29,5 @@ Files:
 - '%{_datadir}/applications/%{name}.desktop'
 - '%{_datadir}/%{name}/qml'
 - '%{_bindir}'
+- /usr/share/harbour-GPSInfo/locales
 PkgBR: [qt5-qtdeclarative-import-sensors, qt5-qtdeclarative-import-positioning, qt5-qtpositioning-devel]

@@ -35,6 +35,7 @@ Page {
             horizontalAlignment: Text.AlignHCenter
             font.pixelSize: Theme.fontSizeMedium
             color: Theme.primaryColor
+            wrapMode: Text.WrapAtWordBoundaryOrAnywhere
             text: qsTr("An app to show all position information")
         }
 
@@ -71,8 +72,7 @@ Page {
             font.pixelSize: Theme.fontSizeSmall
             color: Theme.secondaryColor
             wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-            text: qsTr("GPSInfo is open source software licensed under the terms of ")
-                  + qsTr("the GNU General Public License.")
+            text: qsTr("GPSInfo is open source software licensed under the terms of the GNU General Public License.")
         }
 
         Item {

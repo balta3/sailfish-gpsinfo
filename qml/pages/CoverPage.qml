@@ -13,7 +13,7 @@ CoverBackground {
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.top: parent.top
         anchors.topMargin: 4
-        text: "GPS Info"
+        text: qsTr("GPS Info")
     }
     Column {
         id: column
@@ -21,12 +21,12 @@ CoverBackground {
         width: parent.width
         spacing: Theme.paddingLarge
         InfoField {
-            label: "GPS"
+            label: qsTr("GPS")
             visible: settings.showGpsStateCover
-            value: positionSource.active ? "active" : "inactive"
+            value: positionSource.active ? qsTr("active") : qsTr("inactive")
         }
         InfoField {
-            label: positionSource.position.latitudeValid ? "" : "Latitude"
+            label: positionSource.position.latitudeValid ? "" : qsTr("Latitude")
             visible: settings.showLatitudeCover
             fontpixelSize: Theme.fontSizeMedium
             value: {
@@ -41,7 +41,7 @@ CoverBackground {
             }
         }
         InfoField {
-            label: positionSource.position.longitudeValid ? "" : "Longitude"
+            label: positionSource.position.longitudeValid ? "" : qsTr("Longitude")
             visible: settings.showLongitudeCover
             fontpixelSize: Theme.fontSizeMedium
             value: {
@@ -56,7 +56,7 @@ CoverBackground {
             }
         }
         InfoField {
-            label: "Altitude"
+            label: qsTr("Altitude")
             visible: settings.showAltitudeCover
             value: {
                 if (positionSource.position.altitudeValid) {
@@ -70,7 +70,7 @@ CoverBackground {
             }
         }
         InfoField {
-            label: positionSource.position.speedValid ? "" : "Speed"
+            label: positionSource.position.speedValid ? "" : qsTr("Speed")
             visible: settings.showSpeedCover
             value: {
                 if (positionSource.position.speedValid) {
@@ -84,12 +84,12 @@ CoverBackground {
             }
         }
         InfoField {
-            label: "Last update"
+            label: qsTr("Last update")
             visible: settings.showLastUpdateCover
             value: Qt.formatTime(positionSource.position.timestamp, "hh:mm:ss")
         }
         InfoField {
-            label: "Vert. acc."
+            label: qsTr("Vert. acc.")
             visible: settings.showVerticalAccuracyCover
             value: {
                 if (positionSource.position.verticalAccuracyValid) {
@@ -103,7 +103,7 @@ CoverBackground {
             }
         }
         InfoField {
-            label: "Hor. acc."
+            label: qsTr("Hor. acc.")
             visible: settings.showHorizontalAccuracyCover
             value: {
                 if (positionSource.position.horizontalAccuracyValid) {
@@ -117,7 +117,7 @@ CoverBackground {
             }
         }
         InfoField {
-            label: "Compass direction"
+            label: qsTr("Compass direction")
             visible: settings.showCompassDirectionCover
             value: compass.reading.azimuth
         }

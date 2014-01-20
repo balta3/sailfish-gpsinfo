@@ -7,6 +7,7 @@ class GPSInfoSettings : public QMLSettingsWrapper
 {
     Q_OBJECT
     Q_PROPERTY(QString coordinateFormat READ getCoordinateFormat WRITE setCoordinateFormat NOTIFY coordinateFormatChanged)
+    Q_PROPERTY(QString locale READ getLocale WRITE setLocale NOTIFY localeChanged)
     Q_PROPERTY(bool showAltitudeApp READ getShowAltitudeApp WRITE setShowAltitudeApp NOTIFY showAltitudeAppChanged)
     Q_PROPERTY(bool showAltitudeCover READ getShowAltitudeCover WRITE setShowAltitudeCover NOTIFY showAltitudeCoverChanged)
     Q_PROPERTY(bool showCompassDirectionApp READ getShowCompassDirectionApp WRITE setShowCompassDirectionApp NOTIFY showCompassDirectionAppChanged)
@@ -30,6 +31,7 @@ public:
     explicit GPSInfoSettings(QObject *parent = 0);
 
     QString getCoordinateFormat() {return this->value("coordinateFormat", "DEG").toString();}
+    QString getLocale() {return this->value("locale", "en").toString();}
     bool getShowAltitudeApp() {return this->value("showAltitudeApp", true).toBool();}
     bool getShowAltitudeCover() {return this->value("showAltitudeCover", false).toBool();}
     bool getShowCompassDirectionApp() {return this->value("showCompassDirectionApp", true).toBool();}
@@ -51,6 +53,7 @@ public:
     QString getUnits() {return this->value("units", "MET").toString();}
 
     void setCoordinateFormat(QString val) {this->setValue("coordinateFormat", val); emit coordinateFormatChanged(val);}
+    void setLocale(QString val) {this->setValue("locale", val); emit localeChanged(val);}
     void setShowAltitudeApp(bool val) {this->setValue("showAltitudeApp", val); emit showAltitudeAppChanged(val);}
     void setShowAltitudeCover(bool val) {this->setValue("showAltitudeCover", val); emit showAltitudeCoverChanged(val);}
     void setShowCompassDirectionApp(bool val) {this->setValue("showCompassDirectionApp", val); emit showCompassDirectionAppChanged(val);}
@@ -74,6 +77,7 @@ private:
 
 signals:
     void coordinateFormatChanged(QString);
+    void localeChanged(QString);
     void showAltitudeAppChanged(bool);
     void showAltitudeCoverChanged(bool);
     void showCompassDirectionAppChanged(bool);

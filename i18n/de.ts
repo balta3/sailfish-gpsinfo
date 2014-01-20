@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0" language="de_DE">
+<context>
+    <name>AboutPage</name>
+    <message>
+        <source>About GPSInfo</source>
+        <translation>Über GPSInfo</translation>
+    </message>
+    <message>
+        <source>An app to show all position information</source>
+        <translation>Eine App um alle Positionsinformationen anzuzeigen</translation>
+    </message>
+    <message>
+        <source>Version 0.1</source>
+        <translation>Version 0.1</translation>
+    </message>
+    <message>
+        <source>View license</source>
+        <translation>Lizenz anzeigen</translation>
+    </message>
+    <message>
+        <source>For suggestions, bugs and ideas visit </source>
+        <translation>Für Vorschläge, Fehler und Ideen besuche</translation>
+    </message>
+    <message>
+        <source>GPSInfo is open source software licensed under the terms of the GNU General Public License.</source>
+        <translation>GPSInfo ist Open-Source Software und lizensiert unter den Bedingungen der GNU General Public License </translation>
+    </message>
+</context>
+<context>
+    <name>CoverPage</name>
+    <message>
+        <source>GPS Info</source>
+        <translation>GPS Info</translation>
+    </message>
+    <message>
+        <source>GPS</source>
+        <translation>GPS</translation>
+    </message>
+    <message>
+        <source>active</source>
+        <translation>aktiv</translation>
+    </message>
+    <message>
+        <source>inactive</source>
+        <translation>inaktiv</translation>
+    </message>
+    <message>
+        <source>Latitude</source>
+        <translation>Breite</translation>
+    </message>
+    <message>
+        <source>Longitude</source>
+        <translation>Länge</translation>
+    </message>
+    <message>
+        <source>Altitude</source>
+        <translation>Höhe</translation>
+    </message>
+    <message>
+        <source>Speed</source>
+        <translation>Geschwindigkeit</translation>
+    </message>
+    <message>
+        <source>Last update</source>
+        <translation>Letztes Update</translation>
+    </message>
+    <message>
+        <source>Vert. acc.</source>
+        <translation>Vert. Gen.</translation>
+    </message>
+    <message>
+        <source>Hor. acc.</source>
+        <translation>Hor. Gen.</translation>
+    </message>
+    <message>
+        <source>Compass direction</source>
+        <translation>Kompass-Richtung</translation>
+    </message>
+</context>
+<context>
+    <name>FirstPage</name>
+    <message>
+        <source>About</source>
+        <translation>Über</translation>
+    </message>
+    <message>
+        <source>Settings</source>
+        <translation>Einstellungen</translation>
+    </message>
+    <message>
+        <source>Deactivate GPS</source>
+        <translation>GPS deaktivieren</translation>
+    </message>
+    <message>
+        <source>Activate GPS</source>
+        <translation>GPS aktivieren</translation>
+    </message>
+    <message>
+        <source>GPS Info</source>
+        <translation>GPS Info</translation>
+    </message>
+    <message>
+        <source>GPS</source>
+        <translation>GPS</translation>
+    </message>
+    <message>
+        <source>active</source>
+        <translation>aktiv</translation>
+    </message>
+    <message>
+        <source>inactive</source>
+        <translation>inaktiv</translation>
+    </message>
+    <message>
+        <source>Latitude</source>
+        <translation>Breite</translation>
+    </message>
+    <message>
+        <source>Longitude</source>
+        <translation>Länge</translation>
+    </message>
+    <message>
+        <source>Altitude</source>
+        <translation>Höhe</translation>
+    </message>
+    <message>
+        <source>Last update</source>
+        <translation>Letztes Update</translation>
+    </message>
+    <message>
+        <source>Horizontal accuracy</source>
+        <translation>Horizontale Genauigkeit</translation>
+    </message>
+    <message>
+        <source>Compass direction</source>
+        <translation>Kompass-Richtung</translation>
+    </message>
+    <message>
+        <source>Speed</source>
+        <translation>Geschwindigkeit</translation>
+    </message>
+    <message>
+        <source>Vertical accuracy</source>
+        <translation>Vertikale Genauigkeit</translation>
+    </message>
+</context>
+<context>
+    <name>LicensePage</name>
+    <message>
+        <source>License</source>
+        <translation>Lizenz</translation>
+    </message>
+</context>
+<context>
+    <name>SettingsPage</name>
+    <message>
+        <source>Settings</source>
+        <translation>Einstellungen</translation>
+    </message>
+    <message>
+        <source>Coordinate format</source>
+        <translation>Koordinatenformat</translation>
+    </message>
+    <message>
+        <source>degree</source>
+        <translation>Winkelmaß</translation>
+    </message>
+    <message>
+        <source>decimal</source>
+        <translation>dezimal</translation>
+    </message>
+    <message>
+        <source>Units</source>
+        <translation>Einheiten</translation>
+    </message>
+    <message>
+        <source>metric</source>
+        <translation>metrisch</translation>
+    </message>
+    <message>
+        <source>imperial</source>
+        <translation>imperial</translation>
+    </message>
+    <message>
+        <source>Show</source>
+        <translation>Anzeigen</translation>
+    </message>
+    <message>
+        <source>Appview</source>
+        <translation>Appansicht</translation>
+    </message>
+    <message>
+        <source>Cover</source>
+        <translation>Cover</translation>
+    </message>
+    <message>
+        <source>GPS state</source>
+        <translation>GPS-Status</translation>
+    </message>
+    <message>
+        <source>Latitude</source>
+        <translation>Breite</translation>
+    </message>
+    <message>
+        <source>Longitude</source>
+        <translation>Länge</translation>
+    </message>
+    <message>
+        <source>Altitude</source>
+        <translation>Höhe</translation>
+    </message>
+    <message>
+        <source>Speed</source>
+        <translation>Geschwindigkeit</translation>
+    </message>
+    <message>
+        <source>Last Update</source>
+        <translation>Letztes Update</translation>
+    </message>
+    <message>
+        <source>Vertical Accuracy</source>
+        <translation>Vertikale Genauigkeit</translation>
+    </message>
+    <message>
+        <source>Horizontal Accuracy</source>
+        <translation>Horizontale Genauigkeit</translation>
+    </message>
+    <message>
+        <source>Compass Direction</source>
+        <translation>Kompass-Richtung</translation>
+    </message>
+    <message>
+        <source>Language</source>
+        <translation>Sprache</translation>
+    </message>
+</context>
+</TS>

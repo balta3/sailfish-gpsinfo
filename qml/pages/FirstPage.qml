@@ -14,15 +14,15 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: "about"
+                text: qsTr("About")
                 onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
             }
             MenuItem {
-                text: "settings"
+                text: qsTr("Settings")
                 onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
             }
             MenuItem {
-                text: positionSource.active ? "deactivate GPS" : "activate GPS"
+                text: positionSource.active ? qsTr("Deactivate GPS") : qsTr("Activate GPS")
                 onClicked: {
                     if (positionSource.active) {
                         console.log("deactivating GPS");
@@ -45,15 +45,15 @@ Page {
             width: page.width
             spacing: Theme.paddingLarge
             PageHeader {
-                title: "GPS Info"
+                title: qsTr("GPS Info")
             }
             InfoField {
-                label: "GPS"
+                label: qsTr("GPS")
                 visible: settings.showGpsStateApp
-                value: positionSource.active ? "active" : "inactive"
+                value: positionSource.active ? qsTr("active") : qsTr("inactive")
             }
             InfoField {
-                label: "Latitude"
+                label: qsTr("Latitude")
                 visible: settings.showLatitudeApp
                 value: {
                     if (positionSource.position.latitudeValid) {
@@ -67,7 +67,7 @@ Page {
                 }
             }
             InfoField {
-                label: "Longitude"
+                label: qsTr("Longitude")
                 visible: settings.showLongitudeApp
                 value: {
                     if (positionSource.position.longitudeValid) {
@@ -81,7 +81,7 @@ Page {
                 }
             }
             InfoField {
-                label: "Altitude"
+                label: qsTr("Altitude")
                 visible: settings.showAltitudeApp
                 value: {
                     if (positionSource.position.altitudeValid) {
@@ -95,7 +95,7 @@ Page {
                 }
             }
             InfoField {
-                label: "Current speed"
+                label: qsTr("Speed")
                 visible: settings.showSpeedApp
                 value: {
                     if (positionSource.position.speedValid) {
@@ -109,12 +109,12 @@ Page {
                 }
             }
             InfoField {
-                label: "Last update"
+                label: qsTr("Last update")
                 visible: settings.showLastUpdateApp
                 value: Qt.formatTime(positionSource.position.timestamp, "hh:mm:ss")
             }
             InfoField {
-                label: "Vertical accuracy"
+                label: qsTr("Vertical accuracy")
                 visible: settings.showVerticalAccuracyApp
                 value: {
                     if (positionSource.position.verticalAccuracyValid) {
@@ -128,7 +128,7 @@ Page {
                 }
             }
             InfoField {
-                label: "Horizontal accuracy"
+                label: qsTr("Horizontal accuracy")
                 visible: settings.showHorizontalAccuracyApp
                 value: {
                     if (positionSource.position.horizontalAccuracyValid) {
@@ -142,7 +142,7 @@ Page {
                 }
             }
             InfoField {
-                label: "Compass direction"
+                label: qsTr("Compass direction")
                 visible: settings.showCompassDirectionApp
                 value: LocationFormater.formatDirection(compass.reading.azimuth)
             }
