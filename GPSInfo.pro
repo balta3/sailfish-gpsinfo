@@ -6,7 +6,7 @@
 #         - desktop icon filename must be changed
 #         - desktop filename must be changed
 #         - icon definition filename in desktop file must be changed
-TARGET = harbour-GPSInfo
+TARGET = harbour-gpsinfo
 
 CONFIG += sailfishapp
 
@@ -14,8 +14,8 @@ SOURCES += \
     src/gpsdatasource.cpp \
     src/qmlsettingswrapper.cpp \
     src/gpsinfosettings.cpp \
-    src/harbour-GPSInfo.cpp \
-    src/app.cpp
+    src/app.cpp \
+    src/harbour-gpsinfo.cpp
 
 OTHER_FILES += \
     qml/pages/CoverPage.qml \
@@ -28,12 +28,12 @@ OTHER_FILES += \
     qml/pages/AboutPage.qml \
     qml/pages/LicensePage.qml \
     qml/license.js \
-    qml/harbour-GPSInfo.qml \
-    harbour-GPSInfo.desktop \
-    rpm/harbour-GPSInfo.yaml \
-    rpm/harbour-GPSInfo.spec \
     locales/de.qm \
-    locales/en.qm
+    locales/en.qm \
+    rpm/harbour-gpsinfo.yaml \
+    rpm/harbour-gpsinfo.spec \
+    harbour-gpsinfo.desktop \
+    qml/harbour-gpsinfo.qml
 
 HEADERS += \
     src/gpsdatasource.h \
@@ -47,6 +47,6 @@ locales.files = \
     locales/de.qm \
     locales/en.qm
 
-locales.path = /usr/share/harbour-GPSInfo/locales
+locales.path = /usr/share/harbour-gpsinfo/locales
 
 INSTALLS += locales

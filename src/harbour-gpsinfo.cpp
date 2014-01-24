@@ -1,6 +1,4 @@
-#ifdef QT_QML_DEBUG
 #include <QtQuick>
-#endif
 
 #include <sailfishapp.h>
 #include <QTranslator>
@@ -17,7 +15,7 @@ int main(int argc, char *argv[]) {
     app->connect(settings, SIGNAL(localeChanged(QString)), app, SLOT(localeChanged(QString)));
 
     QStringList locales;
-    QString baseName("/usr/share/harbour-GPSInfo/locales/");
+    QString baseName("/usr/share/harbour-gpsinfo/locales/");
     QDir localesDir(baseName);
     if (localesDir.exists()) {
         locales = localesDir.entryList(QStringList() << "*.qm", QDir::Files | QDir::NoDotAndDotDot, QDir::Name | QDir::IgnoreCase);
@@ -27,7 +25,7 @@ int main(int argc, char *argv[]) {
     if (locales.contains(currentLocale)) {
         qDebug() << "loading" << currentLocale;
         QTranslator* translator = new QTranslator();
-        translator->load(currentLocale, "/usr/share/harbour-GPSInfo/locales", QString(), ".qm");
+        translator->load(currentLocale, "/usr/share/harbour-gpsinfo/locales", QString(), ".qm");
         QGuiApplication::installTranslator(translator);
     } else {
         qDebug() << "missing translation for" << currentLocale;
@@ -36,7 +34,7 @@ int main(int argc, char *argv[]) {
 
     QQuickView *view = SailfishApp::createView();
     view->rootContext()->setContextProperty("settings", settings);
-    view->setSource(SailfishApp::pathTo("qml/harbour-GPSInfo.qml"));
+    view->setSource(SailfishApp::pathTo("qml/harbour-gpsinfo.qml"));
     view->showFullScreen();
     return qGuiAppl->exec();
 }

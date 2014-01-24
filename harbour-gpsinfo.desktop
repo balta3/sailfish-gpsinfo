@@ -2,6 +2,6 @@
 Type=Application
 X-Nemo-Application-Type=silica-qt5
 Name=GPSInfo
-Icon=harbour-GPSInfo
-Exec=harbour-GPSInfo
+Icon=harbour-gpsinfo
+Exec=harbour-gpsinfo
 
