@@ -27,6 +27,7 @@ class GPSInfoSettings : public QMLSettingsWrapper
     Q_PROPERTY(bool showVerticalAccuracyApp READ getShowVerticalAccuracyApp WRITE setShowVerticalAccuracyApp NOTIFY showVerticalAccuracyAppChanged)
     Q_PROPERTY(bool showVerticalAccuracyCover READ getShowVerticalAccuracyCover WRITE setShowVerticalAccuracyCover NOTIFY showVerticalAccuracyCoverChanged)
     Q_PROPERTY(QString units READ getUnits WRITE setUnits NOTIFY unitsChanged)
+    Q_PROPERTY(int updateInterval READ getUpdateInterval WRITE setUpdateInterval NOTIFY updateIntervalChanged)
 public:
     explicit GPSInfoSettings(QObject *parent = 0);
 
@@ -51,6 +52,7 @@ public:
     bool getShowVerticalAccuracyApp() {return this->value("showVerticalAccuracyApp", true).toBool();}
     bool getShowVerticalAccuracyCover() {return this->value("showVerticalAccuracyCover", false).toBool();}
     QString getUnits() {return this->value("units", "MET").toString();}
+    int getUpdateInterval() {return this->value("updateInterval", 1).toInt();}
 
     void setCoordinateFormat(QString val) {this->setValue("coordinateFormat", val); emit coordinateFormatChanged(val);}
     void setLocale(QString val) {this->setValue("locale", val); emit localeChanged(val);}
@@ -73,6 +75,7 @@ public:
     void setShowVerticalAccuracyApp(bool val) {this->setValue("showVerticalAccuracyApp", val); emit showVerticalAccuracyAppChanged(val);}
     void setShowVerticalAccuracyCover(bool val) {this->setValue("showVerticalAccuracyCover", val); emit showVerticalAccuracyCoverChanged(val);}
     void setUnits(QString val) {this->setValue("units", val); emit unitsChanged(val);}
+    void setUpdateInterval(int val) {this->setValue("updateInterval", val); emit updateIntervalChanged(val);}
 private:
 
 signals:
@@ -97,6 +100,7 @@ signals:
     void showVerticalAccuracyAppChanged(bool);
     void showVerticalAccuracyCoverChanged(bool);
     void unitsChanged(QString);
+    void updateIntervalChanged(int);
 public slots:
 
 };

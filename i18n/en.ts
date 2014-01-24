@@ -56,27 +56,19 @@
     </message>
     <message>
         <source>Altitude</source>
-        <translation>Altitude</translation>
+        <translation>Alt.</translation>
     </message>
     <message>
         <source>Speed</source>
         <translation>Speed</translation>
     </message>
     <message>
-        <source>Last update</source>
-        <translation>Last Update</translation>
-    </message>
-    <message>
         <source>Vert. acc.</source>
-        <translation>Vert. acc.</translation>
+        <translation>V.acc.</translation>
     </message>
     <message>
         <source>Hor. acc.</source>
-        <translation>Hor. acc.</translation>
-    </message>
-    <message>
-        <source>Compass direction</source>
-        <translation>Compass direction</translation>
+        <translation>H.acc.</translation>
     </message>
 </context>
 <context>
@@ -234,6 +226,10 @@
     <message>
         <source>Language</source>
         <translation>Language</translation>
+    </message>
+    <message>
+        <source>Update interval</source>
+        <translation>Update interval</translation>
     </message>
 </context>
 </TS>

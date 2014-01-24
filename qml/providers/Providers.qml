@@ -8,7 +8,7 @@ Item {
     property alias compass: compass
     PositionSource {
         id: positionSource
-        updateInterval: 1000
+        updateInterval: settings.updateInterval
         active: true
     }
 

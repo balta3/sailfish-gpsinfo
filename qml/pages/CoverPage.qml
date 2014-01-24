@@ -84,7 +84,7 @@ CoverBackground {
             }
         }
         InfoField {
-            label: qsTr("Last update")
+            label: ""
             visible: settings.showLastUpdateCover
             value: Qt.formatTime(positionSource.position.timestamp, "hh:mm:ss")
         }
@@ -117,9 +117,9 @@ CoverBackground {
             }
         }
         InfoField {
-            label: qsTr("Compass direction")
+            label: ""
             visible: settings.showCompassDirectionCover
-            value: compass.reading.azimuth
+            value: LocationFormater.formatDirection(compass.reading.azimuth)
         }
     }
 
@@ -140,10 +140,6 @@ CoverBackground {
                 }
             }
         }
-
-        /*CoverAction {
-            iconSource: "image://theme/icon-cover-pause"
-        }*/
     }
 }
 

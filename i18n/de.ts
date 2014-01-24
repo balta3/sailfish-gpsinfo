@@ -63,20 +63,12 @@
         <translation>Geschwindigkeit</translation>
     </message>
     <message>
-        <source>Last update</source>
-        <translation>Letztes Update</translation>
-    </message>
-    <message>
         <source>Vert. acc.</source>
-        <translation>Vert. Gen.</translation>
+        <translation>V.Gen.</translation>
     </message>
     <message>
         <source>Hor. acc.</source>
-        <translation>Hor. Gen.</translation>
-    </message>
-    <message>
-        <source>Compass direction</source>
-        <translation>Kompass-Richtung</translation>
+        <translation>H.Gen.</translation>
     </message>
 </context>
 <context>
@@ -234,6 +226,10 @@
     <message>
         <source>Language</source>
         <translation>Sprache</translation>
+    </message>
+    <message>
+        <source>Update interval</source>
+        <translation>Update Intervall</translation>
     </message>
 </context>
 </TS>

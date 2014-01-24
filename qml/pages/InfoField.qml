@@ -19,7 +19,7 @@ Item {
     Label {
         id: value
         anchors.right: parent.right
-        color: Theme.secondaryHighlightColor
+        color: Theme.secondaryColor
         font.pixelSize: Theme.fontSizeLarge
         text: "Value"
     }

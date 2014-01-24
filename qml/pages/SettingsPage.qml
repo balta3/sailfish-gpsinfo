@@ -55,6 +55,22 @@ Page {
                 }
             }
 
+            Label {
+                anchors.left: parent.left
+                anchors.leftMargin: Theme.paddingMedium * 2
+                text: qsTr("Update interval")
+            }
+
+            Slider {
+                minimumValue: 1
+                maximumValue: 120
+                stepSize: 1
+                value: settings.updateInterval
+                valueText: value + "s"
+                width: parent.width
+                onValueChanged: settings.updateInterval = value
+            }
+
             Rectangle {
                 anchors.leftMargin: Theme.paddingMedium
                 height: grid.height
