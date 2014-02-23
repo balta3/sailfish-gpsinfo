@@ -2,12 +2,14 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import QtPositioning 5.0
 import QtSensors 5.0
+import gpsinfo 1.0
 
 import "../LocationFormatter.js" as LocationFormater
 
 CoverBackground {
     property PositionSource positionSource
     property Compass compass
+    property GPSDataSource gpsDataSource
     Label {
         id: label
         anchors.horizontalCenter: parent.horizontalCenter
@@ -117,6 +119,11 @@ CoverBackground {
             }
         }
         InfoField {
+            label: qsTr("Satel.")
+            visible: settings.showSatelliteInfoCover
+            value: gpsDataSource.numberOfUsedSatellites + "/" + gpsDataSource.numberOfVisibleSatellites
+        }
+        InfoField {
             label: ""
             visible: settings.showCompassDirectionCover
             value: LocationFormater.formatDirection(compass.reading.azimuth)
@@ -132,10 +139,12 @@ CoverBackground {
                 if (positionSource.active) {
                     console.log("deactivating GPS");
                     positionSource.stop();
+                    gpsDataSource.active = false;
                     console.log("active: " + positionSource.active);
                 } else {
                     console.log("activating GPS");
                     positionSource.start();
+                    gpsDataSource.active = true;
                     console.log("active: " + positionSource.active);
                 }
             }

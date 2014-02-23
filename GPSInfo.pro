@@ -33,7 +33,9 @@ OTHER_FILES += \
     rpm/harbour-gpsinfo.yaml \
     rpm/harbour-gpsinfo.spec \
     harbour-gpsinfo.desktop \
-    qml/harbour-gpsinfo.qml
+    qml/harbour-gpsinfo.qml \
+    qml/pages/SatelliteInfoPage.qml \
+    qml/CircleCalculator.js
 
 HEADERS += \
     src/gpsdatasource.h \
@@ -41,7 +43,7 @@ HEADERS += \
     src/gpsinfosettings.h \
     src/app.h
 
-QT += positioning
+QT += positioning declarative
 
 locales.files = \
     locales/de.qm \

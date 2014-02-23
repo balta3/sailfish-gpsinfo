@@ -22,6 +22,8 @@ class GPSInfoSettings : public QMLSettingsWrapper
     Q_PROPERTY(bool showLatitudeCover READ getShowLatitudeCover WRITE setShowLatitudeCover NOTIFY showLatitudeCoverChanged)
     Q_PROPERTY(bool showLongitudeApp READ getShowLongitudeApp WRITE setShowLongitudeApp NOTIFY showLongitudeAppChanged)
     Q_PROPERTY(bool showLongitudeCover READ getShowLongitudeCover WRITE setShowLongitudeCover NOTIFY showLongitudeCoverChanged)
+    Q_PROPERTY(bool showSatelliteInfoApp READ getShowSatelliteInfoApp WRITE setShowSatelliteInfoApp NOTIFY showSatelliteInfoAppChanged)
+    Q_PROPERTY(bool showSatelliteInfoCover READ getShowSatelliteInfoCover WRITE setShowSatelliteInfoCover NOTIFY showSatelliteInfoCoverChanged)
     Q_PROPERTY(bool showSpeedApp READ getShowSpeedApp WRITE setShowSpeedApp NOTIFY showSpeedAppChanged)
     Q_PROPERTY(bool showSpeedCover READ getShowSpeedCover WRITE setShowSpeedCover NOTIFY showSpeedCoverChanged)
     Q_PROPERTY(bool showVerticalAccuracyApp READ getShowVerticalAccuracyApp WRITE setShowVerticalAccuracyApp NOTIFY showVerticalAccuracyAppChanged)
@@ -47,6 +49,8 @@ public:
     bool getShowLatitudeCover() {return this->value("showLatitudeCover", true).toBool();}
     bool getShowLongitudeApp() {return this->value("showLongitudeApp", true).toBool();}
     bool getShowLongitudeCover() {return this->value("showLongitudeCover", true).toBool();}
+    bool getShowSatelliteInfoApp() {return this->value("showSatelliteInfoApp", true).toBool();}
+    bool getShowSatelliteInfoCover() {return this->value("showSatelliteInfoCover", false).toBool();}
     bool getShowSpeedApp() {return this->value("showSpeedApp", true).toBool();}
     bool getShowSpeedCover() {return this->value("showSpeedCover", false).toBool();}
     bool getShowVerticalAccuracyApp() {return this->value("showVerticalAccuracyApp", true).toBool();}
@@ -70,6 +74,8 @@ public:
     void setShowLatitudeCover(bool val) {this->setValue("showLatitudeCover", val); emit showLatitudeCoverChanged(val);}
     void setShowLongitudeApp(bool val) {this->setValue("showLongitudeApp", val); emit showLongitudeAppChanged(val);}
     void setShowLongitudeCover(bool val) {this->setValue("showLongitudeCover", val); emit showLongitudeCoverChanged(val);}
+    void setShowSatelliteInfoApp(bool val) {this->setValue("showSatelliteInfoApp", val); emit showSatelliteInfoAppChanged(val);}
+    void setShowSatelliteInfoCover(bool val) {this->setValue("showSatelliteInfoCover", val); emit showSatelliteInfoCoverChanged(val);}
     void setShowSpeedApp(bool val) {this->setValue("showSpeedApp", val); emit showSpeedAppChanged(val);}
     void setShowSpeedCover(bool val) {this->setValue("showSpeedCover", val); emit showSpeedCoverChanged(val);}
     void setShowVerticalAccuracyApp(bool val) {this->setValue("showVerticalAccuracyApp", val); emit showVerticalAccuracyAppChanged(val);}
@@ -95,6 +101,8 @@ signals:
     void showLatitudeCoverChanged(bool);
     void showLongitudeAppChanged(bool);
     void showLongitudeCoverChanged(bool);
+    void showSatelliteInfoAppChanged(bool);
+    void showSatelliteInfoCoverChanged(bool);
     void showSpeedAppChanged(bool);
     void showSpeedCoverChanged(bool);
     void showVerticalAccuracyAppChanged(bool);

@@ -195,6 +195,18 @@ Page {
                     }
 
                     ShowGridRowLabel {
+                        text: qsTr("Satellite Info")
+                    }
+                    Switch {
+                        checked: settings.showSatelliteInfoApp
+                        onClicked: settings.showSatelliteInfoApp = checked
+                    }
+                    Switch {
+                        checked: settings.showSatelliteInfoCover
+                        onClicked: settings.showSatelliteInfoCover = checked
+                    }
+
+                    ShowGridRowLabel {
                         text: qsTr("Compass Direction")
                     }
                     Switch {

@@ -8,16 +8,16 @@ QMLSettingsWrapper::QMLSettingsWrapper(QString organisation, QString application
 }
 
 QVariant QMLSettingsWrapper::value(const QString &key){
-    qDebug() << "load settings value" << key << "->" << this->settings->value(key);
+    //qDebug() << "load settings value" << key << "->" << this->settings->value(key);
     return this->settings->value(key);
 }
 
 QVariant QMLSettingsWrapper::value(const QString &key, const QVariant &defaultValue){
     if (this->settings->contains(key)) {
-        qDebug() << "load settings value" << key << "->" << this->settings->value(key);
+        //qDebug() << "load settings value" << key << "->" << this->settings->value(key);
         return this->settings->value(key);
     } else {
-        qDebug() << "load settings value" << key << "-> returning default" << defaultValue;
+        //qDebug() << "load settings value" << key << "-> returning default" << defaultValue;
         return defaultValue;
     }
 }

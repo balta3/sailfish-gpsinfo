@@ -2,6 +2,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import QtPositioning 5.0
 import QtSensors 5.0
+import gpsinfo 1.0
 
 import "../LocationFormatter.js" as LocationFormater
 
@@ -9,6 +10,26 @@ Page {
     id: page
     property PositionSource positionSource
     property Compass compass
+    property GPSDataSource gpsDataSource
+
+
+
+    SatelliteInfoPage {
+        id: satelliteInfoPage
+        compass: page.compass
+        gpsDataSource: page.gpsDataSource
+    }
+
+    Timer {
+            interval: 100
+            repeat: false
+            running: true
+            onTriggered: {
+                pageStack.pushAttached(satelliteInfoPage);
+                //gpsDataSource.onSatellitesChanged = satelliteInfoPage.repaintSatellites();
+            }
+    }
+
     SilicaFlickable {
         anchors.fill: parent
 
@@ -27,10 +48,12 @@ Page {
                     if (positionSource.active) {
                         console.log("deactivating GPS");
                         positionSource.stop();
+                        gpsDataSource.active = false;
                         console.log("active: " + positionSource.active);
                     } else {
                         console.log("activating GPS");
                         positionSource.start();
+                        gpsDataSource.active = true;
                         console.log("active: " + positionSource.active);
                     }
                 }
@@ -140,6 +163,11 @@ Page {
                     }
                     return "-"
                 }
+            }
+            InfoField {
+                label: qsTr("Satellites in use / view")
+                visible: settings.showSatelliteInfoApp
+                value: gpsDataSource.numberOfUsedSatellites + " / " + gpsDataSource.numberOfVisibleSatellites
             }
             InfoField {
                 label: qsTr("Compass direction")

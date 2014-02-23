@@ -8,7 +8,8 @@
 
 
 int main(int argc, char *argv[]) {
-    //GPSDataSource* source = new GPSDataSource();
+    qmlRegisterType<GPSDataSource>("gpsinfo", 1, 0, "GPSDataSource");
+    qmlRegisterType<GPSSatellite>();
     GPSInfoSettings* settings = new GPSInfoSettings();
     QGuiApplication* qGuiAppl = SailfishApp::application(argc, argv);
     App* app = new App();

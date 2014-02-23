@@ -12,10 +12,12 @@ ApplicationWindow
         FirstPage {
             positionSource: providers.positionSource
             compass: providers.compass
+            gpsDataSource: providers.gpsDataSource
         }
     }
     cover: CoverPage {
         positionSource: providers.positionSource
         compass: providers.compass
+        gpsDataSource: providers.gpsDataSource
     }
 }
