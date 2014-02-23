@@ -80,7 +80,7 @@ Page {
                 visible: settings.showLatitudeApp
                 value: {
                     if (positionSource.position.latitudeValid) {
-                        if (settings.value("coordinateFormat") === "DEG") {
+                        if (settings.coordinateFormat === "DEG") {
                             return LocationFormater.decimalLatToDMS(positionSource.position.coordinate.latitude, 2)
                         } else {
                             return positionSource.position.coordinate.latitude
@@ -94,7 +94,7 @@ Page {
                 visible: settings.showLongitudeApp
                 value: {
                     if (positionSource.position.longitudeValid) {
-                        if (settings.value("coordinateFormat") === "DEG") {
+                        if (settings.coordinateFormat === "DEG") {
                             return LocationFormater.decimalLongToDMS(positionSource.position.coordinate.longitude, 2)
                         } else {
                             return positionSource.position.coordinate.longitude
@@ -108,7 +108,7 @@ Page {
                 visible: settings.showAltitudeApp
                 value: {
                     if (positionSource.position.altitudeValid) {
-                        if (settings.value("units") == "MET") {
+                        if (settings.units == "MET") {
                             return positionSource.position.coordinate.altitude + " m"
                         } else {
                             return LocationFormater.roundToDecimal(positionSource.position.coordinate.altitude * 3.2808399, 2) + " ft"
@@ -122,7 +122,7 @@ Page {
                 visible: settings.showSpeedApp
                 value: {
                     if (positionSource.position.speedValid) {
-                        if (settings.value("units") == "MET") {
+                        if (settings.units == "MET") {
                             return LocationFormater.roundToDecimal(positionSource.position.speed, 2) + " m/s"
                         } else {
                             return LocationFormater.roundToDecimal(positionSource.position.speed * 3.2808399, 2) + " ft/s"
@@ -141,7 +141,7 @@ Page {
                 visible: settings.showVerticalAccuracyApp
                 value: {
                     if (positionSource.position.verticalAccuracyValid) {
-                        if (settings.value("units") == "MET") {
+                        if (settings.units == "MET") {
                             return positionSource.position.verticalAccuracy + " m"
                         } else {
                             return LocationFormater.roundToDecimal(positionSource.position.verticalAccuracy * 3.2808399, 2) + " ft"
@@ -155,7 +155,7 @@ Page {
                 visible: settings.showHorizontalAccuracyApp
                 value: {
                     if (positionSource.position.horizontalAccuracyValid) {
-                        if (settings.value("units") == "MET") {
+                        if (settings.units == "MET") {
                             return positionSource.position.horizontalAccuracy + " m"
                         } else {
                             return LocationFormater.roundToDecimal(positionSource.position.horizontalAccuracy * 3.2808399, 2) + " ft"
