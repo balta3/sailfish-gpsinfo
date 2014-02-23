@@ -12,10 +12,6 @@
         <translation>An app to show all position information</translation>
     </message>
     <message>
-        <source>Version 0.1</source>
-        <translation>Version 0.1</translation>
-    </message>
-    <message>
         <source>View license</source>
         <translation>View license</translation>
     </message>
@@ -26,6 +22,10 @@
     <message>
         <source>GPSInfo is open source software licensed under the terms of the GNU General Public License.</source>
         <translation>GPSInfo is open source software licensed under the terms of the GNU General Public License.</translation>
+    </message>
+    <message>
+        <source>Version</source>
+        <translation>Version</translation>
     </message>
 </context>
 <context>
