@@ -77,7 +77,7 @@ CoverBackground {
             value: {
                 if (positionSource.position.speedValid) {
                     if (settings.value("units") == "MET") {
-                        return positionSource.position.speed + " m/s"
+                        return LocationFormater.roundToDecimal(positionSource.position.speed, 2) + " m/s"
                     } else {
                         return LocationFormater.roundToDecimal(positionSource.position.speed * 3.2808399, 2) + " ft/s"
                     }
