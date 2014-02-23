@@ -70,6 +70,10 @@
         <source>Hor. acc.</source>
         <translation>H.Gen.</translation>
     </message>
+    <message>
+        <source>Satel.</source>
+        <translation>Satel.</translation>
+    </message>
 </context>
 <context>
     <name>FirstPage</name>
@@ -137,12 +141,23 @@
         <source>Vertical accuracy</source>
         <translation>Vertikale Genauigkeit</translation>
     </message>
+    <message>
+        <source>Satellites in use / view</source>
+        <translation>Satelliten in Ben. / Sicht</translation>
+    </message>
 </context>
 <context>
     <name>LicensePage</name>
     <message>
         <source>License</source>
         <translation>Lizenz</translation>
+    </message>
+</context>
+<context>
+    <name>SatelliteInfoPage</name>
+    <message>
+        <source>Satellite Info</source>
+        <translation>Satelliteninformationen</translation>
     </message>
 </context>
 <context>
@@ -217,7 +232,7 @@
     </message>
     <message>
         <source>Horizontal Accuracy</source>
-        <translation>Horizontale Genauigkeit</translation>
+        <translation>Horiz. Genauigkeit</translation>
     </message>
     <message>
         <source>Compass Direction</source>
@@ -230,6 +245,10 @@
     <message>
         <source>Update interval</source>
         <translation>Update Intervall</translation>
+    </message>
+    <message>
+        <source>Satellite Info</source>
+        <translation>Satelliteninform.</translation>
     </message>
 </context>
 </TS>

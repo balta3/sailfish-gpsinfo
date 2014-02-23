@@ -70,6 +70,10 @@
         <source>Hor. acc.</source>
         <translation>H.acc.</translation>
     </message>
+    <message>
+        <source>Satel.</source>
+        <translation>Satel.</translation>
+    </message>
 </context>
 <context>
     <name>FirstPage</name>
@@ -137,12 +141,23 @@
         <source>Vertical accuracy</source>
         <translation>Vertical accuracy</translation>
     </message>
+    <message>
+        <source>Satellites in use / view</source>
+        <translation>Satellites in use / view</translation>
+    </message>
 </context>
 <context>
     <name>LicensePage</name>
     <message>
         <source>License</source>
         <translation>License</translation>
+    </message>
+</context>
+<context>
+    <name>SatelliteInfoPage</name>
+    <message>
+        <source>Satellite Info</source>
+        <translation>Satellite Info</translation>
     </message>
 </context>
 <context>
@@ -230,6 +245,10 @@
     <message>
         <source>Update interval</source>
         <translation>Update interval</translation>
+    </message>
+    <message>
+        <source>Satellite Info</source>
+        <translation>Satellite Info</translation>
     </message>
 </context>
 </TS>
