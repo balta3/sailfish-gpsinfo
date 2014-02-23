@@ -40,7 +40,7 @@ Page {
                 }
             }
             ComboBox {
-                label: qsTr("Language")
+                label: qsTr("Language") + "*"
                 currentIndex: settings.locale === "de" ? 0 : 1
                 onCurrentIndexChanged: {
                     settings.locale = (currentIndex === 0 ? "de" : "en")
@@ -218,6 +218,15 @@ Page {
                         onClicked: settings.showCompassDirectionCover = checked
                     }
                 }
+            }
+
+            Text {
+                anchors.left: parent.left
+                anchors.leftMargin: Theme.paddingMedium * 2
+                anchors.bottomMargin: Theme.paddingLarge
+                font.pixelSize: Theme.fontSizeExtraSmall
+                color: Theme.secondaryColor
+                text: "*" + qsTr("requires app restart")
             }
         }
     }

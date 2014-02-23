@@ -250,5 +250,9 @@
         <source>Satellite Info</source>
         <translation>Satellite Info</translation>
     </message>
+    <message>
+        <source>requires app restart</source>
+        <translation>requires app restart</translation>
+    </message>
 </context>
 </TS>

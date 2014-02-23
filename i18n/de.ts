@@ -250,5 +250,9 @@
         <source>Satellite Info</source>
         <translation>Satelliteninform.</translation>
     </message>
+    <message>
+        <source>requires app restart</source>
+        <translation>benötigt Neustart der App</translation>
+    </message>
 </context>
 </TS>
