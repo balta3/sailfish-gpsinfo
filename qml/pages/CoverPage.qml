@@ -25,6 +25,7 @@ CoverBackground {
         InfoField {
             label: qsTr("GPS")
             visible: settings.showGpsStateCover
+            fontpixelSize: Theme.fontSizeMedium
             value: positionSource.active ? qsTr("active") : qsTr("inactive")
         }
         InfoField {
@@ -60,6 +61,7 @@ CoverBackground {
         InfoField {
             label: qsTr("Altitude")
             visible: settings.showAltitudeCover
+            fontpixelSize: Theme.fontSizeMedium
             value: {
                 if (positionSource.position.altitudeValid) {
                     if (settings.units == "MET") {
@@ -74,6 +76,7 @@ CoverBackground {
         InfoField {
             label: positionSource.position.speedValid ? "" : qsTr("Speed")
             visible: settings.showSpeedCover
+            fontpixelSize: Theme.fontSizeMedium
             value: {
                 if (positionSource.position.speedValid) {
                     if (settings.units == "MET") {
@@ -88,16 +91,19 @@ CoverBackground {
         InfoField {
             label: qsTr("Mov.")
             visible: settings.showMovementDirectionCover
+            fontpixelSize: Theme.fontSizeMedium
             value: isNaN(gpsDataSource.movementDirection) ? "-" : LocationFormater.formatDirection(gpsDataSource.movementDirection)
         }
         InfoField {
             label: ""
             visible: settings.showLastUpdateCover
+            fontpixelSize: Theme.fontSizeMedium
             value: Qt.formatTime(positionSource.position.timestamp, "hh:mm:ss")
         }
         InfoField {
             label: qsTr("Vert. acc.")
             visible: settings.showVerticalAccuracyCover
+            fontpixelSize: Theme.fontSizeMedium
             value: {
                 if (positionSource.position.verticalAccuracyValid) {
                     if (settings.units == "MET") {
@@ -112,6 +118,7 @@ CoverBackground {
         InfoField {
             label: qsTr("Hor. acc.")
             visible: settings.showHorizontalAccuracyCover
+            fontpixelSize: Theme.fontSizeMedium
             value: {
                 if (positionSource.position.horizontalAccuracyValid) {
                     if (settings.units == "MET") {
@@ -126,11 +133,13 @@ CoverBackground {
         InfoField {
             label: qsTr("Satel.")
             visible: settings.showSatelliteInfoCover
+            fontpixelSize: Theme.fontSizeMedium
             value: gpsDataSource.numberOfUsedSatellites + "/" + gpsDataSource.numberOfVisibleSatellites
         }
         InfoField {
-            label: qsTr("Comp.")
+            label: qsTr("Com.")
             visible: settings.showCompassDirectionCover
+            fontpixelSize: Theme.fontSizeMedium
             value: LocationFormater.formatDirection(compass.reading.azimuth)
         }
     }

@@ -13,14 +13,14 @@ Item {
     Label {
         id: label
         color: Theme.primaryColor
-        font.pixelSize: Theme.fontSizeLarge
+        font.pixelSize: fontpixelSize
         text: "Label"
     }
     Label {
         id: value
         anchors.right: parent.right
         color: Theme.secondaryColor
-        font.pixelSize: Theme.fontSizeLarge
+        font.pixelSize: fontpixelSize
         text: "Value"
     }
 }
