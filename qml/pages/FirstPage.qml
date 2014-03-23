@@ -132,6 +132,11 @@ Page {
                 }
             }
             InfoField {
+                label: qsTr("Movement direction")
+                visible: settings.showMovementDirectionApp
+                value: isNaN(gpsDataSource.movementDirection) ? "-" : LocationFormater.formatDirection(gpsDataSource.movementDirection)
+            }
+            InfoField {
                 label: qsTr("Last update")
                 visible: settings.showLastUpdateApp
                 value: Qt.formatTime(positionSource.position.timestamp, "hh:mm:ss")

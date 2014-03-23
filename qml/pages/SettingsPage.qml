@@ -159,6 +159,18 @@ Page {
                     }
 
                     ShowGridRowLabel {
+                        text: qsTr("Movement Direction")
+                    }
+                    Switch {
+                        checked: settings.showMovementDirectionApp
+                        onClicked: settings.showMovementDirectionApp = checked
+                    }
+                    Switch {
+                        checked: settings.showMovementDirectionCover
+                        onClicked: settings.showMovementDirectionCover = checked
+                    }
+
+                    ShowGridRowLabel {
                         text: qsTr("Last Update")
                     }
                     Switch {

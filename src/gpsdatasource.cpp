@@ -16,6 +16,13 @@ GPSDataSource::GPSDataSource(QObject *parent) :
     } else {
         qDebug() << "cannot create default QGeoSatelliteInfoSource";
     }
+    this->pSource = QGeoPositionInfoSource::createDefaultSource(this);
+    if (this->pSource) {
+        qDebug() << "created QGeoPositionInfoSource" << this->pSource->sourceName();
+        connect(this->pSource, SIGNAL(positionUpdated(QGeoPositionInfo)), this, SLOT(positionUpdated(QGeoPositionInfo)));
+    } else {
+        qDebug() << "cannot create default QGeoPositionInfoSource";
+    }
     this->active = false;
 }
 
@@ -53,6 +60,10 @@ void GPSDataSource::satellitesInViewUpdated(const QList<QGeoSatelliteInfo> &info
     this->setNumberOfVisibleSatellites(infos.size());
 }
 
+void GPSDataSource::positionUpdated(QGeoPositionInfo info) {
+    this->setMovementDirection(info.attribute(QGeoPositionInfo::Direction));
+}
+
 QVariantList GPSDataSource::getSatellites() {
     QList<GPSSatellite*> sats = this->satellites.values();
     QVariantList result;
@@ -67,6 +78,7 @@ void GPSDataSource::setActive(bool active) {
         if (this->sSource) {
             qDebug() << "activating source...";
             this->sSource->startUpdates();
+            this->pSource->startUpdates();
             this->active = true;
             emit this->activeChanged(true);
         }
@@ -74,6 +86,7 @@ void GPSDataSource::setActive(bool active) {
         if (this->sSource) {
             qDebug() << "deactivating source...";
             this->sSource->stopUpdates();
+            this->pSource->stopUpdates();
             this->active = false;
             qDeleteAll(this->satellites);
             this->satellites.clear();
@@ -86,6 +99,7 @@ void GPSDataSource::setActive(bool active) {
 void GPSDataSource::setUpdateInterval(int updateInterval) {
     if (this->sSource){
         this->sSource->setUpdateInterval(updateInterval);
+        this->pSource->setUpdateInterval(updateInterval);
         emit this->updateIntervalChanged(updateInterval);
     }
 }

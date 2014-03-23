@@ -86,6 +86,11 @@ CoverBackground {
             }
         }
         InfoField {
+            label: qsTr("Mov.")
+            visible: settings.showMovementDirectionCover
+            value: isNaN(gpsDataSource.movementDirection) ? "-" : LocationFormater.formatDirection(gpsDataSource.movementDirection)
+        }
+        InfoField {
             label: ""
             visible: settings.showLastUpdateCover
             value: Qt.formatTime(positionSource.position.timestamp, "hh:mm:ss")
@@ -124,7 +129,7 @@ CoverBackground {
             value: gpsDataSource.numberOfUsedSatellites + "/" + gpsDataSource.numberOfVisibleSatellites
         }
         InfoField {
-            label: ""
+            label: qsTr("Comp.")
             visible: settings.showCompassDirectionCover
             value: LocationFormater.formatDirection(compass.reading.azimuth)
         }
