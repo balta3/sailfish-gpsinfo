@@ -18,8 +18,8 @@ Page {
 
     Canvas {
         id: canvas
-        width: 500
-        height: 500
+        width: 510
+        height: 510
         anchors.centerIn: parent
         property int north : compass.reading.azimuth;
         property variant satellites : gpsDataSource.satellites;
@@ -28,10 +28,10 @@ Page {
         onPaint: {
             if (visible) {
                 var ctx = canvas.getContext('2d');
-                ctx.clearRect(0,0,500,500);
+                ctx.clearRect(0,0,510,510);
 
                 var radius = 240;
-                var center = {x: 250, y: 250};
+                var center = {x: 255, y: 255};
                 var northRad = CircleCalculator.degreeToRad(north);
                 var compassPos = {
                     north: {
