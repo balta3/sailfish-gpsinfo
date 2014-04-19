@@ -132,7 +132,7 @@ Page {
                             if (settings.speedUnit == "SEC") {
                                 return LocationFormater.roundToDecimal(positionSource.position.speed * 3.2808399, 2) + " " + qsTr("ft/s")
                             } else {
-                                return LocationFormater.roundToDecimal(positionSource.position.speed * 2.23693629) + " " + qsTr("mph")
+                                return LocationFormater.roundToDecimal(positionSource.position.speed * 2.23693629, 2) + " " + qsTr("mph")
                             }
                         }
                     }
