@@ -30,6 +30,7 @@ class GPSInfoSettings : public QMLSettingsWrapper
     Q_PROPERTY(bool showSpeedCover READ getShowSpeedCover WRITE setShowSpeedCover NOTIFY showSpeedCoverChanged)
     Q_PROPERTY(bool showVerticalAccuracyApp READ getShowVerticalAccuracyApp WRITE setShowVerticalAccuracyApp NOTIFY showVerticalAccuracyAppChanged)
     Q_PROPERTY(bool showVerticalAccuracyCover READ getShowVerticalAccuracyCover WRITE setShowVerticalAccuracyCover NOTIFY showVerticalAccuracyCoverChanged)
+    Q_PROPERTY(QString speedUnit READ getSpeedUnit WRITE setSpeedUnit NOTIFY speedUnitChanged)
     Q_PROPERTY(QString units READ getUnits WRITE setUnits NOTIFY unitsChanged)
     Q_PROPERTY(int updateInterval READ getUpdateInterval WRITE setUpdateInterval NOTIFY updateIntervalChanged)
 public:
@@ -59,6 +60,7 @@ public:
     bool getShowSpeedCover() {return this->value("showSpeedCover", false).toBool();}
     bool getShowVerticalAccuracyApp() {return this->value("showVerticalAccuracyApp", true).toBool();}
     bool getShowVerticalAccuracyCover() {return this->value("showVerticalAccuracyCover", false).toBool();}
+    QString getSpeedUnit() {return this->value("speedUnit", "SEC").toString();}
     QString getUnits() {return this->value("units", "MET").toString();}
     int getUpdateInterval() {return this->value("updateInterval", 1).toInt();}
 
@@ -86,6 +88,7 @@ public:
     void setShowSpeedCover(bool val) {this->setValue("showSpeedCover", val); emit showSpeedCoverChanged(val);}
     void setShowVerticalAccuracyApp(bool val) {this->setValue("showVerticalAccuracyApp", val); emit showVerticalAccuracyAppChanged(val);}
     void setShowVerticalAccuracyCover(bool val) {this->setValue("showVerticalAccuracyCover", val); emit showVerticalAccuracyCoverChanged(val);}
+    void setSpeedUnit(QString val) {this->setValue("speedUnit", val); emit speedUnitChanged(val);}
     void setUnits(QString val) {this->setValue("units", val); emit unitsChanged(val);}
     void setUpdateInterval(int val) {this->setValue("updateInterval", val); emit updateIntervalChanged(val);}
 private:
@@ -115,6 +118,7 @@ signals:
     void showSpeedCoverChanged(bool);
     void showVerticalAccuracyAppChanged(bool);
     void showVerticalAccuracyCoverChanged(bool);
+    void speedUnitChanged(QString);
     void unitsChanged(QString);
     void updateIntervalChanged(int);
 public slots:

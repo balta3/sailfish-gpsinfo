@@ -80,9 +80,17 @@ CoverBackground {
             value: {
                 if (positionSource.position.speedValid) {
                     if (settings.units == "MET") {
-                        return LocationFormater.roundToDecimal(positionSource.position.speed, 2) + " m/s"
+                        if (settings.speedUnit == "SEC") {
+                            return LocationFormater.roundToDecimal(positionSource.position.speed, 2) + " m/s"
+                        } else {
+                            return LocationFormater.roundToDecimal(positionSource.position.speed * 60 * 60 / 1000, 2) + " km/h"
+                        }
                     } else {
-                        return LocationFormater.roundToDecimal(positionSource.position.speed * 3.2808399, 2) + " ft/s"
+                        if (settings.speedUnit == "SEC") {
+                            return LocationFormater.roundToDecimal(positionSource.position.speed * 3.2808399, 2) + " ft/s"
+                        } else {
+                            return LocationFormater.roundToDecimal(positionSource.position.speed * 2.23693629) + " mph"
+                        }
                     }
                 }
                 return "-"

@@ -3,6 +3,13 @@ import Sailfish.Silica 1.0
 
 Page {
     id: settingsPage
+    function setSpeedUnitComboBoxIndex() {
+        if (settings.units === "MET") {
+            speedUnitComboBox.currentIndex = settings.speedUnit === "SEC" ? 0 : 1
+        } else {
+            speedUnitComboBox.currentIndex = settings.speedUnit === "SEC" ? 2 : 3
+        }
+    }
     SilicaListView {
         anchors.fill: parent
         header: PageHeader {
@@ -11,48 +18,78 @@ Page {
         model: VisualItemModel {
             ComboBox {
                 label: qsTr("Coordinate format")
-                currentIndex: settings.coordinateFormat === "DEG" ? 0 : 1
-                onCurrentIndexChanged: {
-                    settings.coordinateFormat = (currentIndex === 0 ? "DEG" : "DEC")
-                }
                 menu: ContextMenu {
                     MenuItem {
                         text: qsTr("degree")
+                        onClicked: settings.coordinateFormat = "DEG"
                     }
                     MenuItem {
                         text: qsTr("decimal")
+                        onClicked: settings.coordinateFormat = "DEC"
                     }
                 }
+                Component.onCompleted: currentIndex = settings.coordinateFormat === "DEG" ? 0 : 1
             }
             ComboBox {
                 label: qsTr("Units")
-                currentIndex: settings.units === "MET" ? 0 : 1
-                onCurrentIndexChanged: {
-                    settings.units = (currentIndex === 0 ? "MET" : "IMP")
-                }
                 menu: ContextMenu {
                     MenuItem {
                         text: qsTr("metric")
+                        onClicked: {
+                            settings.units = "MET";
+                            setSpeedUnitComboBoxIndex();
+                        }
                     }
                     MenuItem {
                         text: qsTr("imperial")
+                        onClicked: {
+                            settings.units = "IMP";
+                            setSpeedUnitComboBoxIndex();
+                        }
                     }
                 }
+                Component.onCompleted: currentIndex = settings.units === "MET" ? 0 : 1
+            }
+            ComboBox {
+                id: speedUnitComboBox
+                label: qsTr("Speed")
+                menu: ContextMenu {
+                    MenuItem {
+                        visible: settings.units === "MET"
+                        text: qsTr("m/s")
+                        onClicked: settings.speedUnit = "SEC"
+                    }
+                    MenuItem {
+                        visible: settings.units === "MET"
+                        text: qsTr("km/h")
+                        onClicked: settings.speedUnit = "HOUR"
+                    }
+                    MenuItem {
+                        visible: settings.units === "IMP"
+                        text: qsTr("ft/s")
+                        onClicked: settings.speedUnit = "SEC"
+                    }
+                    MenuItem {
+                        visible: settings.units === "IMP"
+                        text: qsTr("mph")
+                        onClicked: settings.speedUnit = "HOUR"
+                    }
+                }
+                Component.onCompleted: setSpeedUnitComboBoxIndex()
             }
             ComboBox {
                 label: qsTr("Language") + "*"
-                currentIndex: settings.locale === "de" ? 0 : 1
-                onCurrentIndexChanged: {
-                    settings.locale = (currentIndex === 0 ? "de" : "en")
-                }
                 menu: ContextMenu {
                     MenuItem {
                         text: "Deutsch"
+                        onClicked: settings.locale = "de"
                     }
                     MenuItem {
                         text: "English"
+                        onClicked: settings.locale = "en"
                     }
                 }
+                Component.onCompleted: currentIndex = settings.locale === "de" ? 0 : 1
             }
 
             Label {
@@ -68,7 +105,7 @@ Page {
                 value: settings.updateInterval
                 valueText: value + "s"
                 width: parent.width
-                onValueChanged: settings.updateInterval = value
+                onReleased: settings.updateInterval = value
             }
 
             Rectangle {
@@ -233,9 +270,6 @@ Page {
             }
 
             Text {
-                anchors.left: parent.left
-                anchors.leftMargin: Theme.paddingMedium * 2
-                anchors.bottomMargin: Theme.paddingLarge
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: Theme.secondaryColor
                 text: "*" + qsTr("requires app restart")
