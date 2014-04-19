@@ -74,6 +74,30 @@
         <source>Satel.</source>
         <translation>Satel.</translation>
     </message>
+    <message>
+        <source>Mov.</source>
+        <translation>Bew.</translation>
+    </message>
+    <message>
+        <source>Com.</source>
+        <translation>Kom.</translation>
+    </message>
+    <message>
+        <source>m/s</source>
+        <translation>m/s</translation>
+    </message>
+    <message>
+        <source>km/h</source>
+        <translation>km/h</translation>
+    </message>
+    <message>
+        <source>ft/s</source>
+        <translation>ft/s</translation>
+    </message>
+    <message>
+        <source>mph</source>
+        <translation>mph</translation>
+    </message>
 </context>
 <context>
     <name>FirstPage</name>
@@ -144,6 +168,26 @@
     <message>
         <source>Satellites in use / view</source>
         <translation>Satelliten in Ben. / Sicht</translation>
+    </message>
+    <message>
+        <source>Movement direction</source>
+        <translation>Bewegungsrichtung</translation>
+    </message>
+    <message>
+        <source>m/s</source>
+        <translation>m/s</translation>
+    </message>
+    <message>
+        <source>km/h</source>
+        <translation>km/h</translation>
+    </message>
+    <message>
+        <source>ft/s</source>
+        <translation>ft/s</translation>
+    </message>
+    <message>
+        <source>mph</source>
+        <translation>mph</translation>
     </message>
 </context>
 <context>
@@ -253,6 +297,26 @@
     <message>
         <source>requires app restart</source>
         <translation>benötigt Neustart der App</translation>
+    </message>
+    <message>
+        <source>m/s</source>
+        <translation>m/s</translation>
+    </message>
+    <message>
+        <source>km/h</source>
+        <translation>km/h</translation>
+    </message>
+    <message>
+        <source>ft/s</source>
+        <translation>ft/s</translation>
+    </message>
+    <message>
+        <source>mph</source>
+        <translation>mph</translation>
+    </message>
+    <message>
+        <source>Movement Direction</source>
+        <translation>Bewegungsrichtung</translation>
     </message>
 </context>
 </TS>
