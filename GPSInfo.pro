@@ -28,6 +28,7 @@ OTHER_FILES += \
     qml/pages/AboutPage.qml \
     qml/pages/LicensePage.qml \
     qml/license.js \
+    images/coverbg.png \
     locales/de.qm \
     locales/en.qm \
     rpm/harbour-gpsinfo.yaml \
@@ -51,4 +52,9 @@ locales.files = \
 
 locales.path = /usr/share/harbour-gpsinfo/locales
 
-INSTALLS += locales
+images.files = \
+    images/coverbg.png
+
+images.path = /usr/share/harbour-gpsinfo/images
+
+INSTALLS += locales images

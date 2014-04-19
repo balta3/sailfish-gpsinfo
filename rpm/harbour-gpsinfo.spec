@@ -13,7 +13,7 @@ Name:       harbour-gpsinfo
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    GPS Info
-Version:    0.2
+Version:    0.3
 Release:    1
 Group:      Qt/Qt
 License:    LICENSE
@@ -74,6 +74,7 @@ desktop-file-install --delete-original       \
 %{_datadir}/icons/hicolor/86x86/apps/%{name}.png
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/%{name}/qml
+%{_datadir}/%{name}/images
 %{_bindir}
 /usr/share/harbour-gpsinfo/locales
 /usr/share/harbour-gpsinfo

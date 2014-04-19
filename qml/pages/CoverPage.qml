@@ -10,16 +10,17 @@ CoverBackground {
     property PositionSource positionSource
     property Compass compass
     property GPSDataSource gpsDataSource
-    Label {
-        id: label
+    Image {
+        id: bgimg
+        source: "../../images/coverbg.png"
         anchors.horizontalCenter: parent.horizontalCenter
-        anchors.top: parent.top
-        anchors.topMargin: 4
-        text: qsTr("GPS Info")
+        width: parent.width
+        height: sourceSize.height * width / sourceSize.width
     }
     Column {
         id: column
-        anchors.top: label.bottom
+        anchors.top: parent.top
+        anchors.topMargin: Theme.paddingMedium
         width: parent.width
         spacing: Theme.paddingLarge
         InfoField {
