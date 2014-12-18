@@ -44,7 +44,7 @@ HEADERS += \
     src/gpsinfosettings.h \
     src/app.h
 
-QT += positioning declarative
+QT += positioning
 
 locales.files = \
     locales/de.qm \
