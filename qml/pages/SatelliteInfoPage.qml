@@ -87,7 +87,7 @@ Page {
 
                 //Signs
                 ctx.textAlign = "center";
-                ctx.font = "16px Arial";
+                ctx.font = "16px Sail Sans Pro";
 
                 //North
                 ctx.fillStyle = "rgb(0,0,255)";
@@ -132,13 +132,13 @@ Page {
                         ctx.fillStyle = "hsl(" + hue + ",100%,35%)";
                         ctx.fillRect(x - 12, y - 12, 24, 24);
                         ctx.fillStyle = "rgb(255,255,255)";
-                        ctx.font = "16px Arial";
+                        ctx.font = "16px Sail Sans Pro";
                         ctx.fillText(sat.identifier, x, y + 5)
                     } else {
                         ctx.fillStyle = "hsl(" + hue + ",100%,35%)";
                         ctx.fillRect(x - 10, y - 10, 20, 20);
                         ctx.fillStyle = "rgb(255,255,255)";
-                        ctx.font = "14px Arial";
+                        ctx.font = "14px Sail Sans Pro";
                         ctx.fillText(sat.identifier, x, y + 5)
                     }
                 });
