@@ -10,6 +10,22 @@ Page {
             speedUnitComboBox.currentIndex = settings.speedUnit === "SEC" ? 2 : 3
         }
     }
+
+    function setLanguageCombobox() {
+        // For first we do not need a case, because we can use default
+        switch(settings.locale){
+        case "de":
+            return 1
+            break
+        case "fi":
+            return 2
+            break
+        default:
+            return 0
+            break
+    }
+    }
+
     SilicaListView {
         anchors.fill: parent
         header: PageHeader {
@@ -78,18 +94,24 @@ Page {
                 Component.onCompleted: setSpeedUnitComboBoxIndex()
             }
             ComboBox {
+                id: languageCombobox
                 label: qsTr("Language") + "*"
                 menu: ContextMenu {
+                    MenuItem {
+                        text: "English"
+                        onClicked: settings.locale = "en"
+                    }
                     MenuItem {
                         text: "Deutsch"
                         onClicked: settings.locale = "de"
                     }
                     MenuItem {
-                        text: "English"
-                        onClicked: settings.locale = "en"
+                        text: "Suomi"
+                        onClicked: settings.locale = "fi"
                     }
+
                 }
-                Component.onCompleted: currentIndex = settings.locale === "de" ? 0 : 1
+                Component.onCompleted: currentIndex = setLanguageCombobox()
             }
 
             Label {
