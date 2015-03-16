@@ -31,6 +31,7 @@ OTHER_FILES += \
     images/coverbg.png \
     locales/de.qm \
     locales/en.qm \
+    locales/fi.qm \
     rpm/harbour-gpsinfo.yaml \
     rpm/harbour-gpsinfo.spec \
     harbour-gpsinfo.desktop \
@@ -48,7 +49,8 @@ QT += positioning
 
 locales.files = \
     locales/de.qm \
-    locales/en.qm
+    locales/en.qm \
+    locales/fi.qm
 
 locales.path = /usr/share/harbour-gpsinfo/locales
 
