@@ -1,7 +1,7 @@
 import QtQuick 2.0
 import QtPositioning 5.0
 import QtSensors 5.0
-import gpsinfo 1.0
+import harbour.gpsinfo 1.0
 
 Item {
     id: providers
