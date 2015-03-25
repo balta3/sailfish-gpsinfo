@@ -13,7 +13,7 @@ Name:       harbour-gpsinfo
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    GPS Info
-Version:    0.4.devel
+Version:    0.4
 Release:    1
 Group:      Qt/Qt
 License:    LICENSE
