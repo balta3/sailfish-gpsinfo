@@ -4,6 +4,8 @@ import "../license.js" as License
 
 Page {
 
+    allowedOrientations: Orientation.Portrait | Orientation.Landscape | Orientation.LandscapeInverted
+
     SilicaFlickable {
         anchors.fill: parent
         contentHeight: column.height

@@ -3,6 +3,9 @@ import Sailfish.Silica 1.0
 
 Page {
     id: settingsPage
+
+    allowedOrientations: Orientation.Portrait | Orientation.Landscape | Orientation.LandscapeInverted
+
     function setSpeedUnitComboBoxIndex() {
         if (settings.units === "MET") {
             speedUnitComboBox.currentIndex = settings.speedUnit === "SEC" ? 0 : 1

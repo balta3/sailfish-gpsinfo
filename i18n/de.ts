@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.1" language="de_DE">
 <context>
     <name>AboutPage</name>
     <message>
@@ -32,7 +32,7 @@
     <name>CoverPage</name>
     <message>
         <source>GPS Info</source>
-        <translation>GPS Info</translation>
+        <translation type="obsolete">GPS Info</translation>
     </message>
     <message>
         <source>GPS</source>
@@ -202,6 +202,10 @@
     <message>
         <source>Satellite Info</source>
         <translation>Satelliteninformationen</translation>
+    </message>
+    <message>
+        <source>Satellites in use / view</source>
+        <translation>Satelliten in Ben. / Sicht</translation>
     </message>
 </context>
 <context>

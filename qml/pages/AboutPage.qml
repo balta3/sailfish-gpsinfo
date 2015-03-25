@@ -3,112 +3,191 @@ import Sailfish.Silica 1.0
 
 Page {
 
-    Column {
+    allowedOrientations: Orientation.Portrait | Orientation.Landscape | Orientation.LandscapeInverted
+
+    states: [
+        State {
+            name: 'landscape';
+            when: orientation === Orientation.Landscape || orientation === Orientation.LandscapeInverted;
+            PropertyChanges {
+                target:infoLabel
+                anchors.topMargin: Theme.paddingLarge
+            }
+            AnchorChanges {
+                target: versionLabel
+                anchors.horizontalCenter: undefined
+                anchors.left: parent.left
+            }
+            PropertyChanges {
+                target: versionLabel
+                width: parent.width * 0.4
+                anchors.leftMargin: 0.05 * parent.width
+            }
+            AnchorChanges {
+                target: copyrightLabel
+                anchors.horizontalCenter: undefined
+                anchors.left: parent.left
+            }
+            PropertyChanges {
+                target: copyrightLabel
+                width: parent.width * 0.4
+                anchors.leftMargin: 0.05 * parent.width
+            }
+            AnchorChanges {
+                target: licenseLabel
+                anchors.horizontalCenter: undefined
+                anchors.right: parent.right
+                anchors.top: infoLabel.bottom
+            }
+            PropertyChanges {
+                target: licenseLabel
+                width: parent.width * 0.4
+                anchors.rightMargin: 0.05 * parent.width
+            }
+            AnchorChanges {
+                target: licenseButtonBox
+                anchors.horizontalCenter: undefined
+                anchors.right: parent.right
+            }
+            PropertyChanges {
+                target: licenseButtonBox
+                width: parent.width * 0.4
+                anchors.rightMargin: 0.05 * parent.width
+            }
+            AnchorChanges {
+                target: linkText
+                anchors.horizontalCenter: undefined
+                anchors.left: parent.left
+                anchors.top: copyrightLabel.bottom
+            }
+            PropertyChanges {
+                target: linkText
+                width: parent.width * 0.4
+                anchors.leftMargin: 0.05 * parent.width
+            }
+            AnchorChanges {
+                target: link
+                anchors.horizontalCenter: undefined
+                anchors.left: parent.left
+            }
+            PropertyChanges {
+                target: link
+                width: parent.width * 0.4
+                anchors.leftMargin: 0.05 * parent.width
+            }
+        }
+    ]
+
+    PageHeader {
+        title: qsTr("About GPSInfo")
+    }
+
+    Image {
+        id: icon
+        anchors.top: parent.top
+        anchors.topMargin: 2 * Theme.paddingLarge
         anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.leftMargin: Theme.paddingMedium
-        anchors.rightMargin: Theme.paddingMedium
+        anchors.leftMargin: 2 * Theme.paddingLarge
+        source: Qt.resolvedUrl("../GPSInfo.png")
+        smooth: true
+        asynchronous: true
+    }
 
-        PageHeader {
-            title: qsTr("About GPSInfo")
-        }
+    Label {
+        id: infoLabel
+        anchors.top: icon.bottom
+        anchors.topMargin: 2 * Theme.paddingLarge
+        anchors.horizontalCenter: parent.horizontalCenter
+        width: 0.8 * parent.width
+        horizontalAlignment: Text.AlignHCenter
+        font.pixelSize: Theme.fontSizeMedium
+        color: Theme.primaryColor
+        wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+        text: qsTr("An app to show all position information")
+    }
 
-        Item {
-            width: 1
-            height: 3 * Theme.paddingLarge
-        }
+    Label {
+        id: versionLabel
+        anchors.top: infoLabel.bottom
+        anchors.topMargin: 2 * Theme.paddingLarge
+        anchors.horizontalCenter: parent.horizontalCenter
+        width: parent.width
+        horizontalAlignment: Text.AlignHCenter
+        font.pixelSize: Theme.fontSizeExtraSmall
+        color: Theme.secondaryColor
+        text: qsTr("Version") + " 0.4.devel"
+    }
 
-        Image {
-            anchors.horizontalCenter: parent.horizontalCenter
-            source: Qt.resolvedUrl("../GPSInfo.png")
-            smooth: true
-            asynchronous: true
-        }
+    Label {
+        id: copyrightLabel
+        anchors.top: versionLabel.bottom
+        anchors.topMargin: Theme.paddingSmall
+        anchors.horizontalCenter: parent.horizontalCenter
+        width: parent.width
+        horizontalAlignment: Text.AlignHCenter
+        font.pixelSize: Theme.fontSizeExtraSmall
+        color: Theme.secondaryColor
+        text: "Copyright © 2015 Marcel Witte"
+    }
 
-        Item {
-            width: 1
-            height: Theme.paddingLarge
-        }
+    Label {
+        id: licenseLabel
+        anchors.top: copyrightLabel.bottom
+        anchors.topMargin: 2 * Theme.paddingLarge
+        anchors.horizontalCenter: parent.horizontalCenter
+        width: 0.8 * parent.width
+        horizontalAlignment: Text.AlignHCenter
+        font.pixelSize: Theme.fontSizeSmall
+        color: Theme.secondaryColor
+        wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+        text: qsTr("GPSInfo is open source software licensed under the terms of the GNU General Public License.")
+    }
 
-        Label {
-            width: parent.width
-            horizontalAlignment: Text.AlignHCenter
-            font.pixelSize: Theme.fontSizeMedium
-            color: Theme.primaryColor
-            wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-            text: qsTr("An app to show all position information")
-        }
-
-        Item {
-            width: 1
-            height: Theme.paddingLarge
-        }
-
-        Label {
-            width: parent.width
-            horizontalAlignment: Text.AlignHCenter
-            font.pixelSize: Theme.fontSizeExtraSmall
-            color: Theme.secondaryColor
-            text: qsTr("Version") + " 0.3.1"
-        }
-
-        Label {
-            width: parent.width
-            horizontalAlignment: Text.AlignHCenter
-            font.pixelSize: Theme.fontSizeExtraSmall
-            color: Theme.secondaryColor
-            text: "Copyright © 2014 Marcel Witte"
-        }
-
-
-        Item {
-            width: 1
-            height: 2 * Theme.paddingLarge
-        }
-
-        Label {
-            width: parent.width
-            horizontalAlignment: Text.AlignHCenter
-            font.pixelSize: Theme.fontSizeSmall
-            color: Theme.secondaryColor
-            wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-            text: qsTr("GPSInfo is open source software licensed under the terms of the GNU General Public License.")
-        }
-
-        Item {
-            width: 1
-            height: 2 * Theme.paddingLarge
-        }
-
+    Item {
+        id: licenseButtonBox
+        anchors.top: licenseLabel.bottom
+        anchors.topMargin: 2 * Theme.paddingLarge
+        anchors.horizontalCenter: parent.horizontalCenter
+        width: 0.8 * parent.width
+        height: licenseButton.height
         Button {
+            id: licenseButton
             anchors.horizontalCenter: parent.horizontalCenter
             text: qsTr("View license")
             onClicked: {
                 pageStack.push(Qt.resolvedUrl("LicensePage.qml"));
             }
         }
-
-        Label {
-            width: parent.width
-            horizontalAlignment: Text.AlignHCenter
-            font.pixelSize: Theme.fontSizeSmall
-            color: Theme.secondaryColor
-            wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-            text: qsTr("For suggestions, bugs and ideas visit ")
-        }
-
-        Label {
-            width: parent.width
-            color: Theme.secondaryColor
-            horizontalAlignment: Text.AlignHCenter
-            font.pixelSize: Theme.fontSizeSmall
-            font.underline: true
-            text: "https://github.com/balta3/sailfish-gpsinfo"
-            MouseArea {
-                anchors.fill: parent
-                onClicked: Qt.openUrlExternally("https://github.com/balta3/sailfish-gpsinfo")
-            }
-        }
     }
 
+    Label {
+        id: linkText
+        anchors.top: licenseButtonBox.bottom
+        anchors.topMargin: 2 * Theme.paddingLarge
+        anchors.horizontalCenter: parent.horizontalCenter
+        width: parent.width
+        horizontalAlignment: Text.AlignHCenter
+        font.pixelSize: Theme.fontSizeSmall
+        color: Theme.secondaryColor
+        wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+        text: qsTr("For suggestions, bugs and ideas visit ")
+    }
+
+    Label {
+        id: link
+        anchors.top: linkText.bottom
+        anchors.topMargin: Theme.paddingLarge
+        anchors.horizontalCenter: parent.horizontalCenter
+        width: parent.width
+        color: Theme.secondaryColor
+        horizontalAlignment: Text.AlignHCenter
+        font.pixelSize: Theme.fontSizeSmall
+        font.underline: true
+        text: "https://github.com/balta3/sailfish-gpsinfo"
+        wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+        MouseArea {
+            anchors.fill: parent
+            onClicked: Qt.openUrlExternally("https://github.com/balta3/sailfish-gpsinfo")
+        }
+    }
 }

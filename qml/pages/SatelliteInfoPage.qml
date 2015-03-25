@@ -6,6 +6,9 @@ import "../CircleCalculator.js" as CircleCalculator
 
 Page {
     id: satelliteInfoPage
+
+    allowedOrientations: Orientation.Portrait | Orientation.Landscape | Orientation.LandscapeInverted
+
     property Compass compass
     property GPSDataSource gpsDataSource
     PageHeader {
@@ -16,11 +19,30 @@ Page {
         canvas.requestPaint();
     }
 
+    states: [
+        State {
+            name: 'landscape';
+            when: orientation === Orientation.Landscape || orientation === Orientation.LandscapeInverted;
+            AnchorChanges {
+                target: canvas;
+                anchors.horizontalCenter: undefined;
+                anchors.left: satelliteInfoPage.left;
+            }
+            PropertyChanges {
+                target: satellitesInfo;
+                width: satelliteInfoPage.width / 2;
+                anchors.leftMargin: satelliteInfoPage.width / 2;
+            }
+        }
+    ]
+
     Canvas {
         id: canvas
         width: 510
         height: 510
-        anchors.centerIn: parent
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.horizontalCenter: satelliteInfoPage.horizontalCenter;
+        anchors.left: undefined;
         property int north : compass.reading.azimuth;
         property variant satellites : gpsDataSource.satellites;
         onNorthChanged: requestPaint();
@@ -144,5 +166,12 @@ Page {
                 });
             }
         }
+    }
+    InfoField {
+        id: satellitesInfo
+        label: qsTr("Satellites in use / view")
+        value: gpsDataSource.numberOfUsedSatellites + " / " + gpsDataSource.numberOfVisibleSatellites
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: Theme.paddingLarge
     }
 }

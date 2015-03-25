@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fi">
+<TS version="2.1" language="fi">
 <context>
     <name>AboutPage</name>
     <message>
@@ -32,7 +32,7 @@
     <name>CoverPage</name>
     <message>
         <source>GPS Info</source>
-        <translation>GPS Info</translation>
+        <translation type="obsolete">GPS Info</translation>
     </message>
     <message>
         <source>GPS</source>
@@ -208,6 +208,10 @@ Longitude = Pituusaste</translatorcomment>
     <message>
         <source>Satellite Info</source>
         <translation>Satelliitti-info</translation>
+    </message>
+    <message>
+        <source>Satellites in use / view</source>
+        <translation>Näkyvät satelliitit</translation>
     </message>
 </context>
 <context>

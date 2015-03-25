@@ -12,7 +12,7 @@ Page {
     property Compass compass
     property GPSDataSource gpsDataSource
 
-
+    allowedOrientations: Orientation.Portrait | Orientation.Landscape | Orientation.LandscapeInverted
 
     SatelliteInfoPage {
         id: satelliteInfoPage
@@ -29,6 +29,17 @@ Page {
                 //gpsDataSource.onSatellitesChanged = satelliteInfoPage.repaintSatellites();
             }
     }
+
+    states: [
+        State {
+            name: 'landscape';
+            when: orientation === Orientation.Landscape || orientation === Orientation.LandscapeInverted;
+            PropertyChanges {
+                target: column;
+                width: page.width * 0.75;
+            }
+        }
+    ]
 
     SilicaFlickable {
         anchors.fill: parent
@@ -59,17 +70,21 @@ Page {
                 }
             }
         }
+        PageHeader {
+            id: pageHeader
+            title: qsTr("GPS Info")
+        }
 
-        contentHeight: column.height
+        contentHeight: column.height + pageHeader.height + 20;
 
         Column {
             id: column
 
             width: page.width
             spacing: Theme.paddingLarge
-            PageHeader {
-                title: qsTr("GPS Info")
-            }
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.top: parent.top;
+            anchors.topMargin: pageHeader.height;
             InfoField {
                 label: qsTr("GPS")
                 visible: settings.showGpsStateApp
