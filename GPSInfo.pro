@@ -50,7 +50,8 @@ QT += positioning
 locales.files = \
     locales/de.qm \
     locales/en.qm \
-    locales/fi.qm
+    locales/fi.qm \
+    locales/sv.qm
 
 locales.path = /usr/share/harbour-gpsinfo/locales
 

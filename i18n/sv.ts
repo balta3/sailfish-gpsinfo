@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sv_SE">
+<TS version="2.1" language="sv_SE">
 <context>
     <name>AboutPage</name>
     <message>
@@ -135,11 +135,11 @@
     </message>
     <message>
         <source>Latitude</source>
-        <translation>Latitude</translation>
+        <translation>Latitud</translation>
     </message>
     <message>
         <source>Longitude</source>
-        <translation>Longitude</translation>
+        <translation>Longitud</translation>
     </message>
     <message>
         <source>Altitude</source>
@@ -147,31 +147,31 @@
     </message>
     <message>
         <source>Last update</source>
-        <translation>Last Update</translation>
+        <translation>Senast uppdaterad</translation>
     </message>
     <message>
         <source>Horizontal accuracy</source>
-        <translation>Horizontal accuracy</translation>
+        <translation>Horisontell noggrannhet</translation>
     </message>
     <message>
         <source>Compass direction</source>
-        <translation>Compass direction</translation>
+        <translation>Kompassriktning</translation>
     </message>
     <message>
         <source>Speed</source>
-        <translation>Speed</translation>
+        <translation>Hastighet</translation>
     </message>
     <message>
         <source>Vertical accuracy</source>
-        <translation>Vertical accuracy</translation>
+        <translation>Vertikal noggrannhet</translation>
     </message>
     <message>
         <source>Satellites in use / view</source>
-        <translation>Satellites in use / view</translation>
+        <translation>Satelliter som används / visas</translation>
     </message>
     <message>
         <source>Movement direction</source>
-        <translation>Movement direction</translation>
+        <translation>Rörelseriktning</translation>
     </message>
     <message>
         <source>m/s</source>
