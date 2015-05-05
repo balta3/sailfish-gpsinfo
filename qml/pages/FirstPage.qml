@@ -170,7 +170,7 @@ Page {
                 value: {
                     if (positionSource.position.verticalAccuracyValid) {
                         if (settings.units == "MET") {
-                            return positionSource.position.verticalAccuracy + " m"
+                            return LocationFormater.roundToDecimal(positionSource.position.verticalAccuracy, 2) + " m"
                         } else {
                             return LocationFormater.roundToDecimal(positionSource.position.verticalAccuracy * 3.2808399, 2) + " ft"
                         }
@@ -184,7 +184,7 @@ Page {
                 value: {
                     if (positionSource.position.horizontalAccuracyValid) {
                         if (settings.units == "MET") {
-                            return positionSource.position.horizontalAccuracy + " m"
+                            return LocationFormater.roundToDecimal(positionSource.position.horizontalAccuracy, 2) + " m"
                         } else {
                             return LocationFormater.roundToDecimal(positionSource.position.horizontalAccuracy * 3.2808399, 2) + " ft"
                         }
