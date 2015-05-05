@@ -21,7 +21,7 @@
     </message>
     <message>
         <source>GPSInfo is open source software licensed under the terms of the GNU General Public License.</source>
-        <translation>GPSInfo ist Open-Source Software und lizensiert unter den Bedingungen der GNU General Public License </translation>
+        <translation>GPSInfo ist Open-Source Software und lizensiert unter den Bedingungen der GNU General Public License.</translation>
     </message>
     <message>
         <source>Version</source>
