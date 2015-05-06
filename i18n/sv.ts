@@ -56,7 +56,7 @@
     </message>
     <message>
         <source>Altitude</source>
-        <translation>Altitude</translation>
+        <translation>Altitud</translation>
     </message>
     <message>
         <source>Speed</source>
@@ -76,11 +76,11 @@
     </message>
     <message>
         <source>Mov.</source>
-        <translation>Mov.</translation>
+        <translation>Riktn.</translation>
     </message>
     <message>
         <source>Com.</source>
-        <translation>Com.</translation>
+        <translation>Komp.</translation>
     </message>
     <message>
         <source>m/s</source>
@@ -103,19 +103,19 @@
     <name>FirstPage</name>
     <message>
         <source>About</source>
-        <translation>About</translation>
+        <translation>Om</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation>Settings</translation>
+        <translation>Inställningar</translation>
     </message>
     <message>
         <source>Deactivate GPS</source>
-        <translation>Deactivate GPS</translation>
+        <translation>Inaktivera GPS</translation>
     </message>
     <message>
         <source>Activate GPS</source>
-        <translation>Activate GPS</translation>
+        <translation>Aktivera GPS</translation>
     </message>
     <message>
         <source>GPS Info</source>
@@ -127,11 +127,11 @@
     </message>
     <message>
         <source>active</source>
-        <translation>active</translation>
+        <translation>aktiv</translation>
     </message>
     <message>
         <source>inactive</source>
-        <translation>inactive</translation>
+        <translation>inaktiv</translation>
     </message>
     <message>
         <source>Latitude</source>
@@ -143,7 +143,7 @@
     </message>
     <message>
         <source>Altitude</source>
-        <translation>Altitude</translation>
+        <translation>Altitud</translation>
     </message>
     <message>
         <source>Last update</source>
