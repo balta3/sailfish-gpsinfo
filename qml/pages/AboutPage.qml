@@ -115,7 +115,7 @@ Page {
         horizontalAlignment: Text.AlignHCenter
         font.pixelSize: Theme.fontSizeExtraSmall
         color: Theme.secondaryColor
-        text: qsTr("Version") + " 0.5"
+        text: qsTr("Version") + " 0.5.1"
     }
 
     Label {
