@@ -1,6 +1,7 @@
 #ifndef GPSINFOSETTINGS_H
 #define GPSINFOSETTINGS_H
 
+#include <QLocale>
 #include "qmlsettingswrapper.h"
 
 class GPSInfoSettings : public QMLSettingsWrapper
@@ -37,7 +38,7 @@ public:
     explicit GPSInfoSettings(QObject *parent = 0);
 
     QString getCoordinateFormat() {return this->value("coordinateFormat", "DEG").toString();}
-    QString getLocale() {return this->value("locale", "en").toString();}
+    QString getLocale() {return this->value("locale", QLocale().name()).toString();}
     bool getShowAltitudeApp() {return this->value("showAltitudeApp", true).toBool();}
     bool getShowAltitudeCover() {return this->value("showAltitudeCover", false).toBool();}
     bool getShowCompassDirectionApp() {return this->value("showCompassDirectionApp", true).toBool();}
