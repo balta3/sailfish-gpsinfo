@@ -167,7 +167,7 @@
     </message>
     <message>
         <source>Satellites in use / view</source>
-        <translation>Satelliter som används / visas</translation>
+        <translation>Sat. som används / visas</translation>
     </message>
     <message>
         <source>Movement direction</source>
@@ -205,7 +205,7 @@
     </message>
     <message>
         <source>Satellites in use / view</source>
-        <translation>Satelliter som används / visas</translation>
+        <translation>Sat. som används / visas</translation>
     </message>
 </context>
 <context>

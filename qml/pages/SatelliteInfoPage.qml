@@ -31,7 +31,7 @@ Page {
             PropertyChanges {
                 target: satellitesInfo;
                 width: satelliteInfoPage.width / 2;
-                anchors.leftMargin: satelliteInfoPage.width / 2;
+                anchors.leftMargin: satelliteInfoPage.width / 2.2;
             }
         }
     ]
