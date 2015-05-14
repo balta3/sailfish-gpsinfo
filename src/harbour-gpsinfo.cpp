@@ -8,6 +8,14 @@
 
 
 int main(int argc, char *argv[]) {
+    //migrate old configuration
+    QDir configdir = QDir(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation));
+    if (configdir.cd("gpsinfo")) {
+        configdir.rename("gpsinfo.conf", "harbour-gpsinfo.conf");
+        configdir.cdUp();
+        configdir.rename("gpsinfo", "harbour-gpsinfo");
+    }
+
     qmlRegisterType<GPSDataSource>("harbour.gpsinfo", 1, 0, "GPSDataSource");
     qmlRegisterType<GPSSatellite>();
     GPSInfoSettings* settings = new GPSInfoSettings();
