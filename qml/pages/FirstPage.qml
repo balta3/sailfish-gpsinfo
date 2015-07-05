@@ -69,6 +69,21 @@ Page {
                     }
                 }
             }
+            MenuItem {
+                enabled: gpsDataSource.active
+                text: qsTr("Copy location")
+                onClicked: {
+                    if (settings.coordinateFormat === "DEG") {
+                        Clipboard.text = LocationFormater.decimalLatToDMS(positionSource.position.coordinate.latitude, 2)
+                                + ", "
+                                + LocationFormater.decimalLongToDMS(positionSource.position.coordinate.longitude, 2);
+                    } else {
+                        Clipboard.text = positionSource.position.coordinate.latitude
+                                + ", "
+                                + positionSource.position.coordinate.longitude
+                    }
+                }
+            }
         }
         PageHeader {
             id: pageHeader

@@ -189,6 +189,10 @@
         <source>mph</source>
         <translation>mph</translation>
     </message>
+    <message>
+        <source>Copy location</source>
+        <translation>Copy location</translation>
+    </message>
 </context>
 <context>
     <name>LicensePage</name>

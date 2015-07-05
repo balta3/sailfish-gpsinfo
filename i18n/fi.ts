@@ -195,6 +195,10 @@ Longitude = Pituusaste</translatorcomment>
         <source>mph</source>
         <translation>mph</translation>
     </message>
+    <message>
+        <source>Copy location</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>LicensePage</name>
