@@ -6,7 +6,9 @@ GPSSatellite::GPSSatellite(QObject *parent) :
 }
 
 GPSDataSource::GPSDataSource(QObject *parent) :
-    QObject(parent)
+    QObject(parent),
+    numberOfUsedSatellites(0),
+    numberOfVisibleSatellites(0)
 {
     this->sSource = QGeoSatelliteInfoSource::createDefaultSource(this);
     if (this->sSource) {
