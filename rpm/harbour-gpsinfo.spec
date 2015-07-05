@@ -31,6 +31,7 @@ BuildRequires:  qt5-qtdeclarative-import-sensors
 BuildRequires:  qt5-qtdeclarative-import-positioning
 BuildRequires:  qt5-qtpositioning-devel
 BuildRequires:  desktop-file-utils
+BuildRequires:  qt5-qttools-linguist
 
 %description
 Short description of my SailfishOS Application
@@ -68,15 +69,7 @@ desktop-file-install --delete-original       \
 
 %files
 %defattr(-,root,root,-)
-/usr/share/icons/hicolor/86x86/apps
-/usr/share/applications
-/usr/bin
 %{_datadir}/icons/hicolor/86x86/apps/%{name}.png
 %{_datadir}/applications/%{name}.desktop
-%{_datadir}/%{name}/qml
-%{_datadir}/%{name}/images
-%{_bindir}
-/usr/share/harbour-gpsinfo/locales
-/usr/share/harbour-gpsinfo
-# >> files
-# << files
+%{_bindir}/%{name}
+%{_datadir}/%{name}

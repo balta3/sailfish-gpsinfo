@@ -1,11 +1,3 @@
-# The name of your app.
-# NOTICE: name defined in TARGET has a corresponding QML filename.
-#         If name defined in TARGET is changed, following needs to be
-#         done to match new name:
-#         - corresponding QML filename must be changed
-#         - desktop icon filename must be changed
-#         - desktop filename must be changed
-#         - icon definition filename in desktop file must be changed
 TARGET = harbour-gpsinfo
 
 CONFIG += sailfishapp
@@ -28,11 +20,6 @@ OTHER_FILES += \
     qml/pages/AboutPage.qml \
     qml/pages/LicensePage.qml \
     qml/license.js \
-    images/coverbg.png \
-    locales/de.qm \
-    locales/en.qm \
-    locales/fi.qm \
-    rpm/harbour-gpsinfo.yaml \
     rpm/harbour-gpsinfo.spec \
     harbour-gpsinfo.desktop \
     qml/harbour-gpsinfo.qml \
@@ -47,13 +34,34 @@ HEADERS += \
 
 QT += positioning
 
-locales.files = \
-    locales/de.qm \
-    locales/en.qm \
-    locales/fi.qm \
-    locales/sv.qm
+LANGUAGES = de en fi sv
+
+defineReplace(prependAll) {
+ for(a, $$1): result += $$2$${a}$$3
+ return($$result)
+}
+
+TRANSLATIONS = $$prependAll(LANGUAGES, $$PWD/i18n/, .ts)
+
+TRANSLATIONS_FILES =
+
+qtPrepareTool(LRELEASE, lrelease)
+for(tsfile, TRANSLATIONS) {
+ qmfile = $$shadowed($$tsfile)
+ qmfile ~= s,.ts$,.qm,
+ qmdir = $$OUT_PWD/locales
+ qmfile = $$qmdir/$$basename(qmfile)
+ !exists($$qmdir) {
+  mkpath($$qmdir)|error("Aborting.")
+ }
+ command = $$LRELEASE -removeidentical $$tsfile -qm $$qmfile
+ system($$command)|error("Failed to run: $$command")
+ TRANSLATIONS_FILES += $$relative_path($$qmfile, $$OUT_PWD/)
+}
 
 locales.path = /usr/share/harbour-gpsinfo/locales
+
+locales.files = $$TRANSLATIONS_FILES
 
 images.files = \
     images/coverbg.png
