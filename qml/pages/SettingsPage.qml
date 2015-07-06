@@ -23,8 +23,11 @@ Page {
         case "fi":
             return 2
             break
-        case "sv":
+        case "ru":
             return 3
+            break
+        case "sv":
+            return 4
             break
         default:
             return 0
@@ -114,6 +117,10 @@ Page {
                     MenuItem {
                         text: "Suomi"
                         onClicked: settings.locale = "fi"
+                    }
+                    MenuItem {
+                        text: "Pусский"
+                        onClicked: settings.locale = "ru"
                     }
                     MenuItem {
                         text: "Svenska"
