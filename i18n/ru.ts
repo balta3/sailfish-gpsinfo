@@ -3,11 +3,11 @@
     <name>AboutPage</name>
     <message>
         <source>About GPSInfo</source>
-        <translation>О GPSInfo</translation>
+        <translation>О программе GPSInfo</translation>
     </message>
     <message>
         <source>An app to show all position information</source>
-        <translation>Приложение для отображения информации о местоположении</translation>
+        <translation>Отображение информации о местоположении</translation>
     </message>
     <message>
         <source>View license</source>
@@ -15,11 +15,11 @@
     </message>
     <message>
         <source>For suggestions, bugs and ideas visit </source>
-        <translation type="unfinished"/>
+        <translation>Для предложений и замечаний: </translation>
     </message>
     <message>
         <source>GPSInfo is open source software licensed under the terms of the GNU General Public License.</source>
-        <translation>GPSInfo - открытое программное обеспечение, распространяемое под Универсальной общественной лицензией GNU.</translation>
+        <translation>GPSInfo это программа с открытым исходным кодом, лицензированная на условиях GNU GPL.</translation>
     </message>
     <message>
         <source>Version</source>
@@ -38,11 +38,11 @@
     </message>
     <message>
         <source>active</source>
-        <translation>работает</translation>
+        <translation>активен</translation>
     </message>
     <message>
         <source>inactive</source>
-        <translation>выключено</translation>
+        <translation>неактивен</translation>
     </message>
     <message>
         <source>Latitude</source>
@@ -62,23 +62,23 @@
     </message>
     <message>
         <source>Vert. acc.</source>
-        <translation type="unfinished"/>
+        <translation>Верт. точн.</translation>
     </message>
     <message>
         <source>Hor. acc.</source>
-        <translation type="unfinished"/>
+        <translation>Гор. точн.</translation>
     </message>
     <message>
         <source>Satel.</source>
-        <translation>Спутники</translation>
+        <translation>Спутн.</translation>
     </message>
     <message>
         <source>Mov.</source>
-        <translation type="unfinished"/>
+        <translation>Движ.</translation>
     </message>
     <message>
         <source>Com.</source>
-        <translation type="unfinished"/>
+        <translation>Комп.</translation>
     </message>
     <message>
         <source>m/s</source>
@@ -94,14 +94,14 @@
     </message>
     <message>
         <source>mph</source>
-        <translation>миля/ч</translation>
+        <translation>миль/ч</translation>
     </message>
 </context>
 <context>
     <name>FirstPage</name>
     <message>
         <source>About</source>
-        <translation>О приложении</translation>
+        <translation>О программе</translation>
     </message>
     <message>
         <source>Settings</source>
@@ -109,7 +109,7 @@
     </message>
     <message>
         <source>Deactivate GPS</source>
-        <translation>Выключить GPS</translation>
+        <translation>Отключить GPS</translation>
     </message>
     <message>
         <source>Activate GPS</source>
@@ -117,7 +117,7 @@
     </message>
     <message>
         <source>GPS Info</source>
-        <translation type="unfinished"/>
+        <translation>Информация GPS</translation>
     </message>
     <message>
         <source>GPS</source>
@@ -125,11 +125,11 @@
     </message>
     <message>
         <source>active</source>
-        <translation>работает</translation>
+        <translation>Активен</translation>
     </message>
     <message>
         <source>inactive</source>
-        <translation>выключено</translation>
+        <translation>Неактивен</translation>
     </message>
     <message>
         <source>Latitude</source>
@@ -145,15 +145,15 @@
     </message>
     <message>
         <source>Last update</source>
-        <translation>Обновление</translation>
+        <translation>Посл. обновление</translation>
     </message>
     <message>
         <source>Horizontal accuracy</source>
-        <translation>Гор. точность</translation>
+        <translation>Горизонт. точность</translation>
     </message>
     <message>
         <source>Compass direction</source>
-        <translation>Компас</translation>
+        <translation>Направл. компаса</translation>
     </message>
     <message>
         <source>Speed</source>
@@ -165,11 +165,11 @@
     </message>
     <message>
         <source>Satellites in use / view</source>
-        <translation>Спутники исп. / дост.</translation>
+        <translation>Спутников исп. / вид.</translation>
     </message>
     <message>
         <source>Movement direction</source>
-        <translation>Движение</translation>
+        <translation>Направл. движения</translation>
     </message>
     <message>
         <source>m/s</source>
@@ -185,7 +185,11 @@
     </message>
     <message>
         <source>mph</source>
-        <translation>миля/ч</translation>
+        <translation>миль/ч</translation>
+    </message>
+    <message>
+        <source>Copy location</source>
+        <translation>Скопировать местоположение</translation>
     </message>
 </context>
 <context>
@@ -199,11 +203,11 @@
     <name>SatelliteInfoPage</name>
     <message>
         <source>Satellite Info</source>
-        <translation type="unfinished"/>
+        <translation>Информация о спутниках</translation>
     </message>
     <message>
         <source>Satellites in use / view</source>
-        <translation>Спутники исп. / дост.</translation>
+        <translation>Спутников исп. / вид.</translation>
     </message>
 </context>
 <context>
@@ -222,11 +226,11 @@
     </message>
     <message>
         <source>decimal</source>
-        <translation>десятичные</translation>
+        <translation>десятичный</translation>
     </message>
     <message>
         <source>Units</source>
-        <translation>Система измерения</translation>
+        <translation>Система мер</translation>
     </message>
     <message>
         <source>metric</source>
@@ -238,15 +242,15 @@
     </message>
     <message>
         <source>Show</source>
-        <translation type="unfinished"/>
+        <translation>Показывать</translation>
     </message>
     <message>
         <source>Appview</source>
-        <translation type="unfinished"/>
+        <translation>Прилож.</translation>
     </message>
     <message>
         <source>Cover</source>
-        <translation type="unfinished"/>
+        <translation>Обложка</translation>
     </message>
     <message>
         <source>GPS state</source>
@@ -270,7 +274,7 @@
     </message>
     <message>
         <source>Last Update</source>
-        <translation>Обновление</translation>
+        <translation>Послед. обновл.</translation>
     </message>
     <message>
         <source>Vertical Accuracy</source>
@@ -278,11 +282,11 @@
     </message>
     <message>
         <source>Horizontal Accuracy</source>
-        <translation>Гор. точность</translation>
+        <translation>Горизонт. точность</translation>
     </message>
     <message>
         <source>Compass Direction</source>
-        <translation>Компас</translation>
+        <translation>Направл. компаса</translation>
     </message>
     <message>
         <source>Language</source>
@@ -294,11 +298,11 @@
     </message>
     <message>
         <source>Satellite Info</source>
-        <translation type="unfinished"/>
+        <translation>Инфо о спутниках</translation>
     </message>
     <message>
         <source>requires app restart</source>
-        <translation>необходимо перезапустить приложение</translation>
+        <translation>требует перезапуска приложения</translation>
     </message>
     <message>
         <source>m/s</source>
@@ -310,15 +314,15 @@
     </message>
     <message>
         <source>ft/s</source>
-        <translation>фут/с</translation>
+        <translation>фут/s</translation>
     </message>
     <message>
         <source>mph</source>
-        <translation>миля/ч</translation>
+        <translation>миль/ч</translation>
     </message>
     <message>
         <source>Movement Direction</source>
-        <translation>Движение</translation>
+        <translation>Направл. движения</translation>
     </message>
 </context>
 </TS>
