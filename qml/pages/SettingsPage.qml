@@ -15,24 +15,26 @@ Page {
     }
 
     function setLanguageCombobox() {
-        // For first we do not need a case, because we can use default
         switch(settings.locale){
-        case "de":
-            return 1
-            break
-        case "fi":
-            return 2
-            break
-        case "ru":
-            return 3
-            break
-        case "sv":
-            return 4
-            break
-        default:
-            return 0
-            break
-    }
+            case "de":
+                return 1
+                break
+            case "fi":
+                return 2
+                break
+            case "nl":
+                return 3
+                break
+            case "ru":
+                return 4
+                break
+            case "sv":
+                return 5
+                break
+            default:
+                return 0
+                break
+        }
     }
 
     SilicaListView {
@@ -117,6 +119,10 @@ Page {
                     MenuItem {
                         text: "Suomi"
                         onClicked: settings.locale = "fi"
+                    }
+                    MenuItem {
+                        text: "Nederlands"
+                        onClicked: settings.locale = "nl"
                     }
                     MenuItem {
                         text: "Pусский"
