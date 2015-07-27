@@ -191,7 +191,7 @@
     </message>
     <message>
         <source>Copy location</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopiera plats</translation>
     </message>
 </context>
 <context>
