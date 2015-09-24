@@ -19,7 +19,6 @@ Group:      Qt/Qt
 License:    LICENSE
 URL:        http://example.org/
 Source0:    %{name}-%{version}.tar.bz2
-Source100:  harbour-gpsinfo.yaml
 Requires:   qt5-qtdeclarative-import-sensors
 Requires:   qt5-qtdeclarative-import-positioning
 Requires:   sailfishsilica-qt5 >= 0.10.9
