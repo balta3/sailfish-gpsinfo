@@ -19,23 +19,26 @@ Page {
             case "de":
                 return 1
                 break
-            case "fi":
+            case "es":
                 return 2
                 break
-            case "fr":
+            case "fi":
                 return 3
                 break
-            case "nl":
+            case "fr":
                 return 4
                 break
-            case "pl":
+            case "nl":
                 return 5
                 break
-            case "ru":
+            case "pl":
                 return 6
                 break
-            case "sv":
+            case "ru":
                 return 7
+                break
+            case "sv":
+                return 8
                 break
             default:
                 return 0
@@ -121,6 +124,10 @@ Page {
                     MenuItem {
                         text: "Deutsch"
                         onClicked: settings.locale = "de"
+                    }
+                    MenuItem {
+                        text: "Español"
+                        onClicked: settings.locale = "es"
                     }
                     MenuItem {
                         text: "Suomi"
