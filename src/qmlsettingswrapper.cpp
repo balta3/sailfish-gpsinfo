@@ -2,9 +2,11 @@
 #include <QDebug>
 
 QMLSettingsWrapper::QMLSettingsWrapper(QString organisation, QString application, QObject *parent) :
-    QObject(parent)
+    QObject(parent),
+    settings(new QSettings(organisation, application, this))
 {
-    this->settings = new QSettings(organisation, application, this);
+    if (!settings->value("locale").toBool())
+        settings->setValue("locale", QLocale().name().mid(0, 2));
 }
 
 QVariant QMLSettingsWrapper::value(const QString &key){
