@@ -28,11 +28,14 @@ Page {
             case "nl":
                 return 4
                 break
-            case "ru":
+            case "pl":
                 return 5
                 break
-            case "sv":
+            case "ru":
                 return 6
+                break
+            case "sv":
+                return 7
                 break
             default:
                 return 0
@@ -130,6 +133,10 @@ Page {
                     MenuItem {
                         text: "Nederlands"
                         onClicked: settings.locale = "nl"
+                    }
+                    MenuItem {
+                        text: "Polskie"
+                        onClicked: settings.locale = "pl"
                     }
                     MenuItem {
                         text: "Pусский"
