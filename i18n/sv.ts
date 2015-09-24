@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="sv" version="2.1">
 <context>
     <name>AboutPage</name>
     <message>
@@ -32,7 +30,7 @@
     <name>CoverPage</name>
     <message>
         <source>GPS Info</source>
-        <translation type="obsolete">GPS Info</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>GPS</source>
@@ -191,7 +189,7 @@
     </message>
     <message>
         <source>Copy location</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopiera plats</translation>
     </message>
 </context>
 <context>
