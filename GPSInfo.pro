@@ -34,7 +34,7 @@ HEADERS += \
 
 QT += positioning
 
-LANGUAGES = de en fi nl ru sv
+LANGUAGES = de en fi fr nl ru sv
 
 defineReplace(prependAll) {
  for(a, $$1): result += $$2$${a}$$3
