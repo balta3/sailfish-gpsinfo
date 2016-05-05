@@ -68,4 +68,11 @@ images.files = \
 
 images.path = /usr/share/harbour-gpsinfo/images
 
-INSTALLS += locales images
+icon108.files = images/icon108/harbour-gpsinfo.png
+icon108.path = /usr/share/icons/hicolor/108x108/apps
+icon128.files = images/icon128/harbour-gpsinfo.png
+icon128.path = /usr/share/icons/hicolor/128x128/apps
+icon256.files = images/icon256/harbour-gpsinfo.png
+icon256.path = /usr/share/icons/hicolor/256x256/apps
+
+INSTALLS += locales images icon108 icon128 icon256
