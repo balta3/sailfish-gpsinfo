@@ -115,7 +115,7 @@ Page {
         horizontalAlignment: Text.AlignHCenter
         font.pixelSize: Theme.fontSizeExtraSmall
         color: Theme.secondaryColor
-        text: qsTr("Version") + " 0.7.1"
+        text: qsTr("Version") + " 0.8-devel"
     }
 
     Label {
@@ -127,7 +127,7 @@ Page {
         horizontalAlignment: Text.AlignHCenter
         font.pixelSize: Theme.fontSizeExtraSmall
         color: Theme.secondaryColor
-        text: "Copyright © 2015 Marcel Witte"
+        text: "Copyright © 2014-2016 Marcel Witte"
     }
 
     Label {
