@@ -38,8 +38,8 @@ Page {
 
     Canvas {
         id: canvas
-        width: 510
-        height: 510
+        width: Screen.width - 30;
+        height: Screen.width - 30;
         anchors.verticalCenter: parent.verticalCenter
         anchors.horizontalCenter: satelliteInfoPage.horizontalCenter;
         anchors.left: undefined;
@@ -50,10 +50,11 @@ Page {
         onPaint: {
             if (visible) {
                 var ctx = canvas.getContext('2d');
-                ctx.clearRect(0,0,510,510);
+                var canvasSize = Screen.width - 30;
+                ctx.clearRect(0, 0, canvasSize, canvasSize);
 
-                var radius = 240;
-                var center = {x: 255, y: 255};
+                var radius = canvasSize / 2 - 30;
+                var center = {x: canvasSize / 2, y: canvasSize / 2};
                 var northRad = CircleCalculator.degreeToRad(north);
                 var compassPos = {
                     north: {
@@ -109,32 +110,35 @@ Page {
 
                 //Signs
                 ctx.textAlign = "center";
-                ctx.font = "16px Sail Sans Pro";
+                ctx.font = Theme.fontSizeSmall + "px Sail Sans Pro";
+                var signSize = Theme.fontSizeSmall + 3;
 
                 //North
                 ctx.fillStyle = "rgb(0,0,255)";
-                ctx.fillRect(compassPos.north.x - 15, compassPos.north.y - 15, 30, 30);
+                ctx.fillRect(compassPos.north.x - signSize / 2, compassPos.north.y - signSize / 2, signSize, signSize);
                 ctx.fillStyle = "rgb(255,255,255)";
-                ctx.fillText("N", compassPos.north.x, compassPos.north.y + 5);
+                ctx.fillText("N", compassPos.north.x, compassPos.north.y + Theme.fontSizeSmall / 2 - 5);
 
                 //South
                 ctx.fillStyle = "rgb(0,0,255)";
-                ctx.fillRect(compassPos.south.x - 15, compassPos.south.y - 15, 30, 30);
+                ctx.fillRect(compassPos.south.x - signSize / 2, compassPos.south.y - signSize / 2, signSize, signSize);
                 ctx.fillStyle = "rgb(255,255,255)";
-                ctx.fillText("S", compassPos.south.x, compassPos.south.y + 5);
+                ctx.fillText("S", compassPos.south.x, compassPos.south.y + Theme.fontSizeSmall / 2 - 5);
 
                 //West
                 ctx.fillStyle = "rgb(0,0,255)";
-                ctx.fillRect(compassPos.west.x - 15, compassPos.west.y - 15, 30, 30);
+                ctx.fillRect(compassPos.west.x - signSize / 2, compassPos.west.y - signSize / 2, signSize, signSize);
                 ctx.fillStyle = "rgb(255,255,255)";
-                ctx.fillText("W", compassPos.west.x, compassPos.west.y + 5);
+                ctx.fillText("W", compassPos.west.x, compassPos.west.y + Theme.fontSizeSmall / 2 - 5);
 
                 //East
                 ctx.fillStyle = "rgb(0,0,255)";
-                ctx.fillRect(compassPos.east.x - 15, compassPos.east.y - 15, 30, 30);
+                ctx.fillRect(compassPos.east.x - signSize / 2, compassPos.east.y - signSize / 2, signSize, signSize);
                 ctx.fillStyle = "rgb(255,255,255)";
-                ctx.fillText("E", compassPos.east.x, compassPos.east.y + 5);
+                ctx.fillText("E", compassPos.east.x, compassPos.east.y + Theme.fontSizeSmall / 2 - 5);
 
+                var signSizeSmall = Theme.fontSizeExtraSmall + 4;
+                var signSizeActive = Theme.fontSizeExtraSmall + 4;
                 satellites.forEach(function(sat) {
                     /*var inUseStr = sat.inUse ? "in use" : "not in use";
                     console.log("drawing sat " + sat.identifier
@@ -150,18 +154,18 @@ Page {
                     var hue = (sat.signalStrength < 40 ? sat.signalStrength : 40) * 3;
                     if (sat.inUse) {
                         ctx.fillStyle = "rgb(255,255,255)";
-                        ctx.fillRect(x - 14, y - 14, 28, 28);
+                        ctx.fillRect(x - signSizeActive / 2 - 2, y - signSizeActive / 2 - 2, signSizeActive + 4, signSizeActive + 4);
                         ctx.fillStyle = "hsl(" + hue + ",100%,35%)";
-                        ctx.fillRect(x - 12, y - 12, 24, 24);
+                        ctx.fillRect(x - signSizeActive / 2, y - signSizeActive / 2, signSizeActive, signSizeActive);
                         ctx.fillStyle = "rgb(255,255,255)";
-                        ctx.font = "16px Sail Sans Pro";
-                        ctx.fillText(sat.identifier, x, y + 5)
+                        ctx.font = Theme.fontSizeExtraSmall + "px Sail Sans Pro";
+                        ctx.fillText(sat.identifier, x, y + Theme.fontSizeExtraSmall / 2 - 5)
                     } else {
                         ctx.fillStyle = "hsl(" + hue + ",100%,35%)";
-                        ctx.fillRect(x - 10, y - 10, 20, 20);
+                        ctx.fillRect(x - signSizeSmall / 2, y - signSizeSmall / 2, signSizeSmall, signSizeSmall);
                         ctx.fillStyle = "rgb(255,255,255)";
-                        ctx.font = "14px Sail Sans Pro";
-                        ctx.fillText(sat.identifier, x, y + 5)
+                        ctx.font = Theme.fontSizeExtraSmall + "px Sail Sans Pro";
+                        ctx.fillText(sat.identifier, x, y + Theme.fontSizeExtraSmall / 2 - 5)
                     }
                 });
             }

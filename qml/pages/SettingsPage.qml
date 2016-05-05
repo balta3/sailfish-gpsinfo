@@ -184,7 +184,7 @@ Page {
                     columnSpacing: 20
 
                     Rectangle {
-                        width: 220
+                        width: Theme.fontSizeLarge * 6.5;
                         height: label.height
                         color: "transparent"
                         Label {

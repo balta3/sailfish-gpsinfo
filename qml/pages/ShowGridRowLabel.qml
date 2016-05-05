@@ -3,7 +3,7 @@ import Sailfish.Silica 1.0
 
 Rectangle {
     width: 260
-    height: 90
+    height: Theme.fontSizeMedium * 3
     color: "transparent"
     property alias text: label.text
     Label {
