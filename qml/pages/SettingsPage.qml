@@ -40,6 +40,9 @@ Page {
             case "sv":
                 return 8
                 break
+            case "hu":
+                return 9
+                break
             default:
                 return 0
                 break
@@ -152,6 +155,10 @@ Page {
                     MenuItem {
                         text: "Svenska"
                         onClicked: settings.locale = "sv"
+                    }
+                    MenuItem {
+                        text: "Magyar"
+                        onClicked: settings.locale = "hu"
                     }
 
                 }
