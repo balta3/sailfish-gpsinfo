@@ -4,10 +4,6 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <source>About GPSInfo</source>
-        <translation>Acerca de GPSInfo</translation>
-    </message>
-    <message>
         <source>An app to show all position information</source>
         <translation>Una aplicación para mostrar toda la información de la posición</translation>
     </message>
@@ -114,10 +110,6 @@
         <translation>Activar GPS</translation>
     </message>
     <message>
-        <source>GPS Info</source>
-        <translation>Info GPS</translation>
-    </message>
-    <message>
         <source>GPS</source>
         <translation>GPS</translation>
     </message>
@@ -188,6 +180,10 @@
     <message>
         <source>Copy location</source>
         <translation>Copiar ubicación</translation>
+    </message>
+    <message>
+        <source>GPSInfo</source>
+        <translation>Info GPS</translation>
     </message>
 </context>
 <context>

@@ -87,7 +87,7 @@ Page {
         }
         PageHeader {
             id: pageHeader
-            title: qsTr("GPS Info")
+            title: qsTr("GPSInfo")
         }
 
         contentHeight: column.height + pageHeader.height + 20;

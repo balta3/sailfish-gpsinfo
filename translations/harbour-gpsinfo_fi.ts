@@ -4,10 +4,6 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <source>About GPSInfo</source>
-        <translation>Tietoa GPSInfosta</translation>
-    </message>
-    <message>
         <source>An app to show all position information</source>
         <translation>Ohjelma, joka näyttää kaikki paikkatiedot</translation>
     </message>
@@ -44,14 +40,14 @@
     </message>
     <message>
         <source>Latitude</source>
-        <translatorcomment>I left these untraslated because those are valid as well. If you will, correct translations follows:
+        <translatorcomment>I translated these, but the English names are valid as well:
 Latitude = Leveysaste
 Longitude = Pituusaste</translatorcomment>
-        <translation>Latitude</translation>
+        <translation>Leveysaste</translation>
     </message>
     <message>
         <source>Longitude</source>
-        <translation>Longitude</translation>
+        <translation>Pituusaste</translation>
     </message>
     <message>
         <source>Altitude</source>
@@ -119,8 +115,8 @@ Longitude = Pituusaste</translatorcomment>
         <translation>Kytke GPS päälle</translation>
     </message>
     <message>
-        <source>GPS Info</source>
-        <translation>GPS Info</translation>
+        <source>GPSInfo</source>
+        <translation>GPS-tiedot</translation>
     </message>
     <message>
         <source>GPS</source>
@@ -137,11 +133,11 @@ Longitude = Pituusaste</translatorcomment>
     <message>
         <source>Latitude</source>
         <translatorcomment>See comments in CoverPage</translatorcomment>
-        <translation>Latitude</translation>
+        <translation>Leveysaste</translation>
     </message>
     <message>
         <source>Longitude</source>
-        <translation>Longitude</translation>
+        <translation>Pituusaste</translation>
     </message>
     <message>
         <source>Altitude</source>
@@ -262,11 +258,11 @@ Longitude = Pituusaste</translatorcomment>
     </message>
     <message>
         <source>Latitude</source>
-        <translation>Latitude</translation>
+        <translation>Leveysaste</translation>
     </message>
     <message>
         <source>Longitude</source>
-        <translation>Longitude</translation>
+        <translation>Pituusaste</translation>
     </message>
     <message>
         <source>Altitude</source>

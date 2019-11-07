@@ -4,10 +4,6 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <source>About GPSInfo</source>
-        <translation>Over GPSInfo</translation>
-    </message>
-    <message>
         <source>An app to show all position information</source>
         <translation>Een app die alle positieinformatie weergeeft</translation>
     </message>
@@ -114,7 +110,7 @@
         <translation>GPS activeren</translation>
     </message>
     <message>
-        <source>GPS Info</source>
+        <source>GPSInfo</source>
         <translation>GPS-informatie</translation>
     </message>
     <message>

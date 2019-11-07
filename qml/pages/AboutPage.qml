@@ -100,7 +100,7 @@ Page {
         font.pixelSize: Theme.fontSizeLarge
         color: Theme.highlightColor
         wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-        text: qsTr("GPS Info")
+        text: "GPSInfo"
     }
 
     Label {

@@ -4,10 +4,6 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <source>About GPSInfo</source>
-        <translation>О программе GPSInfo</translation>
-    </message>
-    <message>
         <source>An app to show all position information</source>
         <translation>Отображение информации о местоположении</translation>
     </message>
@@ -114,7 +110,7 @@
         <translation>Включить GPS</translation>
     </message>
     <message>
-        <source>GPS Info</source>
+        <source>GPSInfo</source>
         <translation>Информация GPS</translation>
     </message>
     <message>

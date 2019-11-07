@@ -10,7 +10,7 @@ SOURCES += \
     src/harbour-gpsinfo.cpp
 
 OTHER_FILES += \
-    translations/harbour-gpsinfo_*.ts
+    translations/harbour-gpsinfo*.ts
 
 DISTFILES += qml/pages/CoverPage.qml \
     qml/pages/FirstPage.qml \
