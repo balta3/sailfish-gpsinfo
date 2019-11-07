@@ -1,25 +1,27 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="sv" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="en_US">
 <context>
     <name>AboutPage</name>
     <message>
         <source>About GPSInfo</source>
-        <translation>Om GPSInfo</translation>
+        <translation>About GPSInfo</translation>
     </message>
     <message>
         <source>An app to show all position information</source>
-        <translation>En app som visar all positionsinformation</translation>
+        <translation>An app to show all position information</translation>
     </message>
     <message>
         <source>View license</source>
-        <translation>Visa licens</translation>
+        <translation>View license</translation>
     </message>
     <message>
         <source>For suggestions, bugs and ideas visit </source>
-        <translation>För förslag, felrapporter och idéer, besök </translation>
+        <translation>For suggestions, bugs and ideas visit</translation>
     </message>
     <message>
         <source>GPSInfo is open source software licensed under the terms of the GNU General Public License.</source>
-        <translation>GPSInfo är öppen källkod, licensierad under villkoren för GNU General Public License.</translation>
+        <translation>GPSInfo is open source software licensed under the terms of the GNU General Public License.</translation>
     </message>
     <message>
         <source>Version</source>
@@ -29,44 +31,40 @@
 <context>
     <name>CoverPage</name>
     <message>
-        <source>GPS Info</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
         <source>GPS</source>
         <translation>GPS</translation>
     </message>
     <message>
         <source>active</source>
-        <translation>aktiv</translation>
+        <translation>active</translation>
     </message>
     <message>
         <source>inactive</source>
-        <translation>inaktiv</translation>
+        <translation>inactive</translation>
     </message>
     <message>
         <source>Latitude</source>
-        <translation>Latitud</translation>
+        <translation>Latitude</translation>
     </message>
     <message>
         <source>Longitude</source>
-        <translation>Longitud</translation>
+        <translation>Longitude</translation>
     </message>
     <message>
         <source>Altitude</source>
-        <translation>Altitud</translation>
+        <translation>Alt.</translation>
     </message>
     <message>
         <source>Speed</source>
-        <translation>Hastighet</translation>
+        <translation>Speed</translation>
     </message>
     <message>
         <source>Vert. acc.</source>
-        <translation>Vert.acc.</translation>
+        <translation>V.acc.</translation>
     </message>
     <message>
         <source>Hor. acc.</source>
-        <translation>Hor.acc.</translation>
+        <translation>H.acc.</translation>
     </message>
     <message>
         <source>Satel.</source>
@@ -74,11 +72,11 @@
     </message>
     <message>
         <source>Mov.</source>
-        <translation>Riktn.</translation>
+        <translation>Mov.</translation>
     </message>
     <message>
         <source>Com.</source>
-        <translation>Komp.</translation>
+        <translation>Com.</translation>
     </message>
     <message>
         <source>m/s</source>
@@ -101,19 +99,19 @@
     <name>FirstPage</name>
     <message>
         <source>About</source>
-        <translation>Om</translation>
+        <translation>About</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation>Inställningar</translation>
+        <translation>Settings</translation>
     </message>
     <message>
         <source>Deactivate GPS</source>
-        <translation>Inaktivera GPS</translation>
+        <translation>Deactivate GPS</translation>
     </message>
     <message>
         <source>Activate GPS</source>
-        <translation>Aktivera GPS</translation>
+        <translation>Activate GPS</translation>
     </message>
     <message>
         <source>GPS Info</source>
@@ -125,51 +123,51 @@
     </message>
     <message>
         <source>active</source>
-        <translation>aktiv</translation>
+        <translation>active</translation>
     </message>
     <message>
         <source>inactive</source>
-        <translation>inaktiv</translation>
+        <translation>inactive</translation>
     </message>
     <message>
         <source>Latitude</source>
-        <translation>Latitud</translation>
+        <translation>Latitude</translation>
     </message>
     <message>
         <source>Longitude</source>
-        <translation>Longitud</translation>
+        <translation>Longitude</translation>
     </message>
     <message>
         <source>Altitude</source>
-        <translation>Altitud</translation>
+        <translation>Altitude</translation>
     </message>
     <message>
         <source>Last update</source>
-        <translation>Senast uppdaterad</translation>
+        <translation>Last Update</translation>
     </message>
     <message>
         <source>Horizontal accuracy</source>
-        <translation>Horisontell noggrannhet</translation>
+        <translation>Horizontal accuracy</translation>
     </message>
     <message>
         <source>Compass direction</source>
-        <translation>Kompassriktning</translation>
+        <translation>Compass direction</translation>
     </message>
     <message>
         <source>Speed</source>
-        <translation>Hastighet</translation>
+        <translation>Speed</translation>
     </message>
     <message>
         <source>Vertical accuracy</source>
-        <translation>Vertikal noggrannhet</translation>
+        <translation>Vertical accuracy</translation>
     </message>
     <message>
         <source>Satellites in use / view</source>
-        <translation>Sat. som används / visas</translation>
+        <translation>Satellites in use / view</translation>
     </message>
     <message>
         <source>Movement direction</source>
-        <translation>Rörelseriktning</translation>
+        <translation>Movement direction</translation>
     </message>
     <message>
         <source>m/s</source>
@@ -189,40 +187,40 @@
     </message>
     <message>
         <source>Copy location</source>
-        <translation>Kopiera plats</translation>
+        <translation>Copy location</translation>
     </message>
 </context>
 <context>
     <name>LicensePage</name>
     <message>
         <source>License</source>
-        <translation>Licens</translation>
+        <translation>License</translation>
     </message>
 </context>
 <context>
     <name>SatelliteInfoPage</name>
     <message>
         <source>Satellite Info</source>
-        <translation>Satellit-info</translation>
+        <translation>Satellite Info</translation>
     </message>
     <message>
         <source>Satellites in use / view</source>
-        <translation>Sat. som används / visas</translation>
+        <translation>Satellites in use / view</translation>
     </message>
 </context>
 <context>
     <name>SettingsPage</name>
     <message>
         <source>Settings</source>
-        <translation>Inställningar</translation>
+        <translation>Settings</translation>
     </message>
     <message>
         <source>Coordinate format</source>
-        <translation>Koordinatformat</translation>
+        <translation>Coordinate format</translation>
     </message>
     <message>
         <source>degree</source>
-        <translation>grader</translation>
+        <translation>degree</translation>
     </message>
     <message>
         <source>decimal</source>
@@ -230,11 +228,11 @@
     </message>
     <message>
         <source>Units</source>
-        <translation>Enheter</translation>
+        <translation>Units</translation>
     </message>
     <message>
         <source>metric</source>
-        <translation>metrisk</translation>
+        <translation>metric</translation>
     </message>
     <message>
         <source>imperial</source>
@@ -242,67 +240,67 @@
     </message>
     <message>
         <source>Show</source>
-        <translation>Visa</translation>
+        <translation>Show</translation>
     </message>
     <message>
         <source>Appview</source>
-        <translation>Appvy</translation>
+        <translation>Appview</translation>
     </message>
     <message>
         <source>Cover</source>
-        <translation>Miniatyr</translation>
+        <translation>Cover</translation>
     </message>
     <message>
         <source>GPS state</source>
-        <translation>GPS-status</translation>
+        <translation>GPS state</translation>
     </message>
     <message>
         <source>Latitude</source>
-        <translation>Latitud</translation>
+        <translation>Latitude</translation>
     </message>
     <message>
         <source>Longitude</source>
-        <translation>Longitud</translation>
+        <translation>Longitude</translation>
     </message>
     <message>
         <source>Altitude</source>
-        <translation>Altitud</translation>
+        <translation>Altitude</translation>
     </message>
     <message>
         <source>Speed</source>
-        <translation>Hastighet</translation>
+        <translation>Speed</translation>
     </message>
     <message>
         <source>Last Update</source>
-        <translation>Senast uppdaterad</translation>
+        <translation>Last Update</translation>
     </message>
     <message>
         <source>Vertical Accuracy</source>
-        <translation>Vertikal noggrannhet</translation>
+        <translation>Vertical Accuracy</translation>
     </message>
     <message>
         <source>Horizontal Accuracy</source>
-        <translation>Horisontell noggrannhet</translation>
+        <translation>Horizontal Accuracy</translation>
     </message>
     <message>
         <source>Compass Direction</source>
-        <translation>Kompassriktning</translation>
+        <translation>Compass Direction</translation>
     </message>
     <message>
         <source>Language</source>
-        <translation>Språk</translation>
+        <translation>Language</translation>
     </message>
     <message>
         <source>Update interval</source>
-        <translation>Uppdateringsintervall</translation>
+        <translation>Update interval</translation>
     </message>
     <message>
         <source>Satellite Info</source>
-        <translation>Satellit-info</translation>
+        <translation>Satellite Info</translation>
     </message>
     <message>
         <source>requires app restart</source>
-        <translation>kräver app-omstart</translation>
+        <translation>requires app restart</translation>
     </message>
     <message>
         <source>m/s</source>
@@ -322,7 +320,7 @@
     </message>
     <message>
         <source>Movement Direction</source>
-        <translation>Rörelseriktning</translation>
+        <translation>Movement direction</translation>
     </message>
 </context>
 </TS>

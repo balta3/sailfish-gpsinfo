@@ -1,123 +1,121 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="ru_RU" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="sv">
 <context>
     <name>AboutPage</name>
     <message>
         <source>About GPSInfo</source>
-        <translation>О программе GPSInfo</translation>
+        <translation>Om GPSInfo</translation>
     </message>
     <message>
         <source>An app to show all position information</source>
-        <translation>Отображение информации о местоположении</translation>
+        <translation>En app som visar all positionsinformation</translation>
     </message>
     <message>
         <source>View license</source>
-        <translation>Лицензия</translation>
+        <translation>Visa licens</translation>
     </message>
     <message>
         <source>For suggestions, bugs and ideas visit </source>
-        <translation>Для предложений и замечаний: </translation>
+        <translation>För förslag, felrapporter och idéer, besök </translation>
     </message>
     <message>
         <source>GPSInfo is open source software licensed under the terms of the GNU General Public License.</source>
-        <translation>GPSInfo это программа с открытым исходным кодом, лицензированная на условиях GNU GPL.</translation>
+        <translation>GPSInfo är öppen källkod, licensierad under villkoren för GNU General Public License.</translation>
     </message>
     <message>
         <source>Version</source>
-        <translation>Версия</translation>
+        <translation>Version</translation>
     </message>
 </context>
 <context>
     <name>CoverPage</name>
-    <message>
-        <source>GPS Info</source>
-        <translation type="unfinished"/>
-    </message>
     <message>
         <source>GPS</source>
         <translation>GPS</translation>
     </message>
     <message>
         <source>active</source>
-        <translation>активен</translation>
+        <translation>aktiv</translation>
     </message>
     <message>
         <source>inactive</source>
-        <translation>неактивен</translation>
+        <translation>inaktiv</translation>
     </message>
     <message>
         <source>Latitude</source>
-        <translation>Широта</translation>
+        <translation>Latitud</translation>
     </message>
     <message>
         <source>Longitude</source>
-        <translation>Долгота</translation>
+        <translation>Longitud</translation>
     </message>
     <message>
         <source>Altitude</source>
-        <translation>Высота</translation>
+        <translation>Altitud</translation>
     </message>
     <message>
         <source>Speed</source>
-        <translation>Скорость</translation>
+        <translation>Hastighet</translation>
     </message>
     <message>
         <source>Vert. acc.</source>
-        <translation>Верт. точн.</translation>
+        <translation>Vert.acc.</translation>
     </message>
     <message>
         <source>Hor. acc.</source>
-        <translation>Гор. точн.</translation>
+        <translation>Hor.acc.</translation>
     </message>
     <message>
         <source>Satel.</source>
-        <translation>Спутн.</translation>
+        <translation>Satel.</translation>
     </message>
     <message>
         <source>Mov.</source>
-        <translation>Движ.</translation>
+        <translation>Riktn.</translation>
     </message>
     <message>
         <source>Com.</source>
-        <translation>Комп.</translation>
+        <translation>Komp.</translation>
     </message>
     <message>
         <source>m/s</source>
-        <translation>м/с</translation>
+        <translation>m/s</translation>
     </message>
     <message>
         <source>km/h</source>
-        <translation>км/ч</translation>
+        <translation>km/h</translation>
     </message>
     <message>
         <source>ft/s</source>
-        <translation>фут/с</translation>
+        <translation>ft/s</translation>
     </message>
     <message>
         <source>mph</source>
-        <translation>миль/ч</translation>
+        <translation>mph</translation>
     </message>
 </context>
 <context>
     <name>FirstPage</name>
     <message>
         <source>About</source>
-        <translation>О программе</translation>
+        <translation>Om</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation>Настройки</translation>
+        <translation>Inställningar</translation>
     </message>
     <message>
         <source>Deactivate GPS</source>
-        <translation>Отключить GPS</translation>
+        <translation>Inaktivera GPS</translation>
     </message>
     <message>
         <source>Activate GPS</source>
-        <translation>Включить GPS</translation>
+        <translation>Aktivera GPS</translation>
     </message>
     <message>
         <source>GPS Info</source>
-        <translation>Информация GPS</translation>
+        <translation>GPS Info</translation>
     </message>
     <message>
         <source>GPS</source>
@@ -125,204 +123,204 @@
     </message>
     <message>
         <source>active</source>
-        <translation>Активен</translation>
+        <translation>aktiv</translation>
     </message>
     <message>
         <source>inactive</source>
-        <translation>Неактивен</translation>
+        <translation>inaktiv</translation>
     </message>
     <message>
         <source>Latitude</source>
-        <translation>Широта</translation>
+        <translation>Latitud</translation>
     </message>
     <message>
         <source>Longitude</source>
-        <translation>Долгота</translation>
+        <translation>Longitud</translation>
     </message>
     <message>
         <source>Altitude</source>
-        <translation>Высота</translation>
+        <translation>Altitud</translation>
     </message>
     <message>
         <source>Last update</source>
-        <translation>Посл. обновление</translation>
+        <translation>Senast uppdaterad</translation>
     </message>
     <message>
         <source>Horizontal accuracy</source>
-        <translation>Горизонт. точность</translation>
+        <translation>Horisontell noggrannhet</translation>
     </message>
     <message>
         <source>Compass direction</source>
-        <translation>Направл. компаса</translation>
+        <translation>Kompassriktning</translation>
     </message>
     <message>
         <source>Speed</source>
-        <translation>Скорость</translation>
+        <translation>Hastighet</translation>
     </message>
     <message>
         <source>Vertical accuracy</source>
-        <translation>Верт. точность</translation>
+        <translation>Vertikal noggrannhet</translation>
     </message>
     <message>
         <source>Satellites in use / view</source>
-        <translation>Спутников исп. / вид.</translation>
+        <translation>Sat. som används / visas</translation>
     </message>
     <message>
         <source>Movement direction</source>
-        <translation>Направл. движения</translation>
+        <translation>Rörelseriktning</translation>
     </message>
     <message>
         <source>m/s</source>
-        <translation>м/с</translation>
+        <translation>m/s</translation>
     </message>
     <message>
         <source>km/h</source>
-        <translation>км/ч</translation>
+        <translation>km/h</translation>
     </message>
     <message>
         <source>ft/s</source>
-        <translation>фут/с</translation>
+        <translation>ft/s</translation>
     </message>
     <message>
         <source>mph</source>
-        <translation>миль/ч</translation>
+        <translation>mph</translation>
     </message>
     <message>
         <source>Copy location</source>
-        <translation>Скопировать местоположение</translation>
+        <translation>Kopiera plats</translation>
     </message>
 </context>
 <context>
     <name>LicensePage</name>
     <message>
         <source>License</source>
-        <translation>Лицензия</translation>
+        <translation>Licens</translation>
     </message>
 </context>
 <context>
     <name>SatelliteInfoPage</name>
     <message>
         <source>Satellite Info</source>
-        <translation>Информация о спутниках</translation>
+        <translation>Satellit-info</translation>
     </message>
     <message>
         <source>Satellites in use / view</source>
-        <translation>Спутников исп. / вид.</translation>
+        <translation>Sat. som används / visas</translation>
     </message>
 </context>
 <context>
     <name>SettingsPage</name>
     <message>
         <source>Settings</source>
-        <translation>Настройки</translation>
+        <translation>Inställningar</translation>
     </message>
     <message>
         <source>Coordinate format</source>
-        <translation>Формат координат</translation>
+        <translation>Koordinatformat</translation>
     </message>
     <message>
         <source>degree</source>
-        <translation>градусы</translation>
+        <translation>grader</translation>
     </message>
     <message>
         <source>decimal</source>
-        <translation>десятичный</translation>
+        <translation>decimal</translation>
     </message>
     <message>
         <source>Units</source>
-        <translation>Система мер</translation>
+        <translation>Enheter</translation>
     </message>
     <message>
         <source>metric</source>
-        <translation>метрическая</translation>
+        <translation>metrisk</translation>
     </message>
     <message>
         <source>imperial</source>
-        <translation>английская</translation>
+        <translation>imperial</translation>
     </message>
     <message>
         <source>Show</source>
-        <translation>Показывать</translation>
+        <translation>Visa</translation>
     </message>
     <message>
         <source>Appview</source>
-        <translation>Прилож.</translation>
+        <translation>Appvy</translation>
     </message>
     <message>
         <source>Cover</source>
-        <translation>Обложка</translation>
+        <translation>Miniatyr</translation>
     </message>
     <message>
         <source>GPS state</source>
-        <translation>Состояние GPS</translation>
+        <translation>GPS-status</translation>
     </message>
     <message>
         <source>Latitude</source>
-        <translation>Широта</translation>
+        <translation>Latitud</translation>
     </message>
     <message>
         <source>Longitude</source>
-        <translation>Долгота</translation>
+        <translation>Longitud</translation>
     </message>
     <message>
         <source>Altitude</source>
-        <translation>Высота</translation>
+        <translation>Altitud</translation>
     </message>
     <message>
         <source>Speed</source>
-        <translation>Скорость</translation>
+        <translation>Hastighet</translation>
     </message>
     <message>
         <source>Last Update</source>
-        <translation>Послед. обновл.</translation>
+        <translation>Senast uppdaterad</translation>
     </message>
     <message>
         <source>Vertical Accuracy</source>
-        <translation>Верт. точность</translation>
+        <translation>Vertikal noggrannhet</translation>
     </message>
     <message>
         <source>Horizontal Accuracy</source>
-        <translation>Горизонт. точность</translation>
+        <translation>Horisontell noggrannhet</translation>
     </message>
     <message>
         <source>Compass Direction</source>
-        <translation>Направл. компаса</translation>
+        <translation>Kompassriktning</translation>
     </message>
     <message>
         <source>Language</source>
-        <translation>Язык</translation>
+        <translation>Språk</translation>
     </message>
     <message>
         <source>Update interval</source>
-        <translation>Интервал обновления</translation>
+        <translation>Uppdateringsintervall</translation>
     </message>
     <message>
         <source>Satellite Info</source>
-        <translation>Инфо о спутниках</translation>
+        <translation>Satellit-info</translation>
     </message>
     <message>
         <source>requires app restart</source>
-        <translation>требует перезапуска приложения</translation>
+        <translation>kräver app-omstart</translation>
     </message>
     <message>
         <source>m/s</source>
-        <translation>м/с</translation>
+        <translation>m/s</translation>
     </message>
     <message>
         <source>km/h</source>
-        <translation>км/ч</translation>
+        <translation>km/h</translation>
     </message>
     <message>
         <source>ft/s</source>
-        <translation>фут/s</translation>
+        <translation>ft/s</translation>
     </message>
     <message>
         <source>mph</source>
-        <translation>миль/ч</translation>
+        <translation>mph</translation>
     </message>
     <message>
         <source>Movement Direction</source>
-        <translation>Направл. движения</translation>
+        <translation>Rörelseriktning</translation>
     </message>
 </context>
 </TS>

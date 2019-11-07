@@ -31,10 +31,6 @@
 <context>
     <name>CoverPage</name>
     <message>
-        <source>GPS Info</source>
-        <translation type="obsolete">GPS Info</translation>
-    </message>
-    <message>
         <source>GPS</source>
         <translation>GPS</translation>
     </message>
