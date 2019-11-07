@@ -43,7 +43,7 @@ Page {
         anchors.verticalCenter: parent.verticalCenter
         anchors.horizontalCenter: satelliteInfoPage.horizontalCenter;
         anchors.left: undefined;
-        property int north : compass.reading.azimuth;
+        property int north : compass.reading === null ? 0 : compass.reading.azimuth;
         property variant satellites : gpsDataSource.satellites;
         onNorthChanged: requestPaint();
         onSatellitesChanged: requestPaint();

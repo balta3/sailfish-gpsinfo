@@ -149,7 +149,7 @@ CoverBackground {
             label: qsTr("Com.")
             visible: settings.showCompassDirectionCover
             fontpixelSize: Theme.fontSizeMedium
-            value: LocationFormater.formatDirection(compass.reading.azimuth)
+            value: LocationFormater.formatDirection(compass.reading === null ? 0 : compass.reading.azimuth)
         }
     }
 

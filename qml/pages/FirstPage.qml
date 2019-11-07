@@ -215,7 +215,7 @@ Page {
             InfoField {
                 label: qsTr("Compass direction")
                 visible: settings.showCompassDirectionApp
-                value: LocationFormater.formatDirection(compass.reading.azimuth)
+                value: LocationFormater.formatDirection(compass.reading === null ? 0 : compass.reading.azimuth)
             }
         }
     }
