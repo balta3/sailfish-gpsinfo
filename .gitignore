@@ -3,5 +3,5 @@
 *.bak
 *.pro.*
 *.qm
-*.spec.*
+*.spec*
 *.autosave
