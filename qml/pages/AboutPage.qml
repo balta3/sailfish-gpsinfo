@@ -78,24 +78,34 @@ Page {
         }
     ]
 
-    PageHeader {
-        title: qsTr("About GPSInfo")
-    }
-
     Image {
         id: icon
         anchors.top: parent.top
         anchors.topMargin: 2 * Theme.paddingLarge
-        anchors.left: parent.left
-        anchors.leftMargin: 2 * Theme.paddingLarge
-        source: Qt.resolvedUrl("../GPSInfo.png")
+        anchors.horizontalCenter: parent.horizontalCenter
+        source: Qt.resolvedUrl("/usr/share/icons/hicolor/256x256/apps/harbour-gpsinfo.png")
+        width: Theme.iconSizeExtraLarge
+        height: Theme.iconSizeExtraLarge
         smooth: true
         asynchronous: true
     }
 
     Label {
-        id: infoLabel
+        id: nameLabel
         anchors.top: icon.bottom
+        anchors.topMargin: Theme.paddingLarge
+        anchors.horizontalCenter: parent.horizontalCenter
+        width: 0.8 * parent.width
+        horizontalAlignment: Text.AlignHCenter
+        font.pixelSize: Theme.fontSizeLarge
+        color: Theme.highlightColor
+        wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+        text: qsTr("GPS Info")
+    }
+
+    Label {
+        id: infoLabel
+        anchors.top: nameLabel.bottom
         anchors.topMargin: 2 * Theme.paddingLarge
         anchors.horizontalCenter: parent.horizontalCenter
         width: 0.8 * parent.width

@@ -12,7 +12,7 @@ License: GPL-2.0
 Sources:
 - '%{name}-%{version}.tar.bz2'
 Description: |
-  GPS information tool
+  An app to show all position information
 Configure: none
 # The qtc5 builder inserts macros to allow QtCreator to have fine
 # control over qmake/make execution
