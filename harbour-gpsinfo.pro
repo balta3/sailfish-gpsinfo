@@ -14,11 +14,11 @@ OTHER_FILES += \
 
 DISTFILES += qml/pages/CoverPage.qml \
     qml/pages/FirstPage.qml \
-    qml/pages/InfoField.qml \
+    qml/components/InfoField.qml \
     qml/pages/SettingsPage.qml \
     qml/LocationFormatter.js \
-    qml/providers/Providers.qml \
-    qml/pages/ShowGridRowLabel.qml \
+    qml/components/Providers.qml \
+    qml/components/ShowGridRowLabel.qml \
     qml/pages/AboutPage.qml \
     qml/pages/LicensePage.qml \
     qml/license.js \
