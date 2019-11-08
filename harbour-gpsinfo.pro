@@ -26,7 +26,6 @@ DISTFILES += qml/pages/CoverPage.qml \
     harbour-gpsinfo.desktop \
     qml/harbour-gpsinfo.qml \
     qml/pages/SatelliteInfoPage.qml \
-    qml/CircleCalculator.js \
     images/coverbg.png \
     rpm/harbour-gpsinfo.yaml
 
