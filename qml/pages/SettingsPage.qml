@@ -18,31 +18,22 @@ Page {
         switch(settings.locale){
             case "de":
                 return 1
-                break
             case "es":
                 return 2
-                break
             case "fi":
                 return 3
-                break
             case "fr":
                 return 4
-                break
             case "nl":
                 return 5
-                break
             case "pl":
                 return 6
-                break
             case "ru":
                 return 7
-                break
             case "sv":
                 return 8
-                break
             default:
                 return 0
-                break
         }
     }
 
