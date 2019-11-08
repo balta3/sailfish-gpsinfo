@@ -115,117 +115,117 @@
 <context>
     <name>FirstPage</name>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="49"/>
+        <location filename="../qml/pages/FirstPage.qml" line="50"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="53"/>
+        <location filename="../qml/pages/FirstPage.qml" line="54"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="57"/>
+        <location filename="../qml/pages/FirstPage.qml" line="58"/>
         <source>Deactivate GPS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="57"/>
+        <location filename="../qml/pages/FirstPage.qml" line="58"/>
         <source>Activate GPS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="74"/>
+        <location filename="../qml/pages/FirstPage.qml" line="75"/>
         <source>Copy location</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="90"/>
+        <location filename="../qml/pages/FirstPage.qml" line="91"/>
         <source>GPSInfo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="104"/>
+        <location filename="../qml/pages/FirstPage.qml" line="105"/>
         <source>GPS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="106"/>
+        <location filename="../qml/pages/FirstPage.qml" line="107"/>
         <source>active</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="106"/>
+        <location filename="../qml/pages/FirstPage.qml" line="107"/>
         <source>inactive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="109"/>
+        <location filename="../qml/pages/FirstPage.qml" line="110"/>
         <source>Latitude</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="123"/>
+        <location filename="../qml/pages/FirstPage.qml" line="124"/>
         <source>Longitude</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="139"/>
+        <location filename="../qml/pages/FirstPage.qml" line="140"/>
         <source>Altitude</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="158"/>
+        <location filename="../qml/pages/FirstPage.qml" line="159"/>
         <source>Speed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="164"/>
+        <location filename="../qml/pages/FirstPage.qml" line="165"/>
         <source>m/s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="166"/>
+        <location filename="../qml/pages/FirstPage.qml" line="167"/>
         <source>km/h</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="170"/>
+        <location filename="../qml/pages/FirstPage.qml" line="171"/>
         <source>ft/s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="172"/>
+        <location filename="../qml/pages/FirstPage.qml" line="173"/>
         <source>mph</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="180"/>
+        <location filename="../qml/pages/FirstPage.qml" line="181"/>
         <source>Movement direction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="185"/>
+        <location filename="../qml/pages/FirstPage.qml" line="186"/>
         <source>Last update</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="190"/>
+        <location filename="../qml/pages/FirstPage.qml" line="191"/>
         <source>Vertical accuracy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="204"/>
+        <location filename="../qml/pages/FirstPage.qml" line="205"/>
         <source>Horizontal accuracy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="218"/>
+        <location filename="../qml/pages/FirstPage.qml" line="219"/>
         <source>Satellites in use / view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="223"/>
+        <location filename="../qml/pages/FirstPage.qml" line="224"/>
         <source>Compass direction</source>
         <translation type="unfinished"></translation>
     </message>
@@ -246,7 +246,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SatelliteInfoPage.qml" line="176"/>
+        <location filename="../qml/pages/SatelliteInfoPage.qml" line="182"/>
         <source>Satellites in use / view</source>
         <translation type="unfinished"></translation>
     </message>
@@ -254,143 +254,143 @@
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="43"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="44"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="47"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="48"/>
         <source>Coordinate format</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="50"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="51"/>
         <source>degree</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="54"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="55"/>
         <source>decimal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="61"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="62"/>
         <source>Units</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="64"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="65"/>
         <source>metric</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="71"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="72"/>
         <source>imperial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="82"/>
-        <location filename="../qml/pages/SettingsPage.qml" line="244"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="83"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="245"/>
         <source>Speed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="86"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="87"/>
         <source>m/s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="91"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="92"/>
         <source>km/h</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="96"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="97"/>
         <source>ft/s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="101"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="102"/>
         <source>mph</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="109"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="110"/>
         <source>Language</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="155"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="156"/>
         <source>Update interval</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="185"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="186"/>
         <source>Show</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="189"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="190"/>
         <source>Appview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="192"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="193"/>
         <source>Cover</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="196"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="197"/>
         <source>GPS state</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="208"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="209"/>
         <source>Latitude</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="220"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="221"/>
         <source>Longitude</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="232"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="233"/>
         <source>Altitude</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="256"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="257"/>
         <source>Movement Direction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="268"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="269"/>
         <source>Last Update</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="280"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="281"/>
         <source>Vertical Accuracy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="292"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="293"/>
         <source>Horizontal Accuracy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="304"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="305"/>
         <source>Satellite Info</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="316"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="317"/>
         <source>Compass Direction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="332"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="333"/>
         <source>requires app restart</source>
         <translation type="unfinished"></translation>
     </message>
