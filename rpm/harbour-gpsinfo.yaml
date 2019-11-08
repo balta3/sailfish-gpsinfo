@@ -27,12 +27,16 @@ PkgConfigBR:
   - Qt5Quick
 
 # Build dependencies without a pkgconfig setup can be listed here
-# PkgBR:
-#   - package-needed-to-build
+PkgBR:
+  - qt5-qtdeclarative-import-sensors
+  - qt5-qtdeclarative-import-positioning
+  - qt5-qtpositioning-devel
 
 # Runtime dependencies which are not automatically detected
 Requires:
   - sailfishsilica-qt5 >= 0.10.9 
+  - qt5-qtdeclarative-import-sensors
+  - qt5-qtdeclarative-import-positioning
 
 # All installed files
 Files:
