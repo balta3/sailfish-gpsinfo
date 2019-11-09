@@ -18,7 +18,7 @@ DISTFILES += qml/pages/CoverPage.qml \
     qml/pages/SettingsPage.qml \
     qml/LocationFormatter.js \
     qml/components/Providers.qml \
-    qml/components/ShowGridRowLabel.qml \
+    qml/components/DoubleSwitch.qml \
     qml/pages/AboutPage.qml \
     qml/pages/LicensePage.qml \
     qml/license.js \
