@@ -17,24 +17,15 @@ Page {
 
     function setLanguageCombobox() {
         switch(settings.locale){
-            case "de":
-                return 1
-            case "es":
-                return 2
-            case "fi":
-                return 3
-            case "fr":
-                return 4
-            case "nl":
-                return 5
-            case "pl":
-                return 6
-            case "ru":
-                return 7
-            case "sv":
-                return 8
-            default:
-                return 0
+        case "de": return 1
+        case "es": return 2
+        case "fi": return 3
+        case "fr": return 4
+        case "nl": return 5
+        case "pl": return 6
+        case "ru": return 7
+        case "sv": return 8
+        default:   return 0
         }
     }
 
@@ -109,43 +100,15 @@ Page {
                 id: languageCombobox
                 label: qsTr("Language") + "*"
                 menu: ContextMenu {
-                    MenuItem {
-                        text: "English"
-                        onClicked: settings.locale = "en"
-                    }
-                    MenuItem {
-                        text: "Deutsch"
-                        onClicked: settings.locale = "de"
-                    }
-                    MenuItem {
-                        text: "Español"
-                        onClicked: settings.locale = "es"
-                    }
-                    MenuItem {
-                        text: "Suomi"
-                        onClicked: settings.locale = "fi"
-                    }
-                    MenuItem {
-                        text: "Français"
-                        onClicked: settings.locale = "fr"
-                    }
-                    MenuItem {
-                        text: "Nederlands"
-                        onClicked: settings.locale = "nl"
-                    }
-                    MenuItem {
-                        text: "Polskie"
-                        onClicked: settings.locale = "pl"
-                    }
-                    MenuItem {
-                        text: "Pусский"
-                        onClicked: settings.locale = "ru"
-                    }
-                    MenuItem {
-                        text: "Svenska"
-                        onClicked: settings.locale = "sv"
-                    }
-
+                    MenuItem { text: "English";    onClicked: settings.locale = "en"; }
+                    MenuItem { text: "Deutsch";    onClicked: settings.locale = "de"; }
+                    MenuItem { text: "Español";    onClicked: settings.locale = "es"; }
+                    MenuItem { text: "Suomi";      onClicked: settings.locale = "fi"; }
+                    MenuItem { text: "Français";   onClicked: settings.locale = "fr"; }
+                    MenuItem { text: "Nederlands"; onClicked: settings.locale = "nl"; }
+                    MenuItem { text: "Polskie";    onClicked: settings.locale = "pl"; }
+                    MenuItem { text: "Pусский";    onClicked: settings.locale = "ru"; }
+                    MenuItem { text: "Svenska";    onClicked: settings.locale = "sv"; }
                 }
                 Component.onCompleted: currentIndex = setLanguageCombobox()
             }
