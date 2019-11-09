@@ -100,7 +100,7 @@ Longitude = Pituusaste</translatorcomment>
     <name>FirstPage</name>
     <message>
         <source>About</source>
-        <translation>Tietoa</translation>
+        <translation>Tietoja</translation>
     </message>
     <message>
         <source>Settings</source>
@@ -189,7 +189,7 @@ Longitude = Pituusaste</translatorcomment>
     </message>
     <message>
         <source>Copy location</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopioi sijainti</translation>
     </message>
 </context>
 <context>
@@ -246,7 +246,7 @@ Longitude = Pituusaste</translatorcomment>
     </message>
     <message>
         <source>Appview</source>
-        <translation>Ohj. näkymä</translation>
+        <translation>Etusivu</translation>
     </message>
     <message>
         <source>Cover</source>
@@ -323,6 +323,18 @@ Longitude = Pituusaste</translatorcomment>
     <message>
         <source>Movement Direction</source>
         <translation>Liikkeen suunta</translation>
+    </message>
+    <message>
+        <source>Rotate satellite view</source>
+        <translation>Kierrä satelliittinäkymää</translation>
+    </message>
+    <message>
+        <source>yes</source>
+        <translation>kyllä</translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation>ei</translation>
     </message>
 </context>
 </TS>

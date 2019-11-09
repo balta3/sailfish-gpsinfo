@@ -318,5 +318,17 @@
         <source>Movement Direction</source>
         <translation>Dirección movimiento</translation>
     </message>
+    <message>
+        <source>Rotate satellite view</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>yes</source>
+        <translation type="unfinished">si</translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation type="unfinished">no</translation>
+    </message>
 </context>
 </TS>

@@ -318,5 +318,17 @@
         <source>Movement Direction</source>
         <translation>Направл. движения</translation>
     </message>
+    <message>
+        <source>Rotate satellite view</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>yes</source>
+        <translation type="unfinished">да</translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation type="unfinished">нет</translation>
+    </message>
 </context>
 </TS>
