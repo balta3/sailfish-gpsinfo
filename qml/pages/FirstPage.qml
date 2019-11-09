@@ -96,7 +96,7 @@ Page {
         Column {
             id: column
 
-            width: page.width
+            width: parent.width - Theme.paddingLarge
             spacing: Theme.paddingLarge
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.top: parent.top;
