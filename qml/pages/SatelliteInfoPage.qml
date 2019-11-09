@@ -45,11 +45,7 @@ Page {
     Canvas {
         id: canvasBackground
         anchors.fill: canvas
-        onVisibleChanged: {
-            if(visible) {
-                requestPaint()
-            }
-        }
+        onVisibleChanged: if(visible) requestPaint()
         onPaint: {
             var ctx = canvasBackground.getContext('2d');
 
@@ -93,6 +89,7 @@ Page {
         property int signSizeActive: Theme.fontSizeExtraSmall + 4;
         onNorthChanged: requestPaint();
         onSatellitesChanged: requestPaint();
+        onVisibleChanged: if(visible) requestPaint()
         onPaint: {
             if (visible) {
                 var ctx = canvas.getContext('2d');
