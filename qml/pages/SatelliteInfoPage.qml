@@ -19,6 +19,8 @@ Page {
         canvas.requestPaint();
     }
 
+    onVisibleChanged: canvasBackground.requestPaint()
+
     states: [
         State {
             name: 'landscape';
