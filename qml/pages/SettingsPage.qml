@@ -7,6 +7,18 @@ Page {
 
     allowedOrientations: Orientation.Portrait | Orientation.Landscape | Orientation.LandscapeInverted
 
+    states: [
+        State {
+            name: 'landscape';
+            when: orientation === Orientation.Landscape || orientation === Orientation.LandscapeInverted;
+            PropertyChanges {
+                target: listView;
+                anchors.leftMargin: settingsPage.width * 0.125;
+                anchors.rightMargin: settingsPage.width * 0.125;
+            }
+        }
+    ]
+
     function setSpeedUnitComboBoxIndex() {
         if (settings.units === "MET") {
             speedUnitComboBox.currentIndex = settings.speedUnit === "SEC" ? 0 : 1
@@ -30,6 +42,7 @@ Page {
     }
 
     SilicaListView {
+        id: listView
         anchors.fill: parent
         header: PageHeader {
             title: qsTr("Settings")
