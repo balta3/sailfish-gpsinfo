@@ -166,6 +166,25 @@ Page {
                 onReleased: settings.updateInterval = value
             }
 
+            ComboBox {
+                label: qsTr("Rotate satellite view")
+                menu: ContextMenu {
+                    MenuItem {
+                        text: qsTr("yes")
+                        onClicked: {
+                            settings.rotate = true;
+                        }
+                    }
+                    MenuItem {
+                        text: qsTr("no")
+                        onClicked: {
+                            settings.rotate = false;
+                        }
+                    }
+                }
+                Component.onCompleted: currentIndex = settings.rotate ? 0 : 1
+            }
+
             Rectangle {
                 anchors.leftMargin: Theme.paddingMedium
                 height: grid.height

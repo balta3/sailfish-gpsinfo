@@ -87,7 +87,7 @@ Page {
         anchors.verticalCenter: parent.verticalCenter
         anchors.horizontalCenter: satelliteInfoPage.horizontalCenter;
         anchors.left: undefined;
-        property int north : compass.reading === null ? 0 : compass.reading.azimuth;
+        property int north : !settings.rotate || compass.reading === null ? 0 : compass.reading.azimuth;
         property variant satellites : gpsDataSource.satellites;
         property int signSizeSmall: Theme.fontSizeExtraSmall + 4;
         property int signSizeActive: Theme.fontSizeExtraSmall + 4;

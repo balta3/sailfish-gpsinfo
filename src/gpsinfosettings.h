@@ -34,6 +34,7 @@ class GPSInfoSettings : public QMLSettingsWrapper
     Q_PROPERTY(QString speedUnit READ getSpeedUnit WRITE setSpeedUnit NOTIFY speedUnitChanged)
     Q_PROPERTY(QString units READ getUnits WRITE setUnits NOTIFY unitsChanged)
     Q_PROPERTY(int updateInterval READ getUpdateInterval WRITE setUpdateInterval NOTIFY updateIntervalChanged)
+    Q_PROPERTY(bool rotate READ getRotate WRITE setRotate NOTIFY rotateChanged)
 public:
     explicit GPSInfoSettings(QObject *parent = 0);
 
@@ -64,6 +65,7 @@ public:
     QString getSpeedUnit() {return this->value("speedUnit", "SEC").toString();}
     QString getUnits() {return this->value("units", "MET").toString();}
     int getUpdateInterval() {return this->value("updateInterval", 1).toInt();}
+    bool getRotate() {return this->value("rotate", true).toBool();}
 
     void setCoordinateFormat(QString val) {this->setValue("coordinateFormat", val); emit coordinateFormatChanged(val);}
     void setLocale(QString val) {this->setValue("locale", val); emit localeChanged(val);}
@@ -92,6 +94,7 @@ public:
     void setSpeedUnit(QString val) {this->setValue("speedUnit", val); emit speedUnitChanged(val);}
     void setUnits(QString val) {this->setValue("units", val); emit unitsChanged(val);}
     void setUpdateInterval(int val) {this->setValue("updateInterval", val); emit updateIntervalChanged(val);}
+    void setRotate(bool val) {this->setValue("rotate", val); emit rotateChanged(val);}
 private:
 
 signals:
@@ -122,6 +125,7 @@ signals:
     void speedUnitChanged(QString);
     void unitsChanged(QString);
     void updateIntervalChanged(int);
+    void rotateChanged(bool);
 public slots:
 
 };
