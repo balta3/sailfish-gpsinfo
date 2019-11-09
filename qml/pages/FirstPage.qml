@@ -21,14 +21,12 @@ Page {
         gpsDataSource: page.gpsDataSource
     }
 
-    Timer {
-            interval: 100
-            repeat: false
-            running: true
-            onTriggered: {
-                pageStack.pushAttached(satelliteInfoPage);
-                //gpsDataSource.onSatellitesChanged = satelliteInfoPage.repaintSatellites();
-            }
+    property bool satellitePagePushed: false
+    onStatusChanged: {
+        if (status == PageStatus.Active && !satellitePagePushed) {
+            pageStack.pushAttached(satelliteInfoPage)
+            satellitePagePushed = true
+        }
     }
 
     states: [
