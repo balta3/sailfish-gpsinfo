@@ -71,5 +71,5 @@ function formatDirection(direction) {
     } else {
         dirStr = "?"
     }
-    return dirStr + " (" + roundToDecimal(direction, 0) + "°)"
+    return dirStr === "?" ? "-" : dirStr + " (" + roundToDecimal(direction, 0) + "°)"
 }
