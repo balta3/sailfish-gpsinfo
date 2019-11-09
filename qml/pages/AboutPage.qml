@@ -137,7 +137,7 @@ Page {
         horizontalAlignment: Text.AlignHCenter
         font.pixelSize: Theme.fontSizeExtraSmall
         color: Theme.secondaryColor
-        text: "Copyright © 2014-2016 Marcel Witte"
+        text: "Copyright © 2014-2016 Marcel Witte\n2019 Matti Viljanen"
     }
 
     Label {
