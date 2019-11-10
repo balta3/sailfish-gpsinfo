@@ -3,7 +3,7 @@ import Sailfish.Silica 1.0
 
 Item {
     height: Theme.iconSizeLarge
-    width: parent.width
+    width: parent ? parent.width : Screen.width
     property alias text: label.text
     property alias lSw: leftSwitch
     property alias rSw: rightSwitch
