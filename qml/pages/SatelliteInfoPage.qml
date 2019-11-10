@@ -142,7 +142,7 @@ Page {
                     elevationRad = sat.elevation * Math.PI / 180;
                     x = center + Math.sin(azimuthRad) * radius * Math.cos(elevationRad);
                     y = center - Math.cos(azimuthRad) * radius * Math.cos(elevationRad);
-                    dx = sat.identifier >= 100 ? 1.4 : (sat.identifier >= 10 ? 1.2 : 1.0);
+                    dx = sat.identifier >= 100 ? 1.8 : (sat.identifier >= 10 ? 1.4 : 1.0);
 
                     ctx.fillStyle = "hsl(" + (sat.signalStrength < 40 ? sat.signalStrength : 40) * 3 + ",100%,35%)";
                     if (sat.inUse) {
