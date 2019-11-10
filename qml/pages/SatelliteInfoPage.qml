@@ -15,11 +15,12 @@ Page {
         title: qsTr("Satellite Info")
     }
 
-    function repaintSatellites() {
-        canvas.requestPaint();
+    onVisibleChanged: {
+        if(visible) {
+            canvasBackground.requestPaint()
+            canvas.requestPaint()
+        }
     }
-
-    onVisibleChanged: canvasBackground.requestPaint()
 
     states: [
         State {
@@ -45,7 +46,6 @@ Page {
     Canvas {
         id: canvasBackground
         anchors.fill: canvas
-        onVisibleChanged: if(visible) requestPaint()
         onPaint: {
             var ctx = canvasBackground.getContext('2d');
 
@@ -78,8 +78,8 @@ Page {
 
     Canvas {
         id: canvas
-        width: Screen.width - 30;
-        height: Screen.width - 30;
+        width: canvasWidth
+        height: canvasWidth
         anchors.verticalCenter: parent.verticalCenter
         anchors.horizontalCenter: satelliteInfoPage.horizontalCenter;
         anchors.left: undefined;
@@ -89,7 +89,6 @@ Page {
         property int signSizeActive: Theme.fontSizeExtraSmall + 4;
         onNorthChanged: requestPaint();
         onSatellitesChanged: requestPaint();
-        onVisibleChanged: if(visible) requestPaint()
         onPaint: {
             if (visible) {
                 var ctx = canvas.getContext('2d');
