@@ -35,7 +35,8 @@ Page {
             when: orientation === Orientation.Landscape || orientation === Orientation.LandscapeInverted;
             PropertyChanges {
                 target: column;
-                width: page.width * 0.75;
+                anchors.leftMargin: page.width * 0.125;
+                anchors.rightMargin: page.width * 0.125;
             }
         }
     ]
@@ -84,21 +85,25 @@ Page {
                 }
             }
         }
+
+        contentHeight: pageHeader.height + column.height;
+
         PageHeader {
             id: pageHeader
             title: qsTr("GPSInfo")
         }
 
-        contentHeight: column.height + pageHeader.height + 20;
-
         Column {
             id: column
-
-            width: parent.width - Theme.paddingLarge
             spacing: Theme.paddingLarge
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.top: parent.top;
-            anchors.topMargin: pageHeader.height;
+            anchors {
+                top: pageHeader.bottom
+                left: parent.left
+                right: parent.right
+                leftMargin: 0
+                rightMargin: Theme.paddingSmall
+            }
+
             InfoField {
                 label: qsTr("GPS")
                 visible: settings.showGpsStateApp
@@ -215,6 +220,13 @@ Page {
                 label: qsTr("Compass direction")
                 visible: settings.showCompassDirectionApp
                 value: compass.reading === null ? "-" : LocationFormater.formatDirection(compass.reading.azimuth)
+            }
+            // This element is "necessary", because Sony Xperia XA2 Ultra (at least)
+            // messes up the column height calculation with only InfoFields...
+            Rectangle {
+                color: "transparent"
+                width: parent.width
+                height: 1.0
             }
         }
     }
