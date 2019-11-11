@@ -90,6 +90,10 @@
         <source>mph</source>
         <translation>mph</translation>
     </message>
+    <message>
+        <source>Cal.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>FirstPage</name>
@@ -184,6 +188,10 @@
     <message>
         <source>Copy location</source>
         <translation>Kopiere Standort</translation>
+    </message>
+    <message>
+        <source>Compass calibration</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -329,6 +337,10 @@
     <message>
         <source>no</source>
         <translation type="unfinished">nein</translation>
+    </message>
+    <message>
+        <source>Compass Calibration</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -95,6 +95,10 @@ Longitude = Pituusaste</translatorcomment>
         <source>mph</source>
         <translation>mph</translation>
     </message>
+    <message>
+        <source>Cal.</source>
+        <translation>Kal.</translation>
+    </message>
 </context>
 <context>
     <name>FirstPage</name>
@@ -190,6 +194,10 @@ Longitude = Pituusaste</translatorcomment>
     <message>
         <source>Copy location</source>
         <translation>Kopioi sijainti</translation>
+    </message>
+    <message>
+        <source>Compass calibration</source>
+        <translation>Kompassikalibraatio</translation>
     </message>
 </context>
 <context>
@@ -335,6 +343,10 @@ Longitude = Pituusaste</translatorcomment>
     <message>
         <source>no</source>
         <translation>ei</translation>
+    </message>
+    <message>
+        <source>Compass Calibration</source>
+        <translation>Kompassikalibraatio</translation>
     </message>
 </context>
 </TS>
