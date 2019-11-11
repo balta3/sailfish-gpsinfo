@@ -276,6 +276,14 @@ Page {
                 rSw.onClicked: settings.showCompassDirectionCover = rSw.checked
             }
 
+            DoubleSwitch {
+                text: qsTr("Compass Calibration")
+                lSw.checked:   settings.showCompassCalibrationApp
+                lSw.onClicked: settings.showCompassCalibrationApp = lSw.checked
+                rSw.checked:   settings.showCompassCalibrationCover
+                rSw.onClicked: settings.showCompassCalibrationCover = rSw.checked
+            }
+
             Text {
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: Theme.secondaryColor

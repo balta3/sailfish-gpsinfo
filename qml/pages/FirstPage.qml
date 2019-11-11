@@ -221,6 +221,11 @@ Page {
                 visible: settings.showCompassDirectionApp
                 value: compass.reading === null ? "-" : LocationFormater.formatDirection(compass.reading.azimuth)
             }
+            InfoField {
+                label: qsTr("Compass calibration")
+                visible: settings.showCompassCalibrationApp
+                value: compass.reading === null ? "-" : Math.round(compass.reading.calibrationLevel * 100) + "%"
+            }
             // This element is "necessary", because Sony Xperia XA2 Ultra (at least)
             // messes up the column height calculation with only InfoFields...
             Rectangle {

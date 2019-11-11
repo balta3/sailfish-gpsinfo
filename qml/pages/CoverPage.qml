@@ -152,6 +152,12 @@ CoverBackground {
             fontpixelSize: Theme.fontSizeMedium
             value: LocationFormater.formatDirection(compass.reading === null ? 0 : compass.reading.azimuth)
         }
+        InfoField {
+            label: qsTr("Cal.")
+            visible: settings.showCompassCalibrationCover
+            fontpixelSize: Theme.fontSizeMedium
+            value: compass.reading === null ? "-" : Math.round(compass.reading.calibrationLevel * 100) + "%"
+        }
     }
 
     CoverActionList {
