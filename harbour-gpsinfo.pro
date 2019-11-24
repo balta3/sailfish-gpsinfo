@@ -13,6 +13,7 @@ OTHER_FILES += \
     translations/harbour-gpsinfo*.ts
 
 DISTFILES += qml/pages/CoverPage.qml \
+    qml/components/AboutLabel.qml \
     qml/pages/FirstPage.qml \
     qml/components/InfoField.qml \
     qml/pages/SettingsPage.qml \

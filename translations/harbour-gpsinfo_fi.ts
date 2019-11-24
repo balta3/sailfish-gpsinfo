@@ -9,11 +9,11 @@
     </message>
     <message>
         <source>View license</source>
-        <translation>Tarkastele lisenssiä englanniksi</translation>
+        <translation>Näytä lisenssi</translation>
     </message>
     <message>
         <source>For suggestions, bugs and ideas visit </source>
-        <translation>Ehdotukset, bugit ja ideat vieraile (englanniksi)</translation>
+        <translation>Ehdotukset, bugit ja ideat (englanniksi) osoitteessa</translation>
     </message>
     <message>
         <source>GPSInfo is open source software licensed under the terms of the GNU General Public License.</source>
