@@ -1,6 +1,7 @@
 Name: harbour-gpsinfo
 Summary: GPSInfo
-Version: 0.8
+# Checklist: AboutPage.qml
+Version: 0.9
 Release: 1
 # The contents of the Group field should be one of the groups listed here:
 # https://github.com/mer-tools/spectacle/blob/master/data/GROUPS
