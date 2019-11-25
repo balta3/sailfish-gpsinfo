@@ -4,10 +4,6 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <source>About GPSInfo</source>
-        <translation>Über GPSInfo</translation>
-    </message>
-    <message>
         <source>An app to show all position information</source>
         <translation>Eine App um alle Positionsinformationen anzuzeigen</translation>
     </message>
@@ -30,10 +26,6 @@
 </context>
 <context>
     <name>CoverPage</name>
-    <message>
-        <source>GPS Info</source>
-        <translation type="obsolete">GPS Info</translation>
-    </message>
     <message>
         <source>GPS</source>
         <translation>GPS</translation>
@@ -98,6 +90,10 @@
         <source>mph</source>
         <translation>mph</translation>
     </message>
+    <message>
+        <source>Cal.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>FirstPage</name>
@@ -118,8 +114,8 @@
         <translation>GPS aktivieren</translation>
     </message>
     <message>
-        <source>GPS Info</source>
-        <translation>GPS Info</translation>
+        <source>GPSInfo</source>
+        <translation>GPSInfo</translation>
     </message>
     <message>
         <source>GPS</source>
@@ -192,6 +188,10 @@
     <message>
         <source>Copy location</source>
         <translation>Kopiere Standort</translation>
+    </message>
+    <message>
+        <source>Compass calibration</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -325,6 +325,22 @@
     <message>
         <source>Movement Direction</source>
         <translation>Bewegungsrichtung</translation>
+    </message>
+    <message>
+        <source>Rotate satellite view</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>yes</source>
+        <translation type="unfinished">ja</translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation type="unfinished">nein</translation>
+    </message>
+    <message>
+        <source>Compass Calibration</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

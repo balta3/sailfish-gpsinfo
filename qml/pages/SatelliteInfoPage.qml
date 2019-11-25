@@ -2,7 +2,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import QtSensors 5.0
 import harbour.gpsinfo 1.0
-import "../CircleCalculator.js" as CircleCalculator
+import "../components"
 
 Page {
     id: satelliteInfoPage
@@ -15,8 +15,11 @@ Page {
         title: qsTr("Satellite Info")
     }
 
-    function repaintSatellites() {
-        canvas.requestPaint();
+    onVisibleChanged: {
+        if(visible) {
+            canvasBackground.requestPaint()
+            canvas.requestPaint()
+        }
     }
 
     states: [
@@ -36,57 +39,82 @@ Page {
         }
     ]
 
+    property int canvasWidth: Screen.width - 30
+    property int radius: canvasWidth / 2 - 30
+    property int center: canvasWidth / 2
+
+    Canvas {
+        id: canvasBackground
+        anchors.fill: canvas
+        onPaint: {
+            var ctx = canvasBackground.getContext('2d');
+
+            ctx.clearRect(0, 0, canvasWidth, canvasWidth);
+
+            //Background
+            var grd=ctx.createRadialGradient(center,center,5,center,center,radius);
+            grd.addColorStop(0,Qt.rgba(0.0, 1.0, 0.0, 0.3));
+            grd.addColorStop(1,Qt.rgba(0.0, 1.0, 0.0, 0.6));
+            ctx.fillStyle = grd;
+            ctx.beginPath();
+            ctx.arc(center, center, radius, 0, Math.PI * 2, false);
+            ctx.closePath();
+            ctx.fill();
+
+            // Circles
+            ctx.strokeStyle = Qt.rgba(0.0, 1.0, 0.0, 1.0);
+
+            ctx.beginPath();
+            ctx.arc(center, center, radius * Math.cos(Math.PI * 1 / 6), 0, Math.PI * 2, false);
+            ctx.closePath();
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.arc(center, center, radius * Math.cos(Math.PI * 2 / 6), 0, Math.PI * 2, false);
+            ctx.closePath();
+            ctx.stroke();
+        }
+    }
+
     Canvas {
         id: canvas
-        width: Screen.width - 30;
-        height: Screen.width - 30;
+        width: canvasWidth
+        height: canvasWidth
         anchors.verticalCenter: parent.verticalCenter
         anchors.horizontalCenter: satelliteInfoPage.horizontalCenter;
         anchors.left: undefined;
-        property int north : compass.reading.azimuth;
+        property int north : !settings.rotate || compass.reading === null ? 0 : compass.reading.azimuth;
         property variant satellites : gpsDataSource.satellites;
+        property int signSizeSmall: Theme.fontSizeExtraSmall + 4;
+        property int signSizeActive: Theme.fontSizeExtraSmall + 4;
         onNorthChanged: requestPaint();
         onSatellitesChanged: requestPaint();
         onPaint: {
             if (visible) {
                 var ctx = canvas.getContext('2d');
-                var canvasSize = Screen.width - 30;
-                ctx.clearRect(0, 0, canvasSize, canvasSize);
-
-                var radius = canvasSize / 2 - 30;
-                var center = {x: canvasSize / 2, y: canvasSize / 2};
-                var northRad = CircleCalculator.degreeToRad(north);
+                ctx.clearRect(0, 0, canvasWidth, canvasWidth);
+                var northRad = north * Math.PI / 180;
                 var compassPos = {
                     north: {
-                        x: center.x - Math.sin(northRad) * radius,
-                        y: center.y - Math.cos(northRad) * radius
+                        x: center - Math.sin(northRad) * radius,
+                        y: center - Math.cos(northRad) * radius
                     },
                     south: {
-                        x: center.x + Math.sin(northRad) * radius,
-                        y: center.y + Math.cos(northRad) * radius
+                        x: center + Math.sin(northRad) * radius,
+                        y: center + Math.cos(northRad) * radius
                     },
                     west: {
-                        x: center.x + Math.sin(northRad - Math.PI / 2) * radius,
-                        y: center.y + Math.cos(northRad - Math.PI / 2) * radius
+                        x: center + Math.sin(northRad - Math.PI / 2) * radius,
+                        y: center + Math.cos(northRad - Math.PI / 2) * radius
                     },
                     east: {
-                        x: center.x + Math.sin(northRad + Math.PI / 2) * radius,
-                        y: center.y + Math.cos(northRad + Math.PI / 2) * radius
+                        x: center + Math.sin(northRad + Math.PI / 2) * radius,
+                        y: center + Math.cos(northRad + Math.PI / 2) * radius
                     }
                 }
 
-                //Background
-                var grd=ctx.createRadialGradient(center.x,center.y,5,center.x,center.y,radius);
-                grd.addColorStop(0,"rgba(0,255,0,0.3)");
-                grd.addColorStop(1,"rgba(0,255,0,0.6)");
-                ctx.fillStyle = grd;
-                ctx.beginPath();
-                ctx.arc(center.x, center.y, radius, 0, Math.PI * 2, false);
-                ctx.closePath();
-                ctx.fill();
-
-                //Lines
-                ctx.strokeStyle = "rgb(0,255,0)";
+                // Lines
+                ctx.strokeStyle = Qt.rgba(0.0, 1.0, 0.0, 1.0);
                 ctx.beginPath();
                 ctx.moveTo(compassPos.north.x, compassPos.north.y);
                 ctx.lineTo(compassPos.south.x, compassPos.south.y);
@@ -98,76 +126,52 @@ Page {
                 ctx.closePath();
                 ctx.stroke();
 
-                ctx.beginPath();
-                ctx.arc(center.x, center.y, radius * Math.cos(Math.PI * 1 / 6), 0, Math.PI * 2, false);
-                ctx.closePath();
-                ctx.stroke();
+                // Draw satellites one by one
+                ctx.textAlign = "center";
+                ctx.font = Theme.fontSizeExtraSmall + "px Sail Sans Pro";
+                var azimuthRad, elevationRad, x, y, dx;
+                satellites.forEach(function(sat) {
+//                    var inUseStr = sat.inUse ? "in use" : "not in use";
+//                    console.log("drawing sat " + sat.identifier
+//                                + "\tat azimuth " + sat.azimuth
+//                                + "\t and elevation " + sat.elevation
+//                                + "\twith signal strength " + sat.signalStrength
+//                                + " \t" + inUseStr);
+                    azimuthRad = ((sat.azimuth - north) % 360) * Math.PI / 180;
+                    elevationRad = sat.elevation * Math.PI / 180;
+                    x = center + Math.sin(azimuthRad) * radius * Math.cos(elevationRad);
+                    y = center - Math.cos(azimuthRad) * radius * Math.cos(elevationRad);
+                    dx = sat.identifier >= 100 ? 1.8 : (sat.identifier >= 10 ? 1.4 : 1.0);
 
-                ctx.beginPath();
-                ctx.arc(center.x, center.y, radius * Math.cos(Math.PI * 2 / 6), 0, Math.PI * 2, false);
-                ctx.closePath();
-                ctx.stroke();
+                    ctx.fillStyle = "hsl(" + (sat.signalStrength < 40 ? sat.signalStrength : 40) * 3 + ",100%,35%)";
+                    if (sat.inUse) {
+                        ctx.fillRect(x - signSizeActive*dx / 2 - 2, y - signSizeActive / 2 - 2, signSizeActive*dx + 4, signSizeActive + 4);
+                        ctx.fillRect(x - signSizeActive*dx / 2,     y - signSizeActive / 2,     signSizeActive*dx,     signSizeActive);
+                    } else {
+                        ctx.fillRect(x - signSizeSmall*dx / 2,      y - signSizeSmall / 2,      signSizeSmall*dx,      signSizeSmall);
+                    }
 
-                //Signs
+                    ctx.fillStyle = Qt.rgba(1.0, 1.0, 1.0, 1.0);
+                    ctx.fillText(sat.identifier, x, y + Theme.fontSizeExtraSmall / 2 - 5)
+                });
+
+                // Signs
                 ctx.textAlign = "center";
                 ctx.font = Theme.fontSizeSmall + "px Sail Sans Pro";
                 var signSize = Theme.fontSizeSmall + 3;
 
-                //North
-                ctx.fillStyle = "rgb(0,0,255)";
+                // North, South, West, East
+                ctx.fillStyle = Qt.rgba(0.0, 0.0, 1.0, 1.0);
                 ctx.fillRect(compassPos.north.x - signSize / 2, compassPos.north.y - signSize / 2, signSize, signSize);
-                ctx.fillStyle = "rgb(255,255,255)";
-                ctx.fillText("N", compassPos.north.x, compassPos.north.y + Theme.fontSizeSmall / 2 - 5);
-
-                //South
-                ctx.fillStyle = "rgb(0,0,255)";
                 ctx.fillRect(compassPos.south.x - signSize / 2, compassPos.south.y - signSize / 2, signSize, signSize);
-                ctx.fillStyle = "rgb(255,255,255)";
+                ctx.fillRect(compassPos.west.x  - signSize / 2, compassPos.west.y  - signSize / 2, signSize, signSize);
+                ctx.fillRect(compassPos.east.x  - signSize / 2, compassPos.east.y  - signSize / 2, signSize, signSize);
+
+                ctx.fillStyle = Qt.rgba(1.0, 1.0, 1.0, 1.0);
+                ctx.fillText("N", compassPos.north.x, compassPos.north.y + Theme.fontSizeSmall / 2 - 5);
                 ctx.fillText("S", compassPos.south.x, compassPos.south.y + Theme.fontSizeSmall / 2 - 5);
-
-                //West
-                ctx.fillStyle = "rgb(0,0,255)";
-                ctx.fillRect(compassPos.west.x - signSize / 2, compassPos.west.y - signSize / 2, signSize, signSize);
-                ctx.fillStyle = "rgb(255,255,255)";
-                ctx.fillText("W", compassPos.west.x, compassPos.west.y + Theme.fontSizeSmall / 2 - 5);
-
-                //East
-                ctx.fillStyle = "rgb(0,0,255)";
-                ctx.fillRect(compassPos.east.x - signSize / 2, compassPos.east.y - signSize / 2, signSize, signSize);
-                ctx.fillStyle = "rgb(255,255,255)";
-                ctx.fillText("E", compassPos.east.x, compassPos.east.y + Theme.fontSizeSmall / 2 - 5);
-
-                var signSizeSmall = Theme.fontSizeExtraSmall + 4;
-                var signSizeActive = Theme.fontSizeExtraSmall + 4;
-                satellites.forEach(function(sat) {
-                    /*var inUseStr = sat.inUse ? "in use" : "not in use";
-                    console.log("drawing sat " + sat.identifier
-                                + "\tat azimuth " + sat.azimuth
-                                + "\t and elevation " + sat.elevation
-                                + "\twith signal strength " + sat.signalStrength
-                                + " \t" + inUseStr);*/
-                    var azimuthRad = CircleCalculator.degreeToRad((sat.azimuth - north) % 360);
-                    var elevationRad = CircleCalculator.degreeToRad(sat.elevation);
-                    var x = center.x + Math.sin(azimuthRad) * radius * Math.cos(elevationRad);
-                    var y = center.y - Math.cos(azimuthRad) * radius * Math.cos(elevationRad);
-
-                    var hue = (sat.signalStrength < 40 ? sat.signalStrength : 40) * 3;
-                    if (sat.inUse) {
-                        ctx.fillStyle = "rgb(255,255,255)";
-                        ctx.fillRect(x - signSizeActive / 2 - 2, y - signSizeActive / 2 - 2, signSizeActive + 4, signSizeActive + 4);
-                        ctx.fillStyle = "hsl(" + hue + ",100%,35%)";
-                        ctx.fillRect(x - signSizeActive / 2, y - signSizeActive / 2, signSizeActive, signSizeActive);
-                        ctx.fillStyle = "rgb(255,255,255)";
-                        ctx.font = Theme.fontSizeExtraSmall + "px Sail Sans Pro";
-                        ctx.fillText(sat.identifier, x, y + Theme.fontSizeExtraSmall / 2 - 5)
-                    } else {
-                        ctx.fillStyle = "hsl(" + hue + ",100%,35%)";
-                        ctx.fillRect(x - signSizeSmall / 2, y - signSizeSmall / 2, signSizeSmall, signSizeSmall);
-                        ctx.fillStyle = "rgb(255,255,255)";
-                        ctx.font = Theme.fontSizeExtraSmall + "px Sail Sans Pro";
-                        ctx.fillText(sat.identifier, x, y + Theme.fontSizeExtraSmall / 2 - 5)
-                    }
-                });
+                ctx.fillText("W", compassPos.west.x,  compassPos.west.y  + Theme.fontSizeSmall / 2 - 5);
+                ctx.fillText("E", compassPos.east.x,  compassPos.east.y  + Theme.fontSizeSmall / 2 - 5);
             }
         }
     }

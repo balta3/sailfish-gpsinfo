@@ -10,6 +10,7 @@ App::App(QObject *parent) :
 void App::localeChanged(QString locale) {
     QGuiApplication::removeTranslator(&(this->translator));
     qDebug() << "locale changed to" << locale;
-    this->translator.load(locale, "/usr/share/harbour-gpsinfo/locales", QString(), ".qm");
+    QString fileName = locale.compare("en") == 0 ? "harbour-gpsinfo.qm" : "harbour-gpsinfo_"+locale+".qm";
+    this->translator.load(fileName, "/usr/share/harbour-gpsinfo/translations");
     QGuiApplication::installTranslator(&(this->translator));
 }

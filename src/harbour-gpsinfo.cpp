@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
     App* app = new App();
     app->connect(settings, SIGNAL(localeChanged(QString)), app, SLOT(localeChanged(QString)));
     QStringList locales;
-    QString baseName("/usr/share/harbour-gpsinfo/locales/");
+    QString baseName("/usr/share/harbour-gpsinfo/translations/");
     QDir localesDir(baseName);
     if (localesDir.exists()) {
         locales = localesDir.entryList(QStringList() << "*.qm", QDir::Files | QDir::NoDotAndDotDot, QDir::Name | QDir::IgnoreCase);
@@ -32,7 +32,8 @@ int main(int argc, char *argv[]) {
     QString currentLocale = settings->getLocale();
     qDebug() << "loading language" << currentLocale;
     QTranslator* translator = new QTranslator();
-    translator->load(currentLocale, "/usr/share/harbour-gpsinfo/locales", QString(), ".qm");
+    QString fileName = currentLocale.compare("en") == 0 ? "harbour-gpsinfo.qm" : "harbour-gpsinfo_"+currentLocale+".qm";
+    translator->load(fileName, baseName);
     QGuiApplication::installTranslator(translator);
 
     QQuickView *view = SailfishApp::createView();

@@ -4,20 +4,16 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <source>About GPSInfo</source>
-        <translation>Tietoa GPSInfosta</translation>
-    </message>
-    <message>
         <source>An app to show all position information</source>
         <translation>Ohjelma, joka näyttää kaikki paikkatiedot</translation>
     </message>
     <message>
         <source>View license</source>
-        <translation>Tarkastele lisenssiä englanniksi</translation>
+        <translation>Näytä lisenssi</translation>
     </message>
     <message>
         <source>For suggestions, bugs and ideas visit </source>
-        <translation>Ehdotukset, bugit ja ideat vieraile (englanniksi)</translation>
+        <translation>Ehdotukset, bugit ja ideat (englanniksi) osoitteessa</translation>
     </message>
     <message>
         <source>GPSInfo is open source software licensed under the terms of the GNU General Public License.</source>
@@ -30,10 +26,6 @@
 </context>
 <context>
     <name>CoverPage</name>
-    <message>
-        <source>GPS Info</source>
-        <translation type="obsolete">GPS Info</translation>
-    </message>
     <message>
         <source>GPS</source>
         <translation>GPS</translation>
@@ -48,14 +40,14 @@
     </message>
     <message>
         <source>Latitude</source>
-        <translatorcomment>I left these untraslated because those are valid as well. If you will, correct translations follows:
+        <translatorcomment>I translated these, but the English names are valid as well:
 Latitude = Leveysaste
 Longitude = Pituusaste</translatorcomment>
-        <translation>Latitude</translation>
+        <translation>Leveysaste</translation>
     </message>
     <message>
         <source>Longitude</source>
-        <translation>Longitude</translation>
+        <translation>Pituusaste</translation>
     </message>
     <message>
         <source>Altitude</source>
@@ -103,12 +95,16 @@ Longitude = Pituusaste</translatorcomment>
         <source>mph</source>
         <translation>mph</translation>
     </message>
+    <message>
+        <source>Cal.</source>
+        <translation>Kal.</translation>
+    </message>
 </context>
 <context>
     <name>FirstPage</name>
     <message>
         <source>About</source>
-        <translation>Tietoa</translation>
+        <translation>Tietoja</translation>
     </message>
     <message>
         <source>Settings</source>
@@ -123,8 +119,8 @@ Longitude = Pituusaste</translatorcomment>
         <translation>Kytke GPS päälle</translation>
     </message>
     <message>
-        <source>GPS Info</source>
-        <translation>GPS Info</translation>
+        <source>GPSInfo</source>
+        <translation>GPS-tiedot</translation>
     </message>
     <message>
         <source>GPS</source>
@@ -141,11 +137,11 @@ Longitude = Pituusaste</translatorcomment>
     <message>
         <source>Latitude</source>
         <translatorcomment>See comments in CoverPage</translatorcomment>
-        <translation>Latitude</translation>
+        <translation>Leveysaste</translation>
     </message>
     <message>
         <source>Longitude</source>
-        <translation>Longitude</translation>
+        <translation>Pituusaste</translation>
     </message>
     <message>
         <source>Altitude</source>
@@ -197,7 +193,11 @@ Longitude = Pituusaste</translatorcomment>
     </message>
     <message>
         <source>Copy location</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopioi sijainti</translation>
+    </message>
+    <message>
+        <source>Compass calibration</source>
+        <translation>Kompassikalibraatio</translation>
     </message>
 </context>
 <context>
@@ -254,7 +254,7 @@ Longitude = Pituusaste</translatorcomment>
     </message>
     <message>
         <source>Appview</source>
-        <translation>Ohj. näkymä</translation>
+        <translation>Etusivu</translation>
     </message>
     <message>
         <source>Cover</source>
@@ -266,11 +266,11 @@ Longitude = Pituusaste</translatorcomment>
     </message>
     <message>
         <source>Latitude</source>
-        <translation>Latitude</translation>
+        <translation>Leveysaste</translation>
     </message>
     <message>
         <source>Longitude</source>
-        <translation>Longitude</translation>
+        <translation>Pituusaste</translation>
     </message>
     <message>
         <source>Altitude</source>
@@ -331,6 +331,22 @@ Longitude = Pituusaste</translatorcomment>
     <message>
         <source>Movement Direction</source>
         <translation>Liikkeen suunta</translation>
+    </message>
+    <message>
+        <source>Rotate satellite view</source>
+        <translation>Kierrä satelliittinäkymää</translation>
+    </message>
+    <message>
+        <source>yes</source>
+        <translation>kyllä</translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation>ei</translation>
+    </message>
+    <message>
+        <source>Compass Calibration</source>
+        <translation>Kompassikalibraatio</translation>
     </message>
 </context>
 </TS>

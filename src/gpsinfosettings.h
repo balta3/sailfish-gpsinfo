@@ -13,6 +13,8 @@ class GPSInfoSettings : public QMLSettingsWrapper
     Q_PROPERTY(bool showAltitudeCover READ getShowAltitudeCover WRITE setShowAltitudeCover NOTIFY showAltitudeCoverChanged)
     Q_PROPERTY(bool showCompassDirectionApp READ getShowCompassDirectionApp WRITE setShowCompassDirectionApp NOTIFY showCompassDirectionAppChanged)
     Q_PROPERTY(bool showCompassDirectionCover READ getShowCompassDirectionCover WRITE setShowCompassDirectionCover NOTIFY showCompassDirectionCoverChanged)
+    Q_PROPERTY(bool showCompassCalibrationApp READ getShowCompassCalibrationApp WRITE setShowCompassCalibrationApp NOTIFY showCompassCalibrationAppChanged)
+    Q_PROPERTY(bool showCompassCalibrationCover READ getShowCompassCalibrationCover WRITE setShowCompassCalibrationCover NOTIFY showCompassCalibrationCoverChanged)
     Q_PROPERTY(bool showGpsStateApp READ getShowGpsStateApp WRITE setShowGpsStateApp NOTIFY showGpsStateAppChanged)
     Q_PROPERTY(bool showGpsStateCover READ getShowGpsStateCover WRITE setShowGpsStateCover NOTIFY showGpsStateCoverChanged)
     Q_PROPERTY(bool showHorizontalAccuracyApp READ getShowHorizontalAccuracyApp WRITE setShowHorizontalAccuracyApp NOTIFY showHorizontalAccuracyAppChanged)
@@ -34,6 +36,7 @@ class GPSInfoSettings : public QMLSettingsWrapper
     Q_PROPERTY(QString speedUnit READ getSpeedUnit WRITE setSpeedUnit NOTIFY speedUnitChanged)
     Q_PROPERTY(QString units READ getUnits WRITE setUnits NOTIFY unitsChanged)
     Q_PROPERTY(int updateInterval READ getUpdateInterval WRITE setUpdateInterval NOTIFY updateIntervalChanged)
+    Q_PROPERTY(bool rotate READ getRotate WRITE setRotate NOTIFY rotateChanged)
 public:
     explicit GPSInfoSettings(QObject *parent = 0);
 
@@ -43,6 +46,8 @@ public:
     bool getShowAltitudeCover() {return this->value("showAltitudeCover", false).toBool();}
     bool getShowCompassDirectionApp() {return this->value("showCompassDirectionApp", true).toBool();}
     bool getShowCompassDirectionCover() {return this->value("showCompassDirectionCover", false).toBool();}
+    bool getShowCompassCalibrationApp() {return this->value("showCompassCalibrationApp", true).toBool();}
+    bool getShowCompassCalibrationCover() {return this->value("showCompassCalibrationCover", false).toBool();}
     bool getShowGpsStateApp() {return this->value("showGpsStateApp", true).toBool();}
     bool getShowGpsStateCover() {return this->value("showGpsStateCover", true).toBool();}
     bool getShowHorizontalAccuracyApp() {return this->value("showHorizontalAccuracyApp", true).toBool();}
@@ -64,6 +69,7 @@ public:
     QString getSpeedUnit() {return this->value("speedUnit", "SEC").toString();}
     QString getUnits() {return this->value("units", "MET").toString();}
     int getUpdateInterval() {return this->value("updateInterval", 1).toInt();}
+    bool getRotate() {return this->value("rotate", true).toBool();}
 
     void setCoordinateFormat(QString val) {this->setValue("coordinateFormat", val); emit coordinateFormatChanged(val);}
     void setLocale(QString val) {this->setValue("locale", val); emit localeChanged(val);}
@@ -71,6 +77,8 @@ public:
     void setShowAltitudeCover(bool val) {this->setValue("showAltitudeCover", val); emit showAltitudeCoverChanged(val);}
     void setShowCompassDirectionApp(bool val) {this->setValue("showCompassDirectionApp", val); emit showCompassDirectionAppChanged(val);}
     void setShowCompassDirectionCover(bool val) {this->setValue("showCompassDirectionCover", val); emit showCompassDirectionCoverChanged(val);}
+    void setShowCompassCalibrationApp(bool val) {this->setValue("showCompassCalibrationApp", val); emit showCompassCalibrationAppChanged(val);}
+    void setShowCompassCalibrationCover(bool val) {this->setValue("showCompassCalibrationCover", val); emit showCompassCalibrationCoverChanged(val);}
     void setShowGpsStateApp(bool val) {this->setValue("showGpsStateApp", val); emit showGpsStateAppChanged(val);}
     void setShowGpsStateCover(bool val) {this->setValue("showGpsStateCover", val); emit showGpsStateCoverChanged(val);}
     void setShowHorizontalAccuracyApp(bool val) {this->setValue("showHorizontalAccuracyApp", val); emit showHorizontalAccuracyAppChanged(val);}
@@ -92,6 +100,7 @@ public:
     void setSpeedUnit(QString val) {this->setValue("speedUnit", val); emit speedUnitChanged(val);}
     void setUnits(QString val) {this->setValue("units", val); emit unitsChanged(val);}
     void setUpdateInterval(int val) {this->setValue("updateInterval", val); emit updateIntervalChanged(val);}
+    void setRotate(bool val) {this->setValue("rotate", val); emit rotateChanged(val);}
 private:
 
 signals:
@@ -101,6 +110,8 @@ signals:
     void showAltitudeCoverChanged(bool);
     void showCompassDirectionAppChanged(bool);
     void showCompassDirectionCoverChanged(bool);
+    void showCompassCalibrationAppChanged(bool);
+    void showCompassCalibrationCoverChanged(bool);
     void showGpsStateAppChanged(bool);
     void showGpsStateCoverChanged(bool);
     void showHorizontalAccuracyAppChanged(bool);
@@ -122,6 +133,7 @@ signals:
     void speedUnitChanged(QString);
     void unitsChanged(QString);
     void updateIntervalChanged(int);
+    void rotateChanged(bool);
 public slots:
 
 };

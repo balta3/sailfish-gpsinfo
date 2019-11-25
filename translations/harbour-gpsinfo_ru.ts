@@ -1,10 +1,8 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="ru_RU" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="ru_RU">
 <context>
     <name>AboutPage</name>
-    <message>
-        <source>About GPSInfo</source>
-        <translation>О программе GPSInfo</translation>
-    </message>
     <message>
         <source>An app to show all position information</source>
         <translation>Отображение информации о местоположении</translation>
@@ -28,10 +26,6 @@
 </context>
 <context>
     <name>CoverPage</name>
-    <message>
-        <source>GPS Info</source>
-        <translation type="unfinished"/>
-    </message>
     <message>
         <source>GPS</source>
         <translation>GPS</translation>
@@ -96,6 +90,10 @@
         <source>mph</source>
         <translation>миль/ч</translation>
     </message>
+    <message>
+        <source>Cal.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>FirstPage</name>
@@ -116,7 +114,7 @@
         <translation>Включить GPS</translation>
     </message>
     <message>
-        <source>GPS Info</source>
+        <source>GPSInfo</source>
         <translation>Информация GPS</translation>
     </message>
     <message>
@@ -190,6 +188,10 @@
     <message>
         <source>Copy location</source>
         <translation>Скопировать местоположение</translation>
+    </message>
+    <message>
+        <source>Compass calibration</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -323,6 +325,22 @@
     <message>
         <source>Movement Direction</source>
         <translation>Направл. движения</translation>
+    </message>
+    <message>
+        <source>Rotate satellite view</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>yes</source>
+        <translation type="unfinished">да</translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation type="unfinished">нет</translation>
+    </message>
+    <message>
+        <source>Compass Calibration</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

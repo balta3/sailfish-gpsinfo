@@ -3,6 +3,7 @@ import Sailfish.Silica 1.0
 import QtPositioning 5.2
 import QtSensors 5.0
 import harbour.gpsinfo 1.0
+import "../components"
 
 import "../LocationFormatter.js" as LocationFormater
 
@@ -149,7 +150,13 @@ CoverBackground {
             label: qsTr("Com.")
             visible: settings.showCompassDirectionCover
             fontpixelSize: Theme.fontSizeMedium
-            value: LocationFormater.formatDirection(compass.reading.azimuth)
+            value: LocationFormater.formatDirection(compass.reading === null ? 0 : compass.reading.azimuth)
+        }
+        InfoField {
+            label: qsTr("Cal.")
+            visible: settings.showCompassCalibrationCover
+            fontpixelSize: Theme.fontSizeMedium
+            value: compass.reading === null ? "-" : Math.round(compass.reading.calibrationLevel * 100) + "%"
         }
     }
 

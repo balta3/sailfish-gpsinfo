@@ -1,56 +1,50 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="es" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="nl_NL">
 <context>
     <name>AboutPage</name>
     <message>
-        <source>About GPSInfo</source>
-        <translation>Acerca de GPSInfo</translation>
-    </message>
-    <message>
         <source>An app to show all position information</source>
-        <translation>Una aplicación para mostrar toda la información de la posición</translation>
+        <translation>Een app die alle positieinformatie weergeeft</translation>
     </message>
     <message>
         <source>View license</source>
-        <translation>Contrato de Licencia</translation>
+        <translation>Licentie weergeven</translation>
     </message>
     <message>
         <source>For suggestions, bugs and ideas visit </source>
-        <translation>Para sugerencias, errores e ideas visita</translation>
+        <translation>Voor suggesties, bugs en ideeën:</translation>
     </message>
     <message>
         <source>GPSInfo is open source software licensed under the terms of the GNU General Public License.</source>
-        <translation>GPSInfo es un software de código abierto con licencia en virtud de los términos de la Licencia Pública General de GNU.</translation>
+        <translation>GPSInfo is open bron-software gelicenseerd onder de voorwaarden van de GNU General Public License.</translation>
     </message>
     <message>
         <source>Version</source>
-        <translation>Versión</translation>
+        <translation>Versie</translation>
     </message>
 </context>
 <context>
     <name>CoverPage</name>
-    <message>
-        <source>GPS Info</source>
-        <translation type="unfinished"/>
-    </message>
     <message>
         <source>GPS</source>
         <translation>GPS</translation>
     </message>
     <message>
         <source>active</source>
-        <translation>activo</translation>
+        <translation>actief</translation>
     </message>
     <message>
         <source>inactive</source>
-        <translation>inactivo</translation>
+        <translation>inactief</translation>
     </message>
     <message>
         <source>Latitude</source>
-        <translation>Latitud</translation>
+        <translation>Lengtegraad</translation>
     </message>
     <message>
         <source>Longitude</source>
-        <translation>Longitud</translation>
+        <translation>Breedtegraad</translation>
     </message>
     <message>
         <source>Altitude</source>
@@ -58,19 +52,19 @@
     </message>
     <message>
         <source>Speed</source>
-        <translation>Velocidad</translation>
+        <translation>Snelheid</translation>
     </message>
     <message>
         <source>Vert. acc.</source>
-        <translation>Prec.V.</translation>
+        <translation>V.acc.</translation>
     </message>
     <message>
         <source>Hor. acc.</source>
-        <translation>Prec.H.</translation>
+        <translation>H.acc.</translation>
     </message>
     <message>
         <source>Satel.</source>
-        <translation>Satél.</translation>
+        <translation>Satel.</translation>
     </message>
     <message>
         <source>Mov.</source>
@@ -78,7 +72,7 @@
     </message>
     <message>
         <source>Com.</source>
-        <translation>Brú.</translation>
+        <translation>Com.</translation>
     </message>
     <message>
         <source>m/s</source>
@@ -86,7 +80,7 @@
     </message>
     <message>
         <source>km/h</source>
-        <translation>km/h</translation>
+        <translation>km/u</translation>
     </message>
     <message>
         <source>ft/s</source>
@@ -94,30 +88,34 @@
     </message>
     <message>
         <source>mph</source>
-        <translation>mph</translation>
+        <translation>mpu</translation>
+    </message>
+    <message>
+        <source>Cal.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>FirstPage</name>
     <message>
         <source>About</source>
-        <translation>Acerca de</translation>
+        <translation>Over</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation>Ajustes</translation>
+        <translation>Instellingen</translation>
     </message>
     <message>
         <source>Deactivate GPS</source>
-        <translation>Desactivar GPS</translation>
+        <translation>GPS deactiveren</translation>
     </message>
     <message>
         <source>Activate GPS</source>
-        <translation>Activar GPS</translation>
+        <translation>GPS activeren</translation>
     </message>
     <message>
-        <source>GPS Info</source>
-        <translation>Info GPS</translation>
+        <source>GPSInfo</source>
+        <translation>GPS-informatie</translation>
     </message>
     <message>
         <source>GPS</source>
@@ -125,51 +123,51 @@
     </message>
     <message>
         <source>active</source>
-        <translation>activo</translation>
+        <translation>actief</translation>
     </message>
     <message>
         <source>inactive</source>
-        <translation>inactivo</translation>
+        <translation>inactief</translation>
     </message>
     <message>
         <source>Latitude</source>
-        <translation>Latitud</translation>
+        <translation>Lengtegraad</translation>
     </message>
     <message>
         <source>Longitude</source>
-        <translation>Longitud</translation>
+        <translation>Breedtegraad</translation>
     </message>
     <message>
         <source>Altitude</source>
-        <translation>Altitud</translation>
+        <translation>Hoogte</translation>
     </message>
     <message>
         <source>Last update</source>
-        <translation>Última actualización</translation>
+        <translation>Laatste bijwerking</translation>
     </message>
     <message>
         <source>Horizontal accuracy</source>
-        <translation>Precisión Horizontal</translation>
+        <translation>Horizontale nauwkeurigheid</translation>
     </message>
     <message>
         <source>Compass direction</source>
-        <translation>Dirección brújula</translation>
+        <translation>Kompasrichting</translation>
     </message>
     <message>
         <source>Speed</source>
-        <translation>Velocidad</translation>
+        <translation>Snelheid</translation>
     </message>
     <message>
         <source>Vertical accuracy</source>
-        <translation>Precisión vertical</translation>
+        <translation>Verticale nauwkeurigheid</translation>
     </message>
     <message>
         <source>Satellites in use / view</source>
-        <translation>Satélites en uso / vistos</translation>
+        <translation>Satellieten die worden gebruikt / weergegeven</translation>
     </message>
     <message>
         <source>Movement direction</source>
-        <translation>Dirección movimiento</translation>
+        <translation>Verplaatsingsrichting</translation>
     </message>
     <message>
         <source>m/s</source>
@@ -177,7 +175,7 @@
     </message>
     <message>
         <source>km/h</source>
-        <translation>km/h</translation>
+        <translation>km/u</translation>
     </message>
     <message>
         <source>ft/s</source>
@@ -185,124 +183,128 @@
     </message>
     <message>
         <source>mph</source>
-        <translation>mph</translation>
+        <translation>mpu</translation>
     </message>
     <message>
         <source>Copy location</source>
-        <translation>Copiar ubicación</translation>
+        <translation>Locatie kopiëren</translation>
+    </message>
+    <message>
+        <source>Compass calibration</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>LicensePage</name>
     <message>
         <source>License</source>
-        <translation>Licencia</translation>
+        <translation>Licentie</translation>
     </message>
 </context>
 <context>
     <name>SatelliteInfoPage</name>
     <message>
         <source>Satellite Info</source>
-        <translation>Info Satélites</translation>
+        <translation>Sattelietinformatie</translation>
     </message>
     <message>
         <source>Satellites in use / view</source>
-        <translation>Satélites en uso / vistos</translation>
+        <translation>Satellieten die worden gebruikt / weergegeven</translation>
     </message>
 </context>
 <context>
     <name>SettingsPage</name>
     <message>
         <source>Settings</source>
-        <translation>Ajustes</translation>
+        <translation>Instellingen</translation>
     </message>
     <message>
         <source>Coordinate format</source>
-        <translation>Formato de las coordenadas</translation>
+        <translation>Coördinatie-opmaak</translation>
     </message>
     <message>
         <source>degree</source>
-        <translation>grados</translation>
+        <translation>graden</translation>
     </message>
     <message>
         <source>decimal</source>
-        <translation>decimal</translation>
+        <translation>decimaal</translation>
     </message>
     <message>
         <source>Units</source>
-        <translation>Unidades</translation>
+        <translation>Eenheden</translation>
     </message>
     <message>
         <source>metric</source>
-        <translation>métrico</translation>
+        <translation>metrisch</translation>
     </message>
     <message>
         <source>imperial</source>
-        <translation>imperial</translation>
+        <translation>imperiaal</translation>
     </message>
     <message>
         <source>Show</source>
-        <translation>Mostrar</translation>
+        <translation>Weergeven</translation>
     </message>
     <message>
         <source>Appview</source>
-        <translation>Visto en app</translation>
+        <translation>Appweergave</translation>
     </message>
     <message>
         <source>Cover</source>
-        <translation>Cubierta</translation>
+        <translation>Omslag</translation>
     </message>
     <message>
         <source>GPS state</source>
-        <translation>Estado GPS</translation>
+        <translation>GPS-status</translation>
     </message>
     <message>
         <source>Latitude</source>
-        <translation>Latitud</translation>
+        <translation>Lengtegraad</translation>
     </message>
     <message>
         <source>Longitude</source>
-        <translation>Longitud</translation>
+        <translation>Breedtegraad</translation>
     </message>
     <message>
         <source>Altitude</source>
-        <translation>Altitud</translation>
+        <translation>Hoogte</translation>
     </message>
     <message>
         <source>Speed</source>
-        <translation>Velocidad</translation>
+        <translation>Snelheid</translation>
     </message>
     <message>
         <source>Last Update</source>
-        <translation>Última actualización</translation>
+        <translation>Laatste bijwerking</translation>
     </message>
     <message>
         <source>Vertical Accuracy</source>
-        <translation>Precisión vertical</translation>
+        <translation>Verticale nauwkeurigheid</translation>
     </message>
     <message>
         <source>Horizontal Accuracy</source>
-        <translation>Precisión Horizontal</translation>
+        <translation>Horizontale nauwkeurigheid</translation>
     </message>
     <message>
         <source>Compass Direction</source>
-        <translation>Dirección brújula</translation>
+        <translation>Kompasrichting</translation>
     </message>
     <message>
         <source>Language</source>
-        <translation>Idioma</translation>
+        <translation>Taal</translation>
     </message>
     <message>
         <source>Update interval</source>
-        <translation>Intervalo de actualización</translation>
+        <translation>Bijwerktussenpose</translation>
     </message>
     <message>
         <source>Satellite Info</source>
-        <translation>Info Satélites</translation>
+        <translation>Satellietinformatie</translation>
     </message>
     <message>
         <source>requires app restart</source>
-        <translation>requiere reiniciar la aplicación</translation>
+        <translation>vereist een herstart van de app</translation>
     </message>
     <message>
         <source>m/s</source>
@@ -310,7 +312,7 @@
     </message>
     <message>
         <source>km/h</source>
-        <translation>km/h</translation>
+        <translation>km/u</translation>
     </message>
     <message>
         <source>ft/s</source>
@@ -318,11 +320,27 @@
     </message>
     <message>
         <source>mph</source>
-        <translation>mph</translation>
+        <translation>mpu</translation>
     </message>
     <message>
         <source>Movement Direction</source>
-        <translation>Dirección movimiento</translation>
+        <translation>Verplaatsingsrichting</translation>
+    </message>
+    <message>
+        <source>Rotate satellite view</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>yes</source>
+        <translation type="unfinished">ja</translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation type="unfinished">nee</translation>
+    </message>
+    <message>
+        <source>Compass Calibration</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

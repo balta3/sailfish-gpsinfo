@@ -3,6 +3,7 @@ import Sailfish.Silica 1.0
 import QtPositioning 5.2
 import QtSensors 5.0
 import harbour.gpsinfo 1.0
+import "../components"
 
 import "../LocationFormatter.js" as LocationFormater
 
@@ -20,14 +21,12 @@ Page {
         gpsDataSource: page.gpsDataSource
     }
 
-    Timer {
-            interval: 100
-            repeat: false
-            running: true
-            onTriggered: {
-                pageStack.pushAttached(satelliteInfoPage);
-                //gpsDataSource.onSatellitesChanged = satelliteInfoPage.repaintSatellites();
-            }
+    property bool satellitePagePushed: false
+    onStatusChanged: {
+        if (status == PageStatus.Active && !satellitePagePushed) {
+            pageStack.pushAttached(satelliteInfoPage)
+            satellitePagePushed = true
+        }
     }
 
     states: [
@@ -36,7 +35,8 @@ Page {
             when: orientation === Orientation.Landscape || orientation === Orientation.LandscapeInverted;
             PropertyChanges {
                 target: column;
-                width: page.width * 0.75;
+                anchors.leftMargin: page.width * 0.125;
+                anchors.rightMargin: page.width * 0.125;
             }
         }
     ]
@@ -85,21 +85,25 @@ Page {
                 }
             }
         }
+
+        contentHeight: pageHeader.height + column.height;
+
         PageHeader {
             id: pageHeader
-            title: qsTr("GPS Info")
+            title: qsTr("GPSInfo")
         }
-
-        contentHeight: column.height + pageHeader.height + 20;
 
         Column {
             id: column
-
-            width: page.width
             spacing: Theme.paddingLarge
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.top: parent.top;
-            anchors.topMargin: pageHeader.height;
+            anchors {
+                top: pageHeader.bottom
+                left: parent.left
+                right: parent.right
+                leftMargin: 0
+                rightMargin: Theme.paddingSmall
+            }
+
             InfoField {
                 label: qsTr("GPS")
                 visible: settings.showGpsStateApp
@@ -139,7 +143,7 @@ Page {
                 value: {
                     if (positionSource.position.altitudeValid) {
                         if (settings.units == "MET") {
-                            return positionSource.position.coordinate.altitude + " m"
+                            return LocationFormater.roundToDecimal(positionSource.position.coordinate.altitude, 2) + " m"
                         } else {
                             return LocationFormater.roundToDecimal(positionSource.position.coordinate.altitude * 3.2808399, 2) + " ft"
                         }
@@ -177,7 +181,7 @@ Page {
             InfoField {
                 label: qsTr("Last update")
                 visible: settings.showLastUpdateApp
-                value: Qt.formatTime(positionSource.position.timestamp, "hh:mm:ss")
+                value: positionSource.position.valid ? Qt.formatTime(positionSource.position.timestamp, "hh:mm:ss") : "-"
             }
             InfoField {
                 label: qsTr("Vertical accuracy")
@@ -215,7 +219,19 @@ Page {
             InfoField {
                 label: qsTr("Compass direction")
                 visible: settings.showCompassDirectionApp
-                value: LocationFormater.formatDirection(compass.reading.azimuth)
+                value: compass.reading === null ? "-" : LocationFormater.formatDirection(compass.reading.azimuth)
+            }
+            InfoField {
+                label: qsTr("Compass calibration")
+                visible: settings.showCompassCalibrationApp
+                value: compass.reading === null ? "-" : Math.round(compass.reading.calibrationLevel * 100) + "%"
+            }
+            // This element is "necessary", because Sony Xperia XA2 Ultra (at least)
+            // messes up the column height calculation with only InfoFields...
+            Rectangle {
+                color: "transparent"
+                width: parent.width
+                height: 1.0
             }
         }
     }
