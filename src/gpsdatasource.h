@@ -14,32 +14,43 @@ class GPSSatellite : public QObject {
     Q_PROPERTY(int identifier READ getIdentifier WRITE setIdentifier NOTIFY identifierChanged)
     Q_PROPERTY(bool inUse READ isInUse WRITE setInUse NOTIFY inUseChanged)
     Q_PROPERTY(int signalStrength READ getSignalStrength WRITE setSignalStrength NOTIFY signalStrengthChanged)
+    Q_PROPERTY(SatelliteSystem system READ getSystem WRITE setSystem NOTIFY systemChanged)
 public:
     explicit GPSSatellite(QObject *parent = 0);
+    enum class SatelliteSystem {
+        UNKNOWN, GPS, GLONASS, QZSS, BEIDOU, GALILEO
+    };
+    Q_ENUM(SatelliteSystem)
 private:
     qreal azimuth;
     qreal elevation;
     int identifier;
     bool inUse;
     int signalStrength;
+    SatelliteSystem system;
 public slots:
     qreal getAzimuth() {return this->azimuth;}
     qreal getElevation() {return this->elevation;}
     int getIdentifier() {return this->identifier;}
     int getSignalStrength() {return this->signalStrength;}
+    SatelliteSystem getSystem() {return this->system;}
     bool isInUse() {return this->inUse;}
     void setAzimuth(qreal azimuth) {this->azimuth = azimuth; emit this->azimuthChanged(this->azimuth);}
     void setElevation(qreal elevation) {this->elevation = elevation; emit this->elevationChanged(this->elevation);}
     void setIdentifier(int identifier) {this->identifier = identifier; emit this->identifierChanged(this->identifier);}
     void setInUse(bool inUse) {this->inUse = inUse; emit this->inUseChanged(this->inUse);}
     void setSignalStrength(int signalStrength) {this->signalStrength = signalStrength; emit this->signalStrengthChanged(this->signalStrength);}
+    void setSystem(SatelliteSystem system) {this->system = system;}
 signals:
     void azimuthChanged(qreal azimuth);
     void elevationChanged(qreal elevation);
     void identifierChanged(int identifier);
     void inUseChanged(bool inUse);
     void signalStrengthChanged(int signalStrength);
+    void systemChanged(SatelliteSystem system);
 };
+
+typedef QMap<GPSSatellite::SatelliteSystem, int> SatelliteNumberMap;
 
 class GPSDataSource : public QObject
 {
@@ -60,10 +71,14 @@ private:
     qreal movementDirection;
     int numberOfUsedSatellites;
     int numberOfVisibleSatellites;
+    QMap<GPSSatellite::SatelliteSystem, int> numberOfUsedSatellitesBySystem;
+    QMap<GPSSatellite::SatelliteSystem, int> numberOfVisibleSatellitesBySystem;
 public slots:
     qreal getMovementDirection() {return this->movementDirection;}
     int getNumberOfUsedSatellites() {return this->numberOfUsedSatellites;}
+    int getNumberOfUsedSatellitesBySystem(GPSSatellite::SatelliteSystem system) {return this->numberOfUsedSatellitesBySystem[system];}
     int getNumberOfVisibleSatellites() {return this->numberOfVisibleSatellites;}
+    int getNumberOfVisibleSatellitesBySystem(GPSSatellite::SatelliteSystem system) {return this->numberOfVisibleSatellitesBySystem[system];}
     QVariantList getSatellites();
     int getUpdateInterval() {if (this->sSource) return this->sSource->updateInterval(); return -1;}
     bool isActive() {return this->active;}
@@ -79,7 +94,9 @@ signals:
     void activeChanged(bool);
     void movementDirectionChanged(qreal);
     void numberOfUsedSatellitesChanged(int);
+    void numberOfUsedSatellitesBySystemChanged();
     void numberOfVisibleSatellitesChanged(int);
+    void numberOfVisibleSatellitesBySystemChanged();
     void satellitesChanged();
     void updateIntervalChanged(int);
 };

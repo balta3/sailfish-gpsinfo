@@ -11,6 +11,27 @@ Page {
 
     property Compass compass
     property GPSDataSource gpsDataSource
+
+    function updateInfoBySystem() {
+        gpsSatellitesInfo.value = gpsDataSource.getNumberOfUsedSatellitesBySystem(GPSSatellite.GPS) + " / " + gpsDataSource.getNumberOfVisibleSatellitesBySystem(GPSSatellite.GPS)
+        gpsSatellitesInfo.visible = gpsDataSource.getNumberOfVisibleSatellitesBySystem(GPSSatellite.GPS) > 0
+        glonassSatellitesInfo.value = gpsDataSource.getNumberOfUsedSatellitesBySystem(GPSSatellite.GLONASS) + " / " + gpsDataSource.getNumberOfVisibleSatellitesBySystem(GPSSatellite.GLONASS)
+        glonassSatellitesInfo.visible = gpsDataSource.getNumberOfVisibleSatellitesBySystem(GPSSatellite.GLONASS) > 0
+        qzssSatellitesInfo.value = gpsDataSource.getNumberOfUsedSatellitesBySystem(GPSSatellite.QZSS) + " / " + gpsDataSource.getNumberOfVisibleSatellitesBySystem(GPSSatellite.QZSS)
+        qzssSatellitesInfo.visible = gpsDataSource.getNumberOfVisibleSatellitesBySystem(GPSSatellite.QZSS) > 0
+        beidouSatellitesInfo.value = gpsDataSource.getNumberOfUsedSatellitesBySystem(GPSSatellite.BEIDOU) + " / " + gpsDataSource.getNumberOfVisibleSatellitesBySystem(GPSSatellite.BEIDOU)
+        beidouSatellitesInfo.visible = gpsDataSource.getNumberOfVisibleSatellitesBySystem(GPSSatellite.BEIDOU) > 0
+        galileoSatellitesInfo.value = gpsDataSource.getNumberOfUsedSatellitesBySystem(GPSSatellite.GALILEO) + " / " + gpsDataSource.getNumberOfVisibleSatellitesBySystem(GPSSatellite.GALILEO)
+        galileoSatellitesInfo.visible = gpsDataSource.getNumberOfVisibleSatellitesBySystem(GPSSatellite.GALILEO) > 0
+        unknownSatellitesInfo.value = gpsDataSource.getNumberOfUsedSatellitesBySystem(GPSSatellite.UNKNOWN) + " / " + gpsDataSource.getNumberOfVisibleSatellitesBySystem(GPSSatellite.UNKNOWN)
+        unknownSatellitesInfo.visible = gpsDataSource.getNumberOfVisibleSatellitesBySystem(GPSSatellite.UNKNOWN) > 0
+    }
+
+    onGpsDataSourceChanged: {
+        gpsDataSource.numberOfUsedSatellitesBySystemChanged.connect(updateInfoBySystem)
+        gpsDataSource.numberOfVisibleSatellitesBySystemChanged.connect(updateInfoBySystem)
+    }
+
     PageHeader {
         title: qsTr("Satellite Info")
     }
@@ -29,9 +50,10 @@ Page {
                 anchors.left: satelliteInfoPage.left;
             }
             PropertyChanges {
-                target: satellitesInfo;
+                target: satellitesInfoColumn;
                 width: satelliteInfoPage.width / 2;
-                anchors.leftMargin: satelliteInfoPage.width / 2.2;
+                anchors.right: satelliteInfoPage.right;
+                anchors.rightMargin: Theme.paddingLarge;
             }
         }
     ]
@@ -137,12 +159,12 @@ Page {
                 ctx.fillStyle = "rgb(255,255,255)";
                 ctx.fillText("E", compassPos.east.x, compassPos.east.y + Theme.fontSizeSmall / 2 - 5);
 
-                var signSizeSmall = Theme.fontSizeExtraSmall + 4;
+                var signSizeSmall = Theme.fontSizeTiny + 4;
                 var signSizeActive = Theme.fontSizeExtraSmall + 4;
                 satellites.forEach(function(sat) {
                     /*var inUseStr = sat.inUse ? "in use" : "not in use";
                     console.log("drawing sat " + sat.identifier
-                                + "\tat azimuth " + sat.azimuth
+                                + "\tat azimuth " + sat.azimuthgpsSatellitesInfo.value = gpsDataSource.getNumberOfUsedSatellitesBySystem(GPSSatellite.GPS) + " / " + gpsDataSource.getNumberOfVisibleSatellitesBySystem(GPSSatellite.GPS)
                                 + "\t and elevation " + sat.elevation
                                 + "\twith signal strength " + sat.signalStrength
                                 + " \t" + inUseStr);*/
@@ -152,30 +174,83 @@ Page {
                     var y = center.y - Math.cos(azimuthRad) * radius * Math.cos(elevationRad);
 
                     var hue = (sat.signalStrength < 40 ? sat.signalStrength : 40) * 3;
+                    var widthFactor = sat.identifier < 10 ? 1 : sat.identifier < 100 ? 1.5 : 2;
                     if (sat.inUse) {
                         ctx.fillStyle = "rgb(255,255,255)";
-                        ctx.fillRect(x - signSizeActive / 2 - 2, y - signSizeActive / 2 - 2, signSizeActive + 4, signSizeActive + 4);
+                        ctx.fillRect(x - widthFactor * signSizeActive / 2 - 2, y - signSizeActive / 2 - 2, widthFactor * signSizeActive + 4, signSizeActive + 4);
                         ctx.fillStyle = "hsl(" + hue + ",100%,35%)";
-                        ctx.fillRect(x - signSizeActive / 2, y - signSizeActive / 2, signSizeActive, signSizeActive);
+                        ctx.fillRect(x - widthFactor * signSizeActive / 2, y - signSizeActive / 2, widthFactor * signSizeActive, signSizeActive);
                         ctx.fillStyle = "rgb(255,255,255)";
                         ctx.font = Theme.fontSizeExtraSmall + "px Sail Sans Pro";
                         ctx.fillText(sat.identifier, x, y + Theme.fontSizeExtraSmall / 2 - 5)
                     } else {
                         ctx.fillStyle = "hsl(" + hue + ",100%,35%)";
-                        ctx.fillRect(x - signSizeSmall / 2, y - signSizeSmall / 2, signSizeSmall, signSizeSmall);
+                        ctx.fillRect(x - widthFactor * signSizeSmall / 2, y - signSizeSmall / 2, widthFactor * signSizeSmall, signSizeSmall);
                         ctx.fillStyle = "rgb(255,255,255)";
-                        ctx.font = Theme.fontSizeExtraSmall + "px Sail Sans Pro";
+                        ctx.font = Theme.fontSizeTiny + "px Sail Sans Pro";
                         ctx.fillText(sat.identifier, x, y + Theme.fontSizeExtraSmall / 2 - 5)
                     }
                 });
             }
         }
     }
-    InfoField {
-        id: satellitesInfo
-        label: qsTr("Satellites in use / view")
-        value: gpsDataSource.numberOfUsedSatellites + " / " + gpsDataSource.numberOfVisibleSatellites
-        anchors.bottom: parent.bottom
+    Column {
+        id: satellitesInfoColumn
+        anchors.bottom: satelliteInfoPage.bottom
         anchors.bottomMargin: Theme.paddingLarge
+        width: satelliteInfoPage.width
+        InfoField {
+            id: satellitesInfo
+            label: qsTr("Satellites in use / view")
+            value: gpsDataSource.numberOfUsedSatellites + " / " + gpsDataSource.numberOfVisibleSatellites
+        }
+        InfoField {
+            id: gpsSatellitesInfo
+            label: qsTr("GPS (0-32)")
+            value: "- / -"
+            anchors.leftMargin: Theme.paddingLarge
+            fontpixelSize: Theme.fontSizeMedium
+            visible: false
+        }
+        InfoField {
+            id: glonassSatellitesInfo
+            label: qsTr("GLONASS (65-96)")
+            value: "- / -"
+            anchors.leftMargin: Theme.paddingLarge
+            fontpixelSize: Theme.fontSizeMedium
+            visible: false
+        }
+        InfoField {
+            id: qzssSatellitesInfo
+            label: qsTr("QZSS (193-200)")
+            value: "- / -"
+            anchors.leftMargin: Theme.paddingLarge
+            fontpixelSize: Theme.fontSizeMedium
+            visible: false
+        }
+        InfoField {
+            id: beidouSatellitesInfo
+            label: qsTr("BeiDou (201-245)")
+            value: "- / -"
+            anchors.leftMargin: Theme.paddingLarge
+            fontpixelSize: Theme.fontSizeMedium
+            visible: false
+        }
+        InfoField {
+            id: galileoSatellitesInfo
+            label: qsTr("GALILEO (301-336)")
+            value: "- / -"
+            anchors.leftMargin: Theme.paddingLarge
+            fontpixelSize: Theme.fontSizeMedium
+            visible: false
+        }
+        InfoField {
+            id: unknownSatellitesInfo
+            label: qsTr("UNKNOWN")
+            value: "- / -"
+            anchors.leftMargin: Theme.paddingLarge
+            fontpixelSize: Theme.fontSizeMedium
+            visible: false
+        }
     }
 }

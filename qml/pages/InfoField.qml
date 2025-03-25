@@ -4,12 +4,12 @@ import Sailfish.Silica 1.0
 Item {
     property alias label: label.text
     property alias value: value.text
-    property variant fontpixelSize: Theme.fontSizeLarge
+    property int fontpixelSize: Theme.fontSizeLarge
     anchors.left: parent.left
     anchors.leftMargin: Theme.paddingMedium
     anchors.right: parent.right
     anchors.rightMargin: Theme.paddingMedium
-    height: 40
+    height: label.height
     Label {
         id: label
         color: Theme.primaryColor

@@ -17,7 +17,8 @@ int main(int argc, char *argv[]) {
     }
 
     qmlRegisterType<GPSDataSource>("harbour.gpsinfo", 1, 0, "GPSDataSource");
-    qmlRegisterType<GPSSatellite>();
+    qmlRegisterType<GPSSatellite>("harbour.gpsinfo", 1, 0, "GPSSatellite");
+    qRegisterMetaType<GPSSatellite::SatelliteSystem>();
     GPSInfoSettings* settings = new GPSInfoSettings();
     QGuiApplication* qGuiAppl = SailfishApp::application(argc, argv);
     App* app = new App();
