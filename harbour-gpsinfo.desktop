@@ -5,3 +5,7 @@ Name=GPSInfo
 Icon=harbour-gpsinfo
 Exec=harbour-gpsinfo
 
+[X-Sailjail]
+Permissions=Location
+OrganizationName=harbour-gpsinfo
+ApplicationName=harbour-gpsinfo
