@@ -139,7 +139,7 @@ Page {
                 value: {
                     if (positionSource.position.altitudeValid) {
                         if (settings.units == "MET") {
-                            return positionSource.position.coordinate.altitude + " m"
+                            return LocationFormater.roundToDecimal(positionSource.position.coordinate.altitude, 2) + " m"
                         } else {
                             return LocationFormater.roundToDecimal(positionSource.position.coordinate.altitude * 3.2808399, 2) + " ft"
                         }
