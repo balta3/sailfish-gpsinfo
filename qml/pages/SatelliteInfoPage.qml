@@ -99,8 +99,13 @@ Page {
 
                 //Background
                 var grd=ctx.createRadialGradient(center.x,center.y,5,center.x,center.y,radius);
-                grd.addColorStop(0,"rgba(0,255,0,0.3)");
-                grd.addColorStop(1,"rgba(0,255,0,0.6)");
+                if (Theme.colorScheme == Theme.DarkOnLight) {
+                    grd.addColorStop(0,"rgba(64,127,64,1.0)");
+                    grd.addColorStop(1,"rgba(64,127,64,0.5)");
+                } else {
+                    grd.addColorStop(0,"rgba(0,255,0,0.3)");
+                    grd.addColorStop(1,"rgba(0,255,0,0.6)");
+                }
                 ctx.fillStyle = grd;
                 ctx.beginPath();
                 ctx.arc(center.x, center.y, radius, 0, Math.PI * 2, false);
